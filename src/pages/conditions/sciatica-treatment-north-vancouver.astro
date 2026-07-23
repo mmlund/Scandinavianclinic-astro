@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgPathway from '@/assets/The Scatic Nerve Two Illustrations.png?url';
+import imgClassification from '@/assets/Sciatica Classification.png?url';
+import imgDiscVsPiriformis from '@/assets/Disc-related nerve compression versus piriformis syndrome.png?url';
+import imgSupportedPosition from '@/assets/Piriformis stretch.png?url';
+import imgNeurodynamicTest from '@/assets/clinical-assessment.jpg?url';
+import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
+---
+
+<BaseLayout 
+  title="Sciatica Treatment in North Vancouver | Scandinavian Clinic"
+  description="Sciatica is nerve pain from the lower back down the leg — with several possible causes that need different treatment. What's actually driving it, what the evidence supports, and how assessment-based RMT care helps. North Vancouver."
+>
+  <div class="min-h-screen bg-background">
+    <Navigation client:load />
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Sciatica Treatment in North Vancouver</h1>
+        
+        <h2 class="text-3xl font-bold text-foreground mb-6">What is sciatica?</h2>
+        
+        <p class="text-lg text-muted-foreground mb-4">Sciatica is nerve pain that travels from the lower back or buttock down the leg — most often when a disc presses on a nerve root in the lower spine. Most cases improve with conservative (non-surgical) care over a few weeks to a few months.</p>
+        
+        <p class="text-lg text-muted-foreground mb-12">The cause matters: true nerve irritation, a tight piriformis muscle, and hip- or joint-referred pain can feel almost identical but need different treatment — which is why a thorough assessment comes first.</p>
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+          
+          <img src={imgPathway} alt="Sciatic nerve pathway from lower back to leg" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" />
+
+          <p>Sciatica is distinct. A sharp, burning, or electric pain that shoots from your lower back or buttock down into your leg — sometimes all the way to your foot. Sitting becomes the worst position. Driving is miserable. Getting out of a chair requires a strategy. Sciatica has a recognisable pattern <a href="#ref-1" class="text-xs align-super text-primary hover:underline">[1]</a>, though the exact mix varies from person to person:</p>
+          
+          <ul class="space-y-2">
+            <li><strong>Radiating pain.</strong> Often a burning, shooting, or electric pain that starts in the lower back or buttock and travels down the back or outside of the thigh and leg, sometimes into the foot.</li>
+            <li><strong>Numbness, tingling, or weakness.</strong> The pain may come with numbness down the leg, "pins and needles," or a sense of weakness in the leg or foot.</li>
+            <li><strong>Usually one-sided.</strong> Sciatica typically affects one leg, often with a feeling of heaviness in it. Symptoms in both legs are less common — and if they come with any loss of bladder or bowel control or numbness around the groin, that's a red flag needing emergency care (see below).</li>
+            <li><strong>Position-dependent — and the pattern points to the cause.</strong> Which positions ease or worsen it depends on why the nerve is irritated: disc-related sciatica often worsens with sitting, bending forward, or coughing, while stenosis-related symptoms tend to worsen with standing or walking and ease when sitting or leaning forward. Noticing your pattern is part of identifying the cause.</li>
+          </ul>
+
+          <p>What makes sciatica particularly frustrating is the uncertainty. Is it a disc? Is it permanent? Will it come back? At Scandinavian Clinic, we assess where and why your sciatic nerve is being irritated and treat the cause — not just the pain travelling down your leg.</p>
+          
+          <div class="my-8">
+            <a href="/booking" class="inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
+            <a href="#" class="inline-block text-primary hover:underline font-medium py-3">See all conditions Eva treats</a>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Understanding Sciatica</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Is it true sciatica — and why that matters</h3>
+          
+          <p>Sciatica describes pain that follows the path of the sciatic nerve — the largest nerve in your body, running from the lower spine through the buttock and down each leg. The pain is a symptom, not a diagnosis. What matters is why the nerve is irritated, because different causes require different treatment.</p>
+          <p>Pain from the hip joint, sacroiliac joint, or referred muscle pain (common with general lower back pain) can closely mimic sciatic symptoms. Accurate assessment matters because true nerve irritation calls for a different treatment approach than joint or muscle pain.</p>
+
+          <img src={imgDiscVsPiriformis} alt="Disc-related nerve compression vs Piriformis syndrome" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <h4 class="text-xl font-bold text-foreground mt-8 mb-4">Common causes of sciatic nerve irritation:</h4>
+          <ul class="space-y-4">
+            <li><strong>Disc-related compression.</strong> A bulging or herniated disc in the lower lumbar spine presses on a nerve root. Often produces pain that worsens with sitting, bending forward, or coughing and sneezing, and may include numbness or tingling in a specific area down the leg which can go into the foot <a href="#ref-1" class="text-xs align-super text-primary hover:underline">[1]</a>.</li>
+            <li><strong>Spinal stenosis.</strong> Narrowing of the nerve channel, more common in older adults. Typically produces leg symptoms during walking that ease when sitting or leaning forward <a href="#ref-2" class="text-xs align-super text-primary hover:underline">[2]</a>.</li>
+            <li><strong>Piriformis-related irritation.</strong> The sciatic nerve passes through or beside the piriformis muscle deep in the buttock. When this muscle tightens or spasms, it can compress the nerve — producing buttock and posterior thigh pain without significant lower back involvement <a href="#ref-3" class="text-xs align-super text-primary hover:underline">[3]</a>.</li>
+            <li><strong>Neural sensitisation.</strong> Sometimes the nerve itself becomes hypersensitive — due to impaired mobility relative to the surrounding tissue, or because the nerve has become mechanically sensitive. This may require a different treatment approach than mechanical compression <a href="#ref-4" class="text-xs align-super text-primary hover:underline">[4, 5]</a>.</li>
+          </ul>
+
+          <img src={imgClassification} alt="Classification of sciatica types and causes" class="w-full max-w-3xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When should sciatica be seen urgently?</h2>
+          <p>Most sciatica is not an emergency and responds well to conservative care. But a small number of warning signs need prompt or immediate medical attention rather than a scheduled appointment.</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <h4 class="text-lg font-bold text-foreground mb-2">Seek assessment promptly if you have:</h4>
+            <ul class="mb-4">
+              <li>Pain radiating below the knee</li>
+              <li>Numbness or tingling in the leg or foot</li>
+              <li>Weakness in the leg muscles (for example, difficulty lifting your foot)</li>
+            </ul>
+            <h4 class="text-lg font-bold text-foreground mb-2">Go to the emergency department immediately if you have:</h4>
+            <p>Sudden loss of bladder or bowel control, numbness in the groin or inner thighs (saddle numbness), or new weakness in both legs alongside leg pain. These can be signs of cauda equina syndrome — rare, but a genuine surgical emergency that needs urgent MRI and assessment. When in doubt, the emergency department is the right call, not a massage therapy appointment.</p>
+          </div>
+          
+          <p>Outside of these red flags, there is no need to panic about a diagnosis of sciatica itself — it is very treatable.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with sciatica?</h2>
+          <p>The large majority of sciatica improves without surgery, and the natural course is generally favourable <a href="#ref-6" class="text-xs align-super text-primary hover:underline">[6]</a>. A few approaches have the most consistent support:</p>
+
+          <ul class="space-y-4 mb-8">
+            <li><strong>Staying active, within reason.</strong> For most people, staying as active as symptoms allow leads to similar or better outcomes than prolonged rest, and long periods of inactivity tend to prolong symptoms rather than settle them.</li>
+            <li><strong>Movement-based rehabilitation.</strong> Supervised exercise therapy — directional exercises, motor-control/stabilisation work, and nerve-mobilisation techniques — is a core part of first-line physiotherapy management for sciatica <a href="#ref-7" class="text-xs align-super text-primary hover:underline">[7]</a>. It's worth being straight about the evidence: physiotherapy is widely used as first-line care, but the trials are heterogeneous and the overall certainty is still limited <a href="#ref-8" class="text-xs align-super text-primary hover:underline">[8]</a>. In practice, these approaches tend to work best when guided at first, because technique and progression matter.</li>
+            <li><strong>Manual therapy and soft-tissue treatment.</strong> Hands-on treatment, including clinical massage, may help reduce the muscle tension and restriction that contribute to nerve irritation. The research on massage specifically is mixed in quality — some studies show measurable benefit for pain and range of motion, while broader reviews call for more rigorous trials <a href="#ref-9" class="text-xs align-super text-primary hover:underline">[9]</a>. In practice, that makes it a reasonable and often helpful part of a broader plan, particularly alongside movement retraining — not a standalone cure.</li>
+            <li><strong>Addressing the underlying pattern, not just the symptom.</strong> Because sciatica often develops from a combination of factors — spinal mechanics, muscle imbalance, and movement habits — treatment aimed only at the painful area may give temporary relief without resolving what irritated the nerve in the first place <a href="#ref-10" class="text-xs align-super text-primary hover:underline">[10]</a>. This is why an assessment that looks at proper core function may give more lasting results.</li>
+          </ul>
+
+          <img src={imgSupportedPosition} alt="Clinical illustration of a supported position for sciatica relief" class="w-full max-w-xl mx-auto rounded-lg shadow-md my-10" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Sciatica</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Finding where the nerve is irritated — and why</h3>
+          <p>Eva's sciatica assessment identifies the specific mechanism irritating the nerve. This matters because treating a disc-related sciatica the same way as a piriformis-related one tends to produce inconsistent results.</p>
+
+          <img src={imgNeurodynamicTest} alt="Neurodynamic assessment and positioning test" class="w-full max-w-xl mx-auto rounded-lg shadow-md my-10" />
+
+          <ul class="space-y-4">
+            <li><strong>Lumbar spine mobilisation — reducing nerve compression.</strong> When disc-related or stenotic causes are identified, manual therapy targets the relevant spinal segments to reduce compression and improve spinal mechanics — combined with positional strategies (specific positions and movements that reduce nerve loading) you can use at home for pain management.</li>
+            <li><strong>Piriformis & deep hip rotator treatment — releasing the buttock muscles.</strong> When the buttock muscles are compressing or irritating the nerve, targeted soft-tissue work (including clinical massage) releases the piriformis and surrounding structures. But release alone is rarely enough — the reason the piriformis tightened must also be addressed, which often involves hip stability and lumbar spine mechanics.</li>
+            <li><strong>Neurodynamic assessment & treatment — restoring nerve mobility.</strong> Neurodynamic testing is a specific clinical skill: it identifies where along the nerve pathway restriction or sensitivity exists. Treatment then uses precise, gentle techniques to restore normal nerve mobility — the nerve needs to slide and stretch freely through the surrounding tissues. When it can't, pain can persist even after the original cause has improved.</li>
+            <li><strong>DNS for spinal stability — supporting long-term resolution.</strong> Sciatica frequently recurs because the underlying spinal instability that allowed the nerve irritation hasn't been addressed. Dynamic Neuromuscular Stabilization (DNS) retrains the core — to provide genuine spinal support, drawing on the developmental-kinesiology basis of the method <a href="#ref-11" class="text-xs align-super text-primary hover:underline">[11]</a>. It is often part of both short-term relief and long-term resolution. <a href="#" class="text-primary hover:underline">Learn more about DNS →</a></li>
+          </ul>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Treating the whole movement system, not just the pain</h3>
+          <p>Eva will explain what she finds during your clinical assessment, what's possibly causing the nerve irritation, and what a realistic recovery timeline looks like for your situation. If imaging (MRI) or another practitioner's input is warranted, she'll recommend it directly.</p>
+          <p>Home management is important, particularly in an acute situation. You'll learn which positions and movements reduce nerve loading and which aggravate it — this knowledge often makes the biggest difference in the early stages of recovery.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-12 items-center my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <h3 class="text-xl font-semibold text-foreground mb-4">Nerve-specific Registered Massage Therapy</h3>
+              <ul class="space-y-4">
+                <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's training includes neurodynamic assessment and treatment — the skill set used for accurate sciatica assessment and effective nerve mobilisation.</li>
+                <li><strong>Czech-trained DNS therapist.</strong> Sciatica recurrence is closely tied to spinal stability; DNS addresses this at a deep level by retraining the core stabilisation system. <a href="#" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Clinical distinction.</strong> Differentiating the radicular pain from pseudo radicular pain requires specific testing — and a different treatment plan for each.</li>
+                <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are usually eligible for extended health benefits.</li>
+              </ul>
+              <div class="mt-6">
+                <a href="#" class="text-primary hover:underline font-medium">See all conditions Eva treats</a>
+              </div>
+            </div>
+            <div>
+              <img src={imgEvaConsultation} alt="Eva Andersson in a consultation pose" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is sciatica the same as a slipped disc?</h3>
+              <p>Not exactly. A herniated or bulging disc is a common cause of sciatica, but "sciatica" describes the resulting nerve-pain pattern rather than the disc problem itself. Spinal stenosis, piriformis-related irritation, and a sensitised nerve can, at times, all produce similar symptoms.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">How do I know if my leg pain is sciatica or something else, like piriformis syndrome?</h3>
+              <p>The location and pattern of pain, plus specific movement and positioning tests, help tell a spinal cause apart from a muscular one such as piriformis-related irritation. An in-person assessment is the most reliable way to know — the two can feel almost identical but respond to different treatment.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can massage by itself help with sciatica?</h3>
+              <p>Massage may help reduce the muscle tension and restriction that contribute to nerve irritation, and some studies show benefits for pain and mobility <a href="#ref-9" class="text-xs align-super text-primary hover:underline">[9]</a>. It's generally most effective as part of a broader plan that includes movement-based rehabilitation, rather than on its own.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Should I rest or stay active with sciatica?</h3>
+              <p>For most people, staying as active as symptoms allow is better than prolonged rest, which tends to prolong symptoms. Your assessment will include which specific positions and movements reduce nerve loading for you.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">When should I see a doctor instead of booking an appointment?</h3>
+              <p>If leg pain comes with new bladder or bowel changes, saddle numbness, or weakness in both legs, seek emergency care immediately. Outside of those red flags, sciatica is very treatable with conservative care.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">How many sessions will it take?</h3>
+              <p>It often depends on the cause and how long symptoms have been present. Eva can give you more qualified guidance after your first visit.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your RMT assessment for sciatica</h3>
+            <p class="mb-8 max-w-2xl mx-auto">Sciatica responds best to treatment that targets the right cause. Book an assessment to find out exactly where and why your nerve is being irritated.</p>
+            <a href="/booking" class="inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Schedule Your Assessment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li id="ref-1">Jensen RK, Kongsted A, Kjaer P, et al. Diagnosis and treatment of sciatica. <em>BMJ</em>. 2019.</li>
+              <li id="ref-2">Katz JN, Zimmerman ZE, Mass H, et al. Diagnosis and management of lumbar spinal stenosis: a review. <em>JAMA</em>. 2022.</li>
+              <li id="ref-3">Hopayian K, Song F, Riera R, et al. The clinical features of the piriformis syndrome: a systematic review. <em>Eur Spine J</em>. 2010.</li>
+              <li id="ref-4">Butler DS. <em>The Sensitive Nervous System</em>. 2000.</li>
+              <li id="ref-5">Shacklock M. <em>Clinical Neurodynamics</em>. 2005.</li>
+              <li id="ref-6">Vroomen PCAJ, de Krom MCTFM, Slofstra PD, Knottnerus JA. Conservative treatment of sciatica: a systematic review. <em>Journal of Spinal Disorders</em>. 2000;13(6):463–469.</li>
+              <li id="ref-7">Ostelo RWJG. Physiotherapy management of sciatica. <em>Journal of Physiotherapy</em>. 2020;66(2):83–88.</li>
+              <li id="ref-8">Dove L, Jones G, Kelsey LA, Cairns MC, Schmid AB. How effective are physiotherapy interventions in treating people with sciatica? A systematic review and meta-analysis. <em>European Spine Journal</em>. 2023;32(2):517–533.</li>
+              <li id="ref-9">Kumar S, Beaton K, Hughes T. The effectiveness of massage therapy for the treatment of nonspecific low back pain. <em>International Journal of General Medicine</em>. 2013;6:733–741.</li>
+              <li id="ref-10">Frank C, Kobesova A, Kolar P. Dynamic neuromuscular stabilization & sports rehabilitation. <em>Int J Sports Phys Ther</em>. 2013.</li>
+              <li id="ref-11">Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <Footer client:idle />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>

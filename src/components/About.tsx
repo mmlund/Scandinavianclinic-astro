@@ -1,4 +1,4 @@
-import evaProfile from "@/assets/eva-profile.jpg";
+import evaProfile from "@/assets/eva-profile.jpg?url";
 import { CheckCircle2 } from "lucide-react";
 
 interface AboutProps {
