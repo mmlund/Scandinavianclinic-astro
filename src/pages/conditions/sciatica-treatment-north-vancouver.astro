@@ -11,14 +11,27 @@ import imgDiscVsPiriformis from '@/assets/Disc-related nerve compression versus 
 import imgSupportedPosition from '@/assets/Piriformis stretch.png?url';
 import imgNeurodynamicTest from '@/assets/clinical-assessment.jpg?url';
 import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
+import logo from '@/assets/logo.jpg?url';
 ---
 
 <BaseLayout 
   title="Sciatica Treatment in North Vancouver | Scandinavian Clinic"
   description="Sciatica is nerve pain from the lower back down the leg — with several possible causes that need different treatment. What's actually driving it, what the evidence supports, and how assessment-based RMT care helps. North Vancouver."
+  robots="noindex"
 >
-  <div class="min-h-screen bg-background">
-    <Navigation client:load />
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
     
     <main class="pt-24 pb-16">
       <div class="container mx-auto px-4 max-w-4xl">
@@ -46,8 +59,8 @@ import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
           <p>What makes sciatica particularly frustrating is the uncertainty. Is it a disc? Is it permanent? Will it come back? At Scandinavian Clinic, we assess where and why your sciatic nerve is being irritated and treat the cause — not just the pain travelling down your leg.</p>
           
           <div class="my-8">
-            <a href="/booking" class="inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
-            <a href="#" class="inline-block text-primary hover:underline font-medium py-3">See all conditions Eva treats</a>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
+            <span class="inline-block text-primary font-medium py-3">See all conditions Eva treats</span>
           </div>
 
           <hr class="my-12 border-border" />
@@ -114,7 +127,7 @@ import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
             <li><strong>Lumbar spine mobilisation — reducing nerve compression.</strong> When disc-related or stenotic causes are identified, manual therapy targets the relevant spinal segments to reduce compression and improve spinal mechanics — combined with positional strategies (specific positions and movements that reduce nerve loading) you can use at home for pain management.</li>
             <li><strong>Piriformis & deep hip rotator treatment — releasing the buttock muscles.</strong> When the buttock muscles are compressing or irritating the nerve, targeted soft-tissue work (including clinical massage) releases the piriformis and surrounding structures. But release alone is rarely enough — the reason the piriformis tightened must also be addressed, which often involves hip stability and lumbar spine mechanics.</li>
             <li><strong>Neurodynamic assessment & treatment — restoring nerve mobility.</strong> Neurodynamic testing is a specific clinical skill: it identifies where along the nerve pathway restriction or sensitivity exists. Treatment then uses precise, gentle techniques to restore normal nerve mobility — the nerve needs to slide and stretch freely through the surrounding tissues. When it can't, pain can persist even after the original cause has improved.</li>
-            <li><strong>DNS for spinal stability — supporting long-term resolution.</strong> Sciatica frequently recurs because the underlying spinal instability that allowed the nerve irritation hasn't been addressed. Dynamic Neuromuscular Stabilization (DNS) retrains the core — to provide genuine spinal support, drawing on the developmental-kinesiology basis of the method <a href="#ref-11" class="text-xs align-super text-primary hover:underline">[11]</a>. It is often part of both short-term relief and long-term resolution. <a href="#" class="text-primary hover:underline">Learn more about DNS →</a></li>
+            <li><strong>DNS for spinal stability — supporting long-term resolution.</strong> Sciatica frequently recurs because the underlying spinal instability that allowed the nerve irritation hasn't been addressed. Dynamic Neuromuscular Stabilization (DNS) retrains the core — to provide genuine spinal support, drawing on the developmental-kinesiology basis of the method <a href="#ref-11" class="text-xs align-super text-primary hover:underline">[11]</a>. It is often part of both short-term relief and long-term resolution. <span class="text-primary">Learn more about DNS →</span></li>
           </ul>
 
           <hr class="my-12 border-border" />
@@ -132,12 +145,12 @@ import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
               <h3 class="text-xl font-semibold text-foreground mb-4">Nerve-specific Registered Massage Therapy</h3>
               <ul class="space-y-4">
                 <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's training includes neurodynamic assessment and treatment — the skill set used for accurate sciatica assessment and effective nerve mobilisation.</li>
-                <li><strong>Czech-trained DNS therapist.</strong> Sciatica recurrence is closely tied to spinal stability; DNS addresses this at a deep level by retraining the core stabilisation system. <a href="#" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Czech-trained DNS therapist.</strong> Sciatica recurrence is closely tied to spinal stability; DNS addresses this at a deep level by retraining the core stabilisation system. <span class="text-primary">Learn more</span></li>
                 <li><strong>Clinical distinction.</strong> Differentiating the radicular pain from pseudo radicular pain requires specific testing — and a different treatment plan for each.</li>
                 <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are usually eligible for extended health benefits.</li>
               </ul>
               <div class="mt-6">
-                <a href="#" class="text-primary hover:underline font-medium">See all conditions Eva treats</a>
+                <span class="text-primary font-medium">See all conditions Eva treats</span>
               </div>
             </div>
             <div>
@@ -185,7 +198,7 @@ import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
             <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
             <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your RMT assessment for sciatica</h3>
             <p class="mb-8 max-w-2xl mx-auto">Sciatica responds best to treatment that targets the right cause. Book an assessment to find out exactly where and why your nerve is being irritated.</p>
-            <a href="/booking" class="inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Schedule Your Assessment</a>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Schedule Your Assessment</a>
             <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
           </div>
 
@@ -212,8 +225,36 @@ import imgEvaConsultation from '@/assets/eva-andersson-portrait.jpg?url';
       </div>
     </main>
     
-    <Footer client:idle />
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
     <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
   </div>
 </BaseLayout>
 

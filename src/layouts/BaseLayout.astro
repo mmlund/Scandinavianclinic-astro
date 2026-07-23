@@ -57,13 +57,12 @@ const {
     </script>
     
     <!-- Google Tag Manager / GA4 (Placeholder ID) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-PLACEHOLDER');
-      gtag('config', 'AW-PLACEHOLDER');
+      gtag('config', 'GA4_MEASUREMENT_ID');
     </script>
 
     {jsonLd && (
