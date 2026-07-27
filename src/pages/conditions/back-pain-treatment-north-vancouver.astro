@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgHero from '@/assets/back-pain-causes-illustration.png?url';
+import imgUnderstanding from '@/assets/Deep_core_muscles.png?url';
+import imgWhatHelps from '@/assets/movement_good-for-the_back.png?url';
+import imgHowWeTreat from '@/assets/Assessment_of_back_movement_symmetry_pattern.jpg?url';
+import imgFooter from '@/assets/Treatment_room.jpeg?url';
+import logo from '@/assets/logo.jpg?url';
+---
+
+<BaseLayout 
+  title="Back Pain Treatment in North Vancouver | Scandinavian Clinic"
+  description="Most back pain is not caused by a single damaged structure. Lasting relief comes from finding why the area is being overloaded. North Vancouver RMT."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="https://scandinavianclinic.com">
+            <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+          </a>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Back Pain Treatment in North Vancouver</h1>
+        
+        <div class="bg-accent/10 p-6 rounded-xl border border-accent/20 mb-8">
+          <p class="font-medium text-foreground mb-2"><strong>QUICK ANSWER</strong></p>
+          <p class="text-muted-foreground m-0">Most back pain is not caused by a single damaged structure, and for the large majority of people no specific cause shows up on a scan. It usually improves within a few weeks, though it commonly returns. Lasting relief tends to come less from treating the sore spot and more from finding why the area is being overloaded — which is what an assessment is for.</p>
+        </div>
+        
+        <p class="text-lg text-muted-foreground mb-4">Back pain often changes the way you move through your day. Bending to tie your shoes becomes a negotiation. Sitting through a meeting turns into a countdown. A weekend hike on the North Shore trails — something you used to do without thinking — now requires recovery time you didn't plan for.</p>
+        
+        <p class="text-lg text-muted-foreground mb-8">If your back pain has lasted more than a few weeks, or keeps coming back despite stretching and rest, the problem is usually deeper than tight muscles. At Scandinavian Clinic, we work to identify and address the functional movement and stabilisation patterns overloading your lower back.</p>
+
+        <div class="my-8 flex flex-wrap gap-4 items-center">
+          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors">Book Your Assessment</a>
+          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+        </div>
+
+        <img src={imgHero} alt="Three common back-pain presentations we assess and treat — each requiring a different approach." class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+        <p class="text-sm text-center text-muted-foreground -mt-6 mb-12 italic">Three common back-pain presentations we assess and treat — each requiring a different approach.</p>
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Understanding Back Pain</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Why your back hurts — and why it keeps coming back</h3>
+          
+          <p>Back pain is one of the most common reasons people seek care, and for nearly everyone with it, no single specific structural cause can be pinpointed on examination or imaging (Hartvigsen et al., The Lancet, 2018). That's not a dead end — it's the reason a careful assessment matters more than a scan.</p>
+          <p>For many people, persistent back pain is less about one damaged structure and more about how the body has learned to move — or stopped moving — over time. A common pattern, described by Czech physician Vladimir Janda as lower crossed syndrome, is tightness in the hip flexors and lower-back muscles paired with relative weakness of the glutes and deep abdominal wall — which shifts how the lower back and hips share load. Like its counterpart in the shoulder (upper crossed syndrome), it's a useful lens rather than a verdict: posture and muscle balance don't perfectly predict pain, so it's assessed individually. This is usually one part of a bigger picture, which is why it needs to be assessed rather than assumed. Massage is frequently a valuable part of the treatment, but it's often one component of a plan that has to be worked through step by step.</p>
+          
+          <img src={imgUnderstanding} alt="Deep stabilisers vs outer muscles" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <h4 class="text-xl font-bold text-foreground mt-8 mb-4">Common symptoms of back pain we treat include:</h4>
+          <ul class="space-y-2">
+            <li>Stiffness or aching in the lower back, especially in the morning or after sitting</li>
+            <li>Sharp pain when bending, lifting, or twisting</li>
+            <li>Pain that spreads into the buttock or upper leg</li>
+            <li>Difficulty standing upright after sitting for long periods</li>
+            <li>A feeling that your back "gives out" or lacks support during activity</li>
+          </ul>
+
+          <div class="bg-blue-50/50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
+            <p class="m-0">Back pain that radiates down the leg may involve the nerve — see our <a href="https://go.scandinavianclinic.com/conditions/sciatica-treatment-north-vancouver/" class="text-primary hover:underline">sciatica treatment page</a> for nerve-related leg pain.</p>
+          </div>
+
+          <p>Back pain often worsens with prolonged sitting, repetitive bending, poor sleeping positions, or sudden increases in activity. Many patients describe a pattern: it flares up, settles down, then returns — each time a little more limiting. (Why that happens, and what interrupts it, is covered on our Why Pain Keeps Coming Back page.)</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When should back pain be seen?</h2>
+          <p>Most back pain settles and is not a sign of anything dangerous. But a few situations warrant a prompt professional assessment, and a small number are medical emergencies.</p>
+          
+          <p><strong>Worth a proper assessment rather than waiting it out</strong> if your back pain lasts beyond two to three weeks, limits your daily activities, disrupts your sleep, or has started reducing how much you move and exercise.</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <h4 class="text-lg font-bold text-foreground mb-2">Go to the emergency department immediately if back pain comes with any of these:</h4>
+            <ul class="mb-4">
+              <li>New loss of bladder or bowel control</li>
+              <li>Numbness around the groin or inner thighs (saddle numbness)</li>
+              <li>New weakness in both legs</li>
+            </ul>
+            <p class="m-0">These are rare, but can signal cauda equina syndrome — a genuine emergency. Also seek prompt medical review for back pain following a significant injury, or accompanied by fever or unexplained weight loss.</p>
+          </div>
+          
+          <p>Outside of these, back pain is very treatable, and there's usually no need to fear the worst.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with back pain?</h2>
+          <p>The evidence here is clearer than most people expect, and some of it is reassuring:</p>
+
+          <ul class="space-y-4">
+            <li><strong>Staying active beats rest.</strong> Clinical guidelines consistently recommend keeping moving and returning to normal activity as tolerated, rather than resting — prolonged rest tends to prolong the problem (Foster et al., The Lancet, 2018).</li>
+            <li><strong>Scans are usually not needed early.</strong> Because a specific structural cause can rarely be identified, and imaging findings often don't match the pain, guidelines advise against routine early imaging for ordinary back pain (Hartvigsen et al., 2018; Foster et al., 2018). Imaging is reserved for when red flags or a lack of expected progress make it useful — in which case Eva will suggest consulting your family physician for further medical evaluation or imaging.</li>
+            <li><strong>Exercise and self-management are first-line.</strong> Guidelines point to education, staying active, and exercise as the foundation of care. No single type of exercise has been shown to be superior; motor-control (deep-stabiliser) exercise helps compared with minimal treatment, but works about as well as other well-chosen exercise (Saragiotto et al., Cochrane Review, 2016). What matters is that the exercise is matched to your assessment and that you do it consistently.</li>
+            <li><strong>Treating the pattern, not just the sore spot.</strong> Because ordinary back pain usually reflects how the whole lower back, hips, and core work together rather than one injured part, treatment aimed only at the painful area may relieve it temporarily without changing what overloaded it. This is why an assessment-led approach tends to give more durable results. (See What to Expect from a Thorough Assessment.)</li>
+          </ul>
+
+          <img src={imgWhatHelps} alt="Person walking or engaging in supported movement" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Back Pain</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Assessment-based treatment, not guesswork</h3>
+          <p>Your first appointment begins with a thorough assessment. Eva evaluates how your spine moves, where movement is restricted, and — importantly — which stabilising muscles have stopped activating well. This biomechanical evaluation looks at functional movement and regional contributors to your symptoms — which are often different from the location of your pain.</p>
+
+          <ul class="space-y-4 my-8">
+            <li><strong>Massage, soft-tissue & fascia work — targeted release.</strong> Targeted treatment of muscles that have tightened in response to how the spine is loading — commonly the quadratus lumborum, hip flexors, and thoracolumbar fascia. Massage and stretching often relieve pain and create space for better movement.</li>
+            <li><strong>Dynamic stabilisation & intra-abdominal pressure (DNS).</strong> Many people with back pain have lost the ability to coordinate the deep stabilising system well — the diaphragm, pelvic floor, and deep abdominal wall. DNS retrains these to regulate intra-abdominal pressure (IAP): the diaphragm descends to push against the pelvic floor and abdominal wall, forming a pressurised cylinder that stabilises the lumbar spine from the inside before any arm or leg movement — the integrated spinal stabilisation system. This draws on the developmental-kinesiology basis of the method (Kobesová & Kolář, J Bodywork Mov Ther, 2014), and targets control and timing rather than only the larger outer muscles that exercises like crunches or planks tend to train. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more about DNS →</a></li>
+            <li><strong>Spinal & joint mobilisation — low velocity only.</strong> Hands-on manual therapy restores functional joint play to restricted segments. When functional joint restriction occurs in the lower back or hips, surrounding muscles tighten reflexively to protect the area; restoring that joint play reduces muscle guarding and allows the nervous system to re-learn better-centrated movement — often a secondary compensation to altered stabilisation rather than a joint simply "locked" out of place.</li>
+            <li><strong>Active rehabilitation — home practice that works.</strong> You'll leave each session with specific corrective movements chosen from your assessment findings — not generic exercises. Your active participation is essential to lasting results.</li>
+          </ul>
+
+          <img src={imgHowWeTreat} alt="Assessment of back movement symmetry pattern" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Your path from pain to function</h3>
+          <p>For most back pain patients, treatment begins with 60-minute sessions focused on hands-on assessment and treatment. Early sessions prioritise reducing pain and restoring mobility. As pain settles and the stabilising muscles reactivate, sessions shift toward movement training and self-management.</p>
+          <p>Many patients with uncomplicated back pain notice meaningful improvement within three to six sessions. Chronic or recurring back pain may take a longer course. Eva will be direct with you about what functional factors may be contributing and outline a realistic recovery plan for your presentation.</p>
+          <p>Your role matters: lasting results depend on consistent home practice between sessions. The goal is to give you the tools to manage and prevent recurrence yourself.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+          <h3 class="text-xl font-semibold text-foreground mb-4">A clinical approach to back pain</h3>
+          <ul class="space-y-4 mb-8">
+            <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's five-year Scandinavian education provides a high level of biomechanical assessment training.</li>
+            <li><strong>Czech-trained in DNS.</strong> DNS focuses directly on the deep-core stabilisation that is often involved when back pain develops and recurs. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+            <li><strong>Assessment-first philosophy.</strong> Treatment starts only after a thorough assessment, not from assumptions about where it hurts.</li>
+            <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+          </ul>
+          
+          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is my back pain serious?</h3>
+              <p>Most back pain is not dangerous, even when it's very painful. The warning signs that need urgent care are new bladder or bowel changes, saddle numbness, or new weakness in both legs. Back pain after a major injury, or with fever or unexplained weight loss, also needs prompt medical review. Outside of these, it's very treatable.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Do I need an MRI or X-ray for back pain?</h3>
+              <p>Usually not, at least early on. For ordinary back pain a specific structural cause can rarely be pinpointed, and scan findings often don't match the pain, so guidelines advise against routine early imaging (Foster et al., 2018). It's useful when there are red flags or when recovery stalls — Eva will recommend it if that's the case.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why does my back keep "going out"?</h3>
+              <p>Recurring back pain usually means the underlying pattern — how you move, stabilise, and load the area — hasn't been addressed, so the same overload keeps happening. Identifying and retraining that pattern is what tends to break the cycle.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Should I rest or stay active?</h3>
+              <p>Stay as active as your pain allows. Guidelines favour movement and a return to normal activity over rest, which tends to prolong symptoms (Foster et al., 2018).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">What's the best exercise for back pain?</h3>
+              <p>There isn't a single best one — no type of exercise has been shown to beat the others (Saragiotto et al., 2016). What works is exercise matched to your assessment that you'll actually do consistently.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is massage enough on its own?</h3>
+              <p>Massage often helps relieve pain and tension and can be a valuable part of treatment. For back pain that lasts or recurs, it usually works best combined with movement retraining that addresses why the area is being overloaded.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for back pain treatment</h3>
+            <p class="mb-8 max-w-2xl mx-auto">Ready to find out what's actually causing your back pain? Book an assessment and start treatment based on answers, not guesswork.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Appointment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li>Hartvigsen J, Hancock MJ, Kongsted A, et al. What low back pain is and why we need to pay attention. <em>The Lancet</em>. 2018;391(10137):2356–2367.</li>
+              <li>Foster NE, Anema JR, Cherkin D, et al. Prevention and treatment of low back pain: evidence, challenges, and promising directions. <em>The Lancet</em>. 2018;391(10137):2368–2383.</li>
+              <li>Saragiotto BT, Maher CG, Yamato TP, et al. Motor control exercise for chronic non-specific low-back pain. <em>Cochrane Database of Systematic Reviews</em>. 2016;(1):CD012004.</li>
+              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+        
+        <div class="mt-8">
+          <img src={imgFooter} alt="Scandinavian Clinic Treatment Room" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm" />
+        </div>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>
