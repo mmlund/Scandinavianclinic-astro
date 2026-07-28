@@ -1,0 +1,265 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgHero from '@/assets/Anatomy_of_the_foot.webp?url';
+import imgConnection from '@/assets/Body_alignment_starts_ with_the_feet_link_to_knee_hip_back_pain.webp?url';
+import imgOrthotics from '@/assets/manufacturing_custom_foot_orthotics.webp?url';
+import imgKineticChain from '@/assets/Kinetic_chain_from_feet_to_body.webp?url';
+import imgEvaConsultation from '@/assets/eva-andersson-portrait.webp?url';
+import logo from '@/assets/logo.webp?url';
+---
+
+<BaseLayout 
+  title="Foot and Ankle Pain Treatment in North Vancouver | Scandinavian Clinic"
+  description="The most common cause of heel and foot pain is plantar fasciitis. Learn how foot mechanics affect your knees, hips, and back, and how orthotics can help."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Foot and Ankle Pain Treatment in North Vancouver</h1>
+        
+        <h2 class="text-3xl font-bold text-foreground mb-6">What causes foot and ankle pain — and can it affect the rest of my body?</h2>
+        
+        <p class="text-lg text-muted-foreground mb-4">The most common cause of heel and foot pain is plantar fasciitis, now understood primarily as degenerative changes and disorganisation of the tissue that supports the arch, rather than simple inflammation. It usually responds to a combination of supportive footwear, targeted exercise, and properly fitted orthotics. Foot mechanics also matter above the foot: how your foot loads can affect your knees, hips, and lower back through a connected chain — which is why a good assessment looks beyond the foot itself.</p>
+        
+        <p class="text-lg text-muted-foreground mb-4">Your feet take the load of your whole body, every step of the day — so when something's off down there, it rarely stays a foot problem. Heel pain with the first steps in the morning, an ache that builds after standing, or a knee or hip that won't settle no matter what you do to it: all of these can trace back, at least in part, to how your feet are working.</p>
+
+        <p class="text-lg text-muted-foreground mb-12">At Scandinavian Clinic, Eva Andersson, RMT, assesses how your feet load and move — and, when custom orthotics are the right call, works with a German-trained pedorthist to get them made properly rather than relying on a generic insert.</p>
+
+        <div class="my-8">
+          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
+          <a href="/conditions/" class="inline-block text-primary font-medium py-3 hover:underline">See all conditions Eva treats</a>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+          
+          <img src={imgHero} alt="Anatomy of the foot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What's causing my heel or foot pain?</h2>
+          
+          <p>The most common cause is plantar fasciitis — strain and small tears in the band of tissue (the plantar fascia) that runs along the bottom of the foot from the heel to the toes. The classic sign is a sharp, stabbing pain with the first few steps in the morning that eases as you move, then returns after long standing or when you get up from sitting.</p>
+
+          <p>It's worth understanding that current thinking increasingly sees this as a degenerative problem in the tissue itself, not pure inflammation — which is one reason anti-inflammatory-only approaches (rest, ice, medication) often give only partial relief, and why rebuilding the tissue's tolerance to load matters. Common contributors include flat feet or high arches, tight calf muscles and reduced ankle flexibility, jobs that involve prolonged standing, and a sudden jump in activity.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How your feet connect to your knees, hips, and back</h2>
+          
+          <img src={imgConnection} alt="Body alignment starts with the feet and links to knee, hip, and back pain" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>This connection surprises many people — and it's one that even medical training tends to overlook — but it's well documented. In physiotherapy it's called regional interdependence: the principle that a problem in one area, like the foot, can contribute to symptoms in a seemingly unrelated area, like the knee, hip, or lower back (Wainner et al., JOSPT, 2007; Sueki et al., J Man Manip Ther, 2013). Your foot is the base of that chain: when it changes how it loads, the joints above it adjust in turn.</p>
+
+          <p>There's a concrete, well-described version of this. When the foot overpronates — rolls inward more than it should — the shin bone rotates inward with it, and a controlled study found that inducing extra foot pronation measurably increased anterior pelvic tilt and thigh rotation while standing (Khamis & Yizhar, Gait & Posture, 2007). In runners, a rigid, supinated foot has been described as feeding up the chain to inadequate tibial and femoral rotation and reduced recruitment of the gluteal muscles — so that treating "the injured tissue" alone often fails, while restoring the whole kinetic chain — including the foot's sensorimotor function (its role as a source of balance and postural feedback) — works better (Geraci & Brown, Phys Med Rehabil Clin N Am, 2005). Population research fits the picture too: people with flat feet have higher rates of knee and ankle pain (Menz et al., 2013), and flat-foot posture has been linked to knee cartilage changes in older adults through that same inward-rotation mechanism (Gross et al., 2011).</p>
+
+          <p>This is the same idea the functional (Prague School) tradition described decades ago as "chain reactions," treating the foot as the body's base of support and a key source of postural feedback — but it's now backed by mainstream biomechanical research, not just clinical theory.</p>
+
+          <p>One honest nuance: static foot shape predicts pain elsewhere more reliably than foot function during walking does, and the relationship isn't a simple one-way street — so foot mechanics are best treated as one contributing factor to assess, not the automatic cause of every knee, hip, or back problem.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-12">Will fixing my feet actually help my knee, hip, or back pain?</h3>
+
+          <p>This deserves an honest, evidence-based answer rather than a blanket "yes" — and the answer differs by body part:</p>
+
+          <ul class="space-y-4 mb-8">
+            <li><strong>Knees: genuinely encouraging.</strong> Properly designed orthotics — custom, full-length, with appropriate arch support and shock absorption — can improve pain and function, particularly for knee osteoarthritis (foot orthoses for medial knee OA review, 2020).</li>
+            <li><strong>Foot itself: solid.</strong> Custom orthotics have good evidence for reducing foot pain in conditions such as plantar fasciitis and arthritis.</li>
+            <li><strong>Hips and lower back: less settled.</strong> The biomechanical theory is sound, but the clinical evidence is thin — reviews describe foot orthotics for low-back pain as still largely unproven (Chuter et al., 2014), and a recent randomised trial found no significant benefit of foot orthoses for chronic low-back pain (2023 RCT).</li>
+          </ul>
+
+          <p>The practical takeaway: foot mechanics are a real and worthwhile thing to assess when a knee, hip, or back problem isn't resolving with treatment aimed only at the sore area — but they're one piece of a broader picture, not a guaranteed fix, and we'll be straight with you about that, especially for back pain.</p>
+
+          <p class="text-sm italic">(This is exactly why our assessment looks at the whole chain — feet, knees, hips, and lower back together. See our <a href="/conditions/back-pain-treatment-north-vancouver" class="text-primary hover:underline">back pain</a>, <a href="/conditions/hip-pain-treatment-north-vancouver" class="text-primary hover:underline">hip pain</a>, and knee-related <a href="/conditions/sciatica-treatment-north-vancouver" class="text-primary hover:underline">sciatica</a> pages.)</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why don't orthotics always work — and what makes a good one?</h2>
+          
+          <img src={imgOrthotics} alt="Manufacturing custom foot orthotics" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>"I tried orthotics and they didn't help" is one of the most common frustrations we hear — and it usually isn't that orthotics don't work, but that the fit, the specific correction, or the plan around them wasn't right. Many people get relief only after the orthotics are adjusted, combined with the right footwear, and paired with an exercise program.</p>
+
+          <p>A well-made orthotic is more than a mould of your foot. In practice, the ones that work tend to share a few things:</p>
+
+          <ul class="space-y-4 mb-8">
+            <li><strong>Matched to your foot and your problem</strong> — the correction is based on how your foot loads and moves during walking, not a generic template.</li>
+            <li><strong>The right material for the job, not a single hard shell</strong> — good orthotics blend support and cushioning; an insert that's uniformly rigid is often uncomfortable and poorly tolerated.</li>
+            <li><strong>Full-length and supporting the whole foot where needed</strong> — rather than propping up only one part and leaving the rest unsupported.</li>
+            <li><strong>Professionally assessed and adjusted over time</strong> — a first fitting is a starting point; reassessment and fine-tuning are usually what turn "didn't help" into "made a real difference."</li>
+          </ul>
+
+          <p>Because these details genuinely determine whether an orthotic helps, Eva works with a German-trained pedorthist for custom orthotics rather than a one-time, off-the-shelf fitting (see below).</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When does foot or ankle pain need prompt medical attention?</h2>
+          <p>Most foot and ankle pain is manageable with conservative care, but a few situations warrant prompt medical evaluation rather than self-treatment:</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <h4 class="text-lg font-bold text-foreground mb-2">Seek assessment promptly if you have:</h4>
+            <ul class="mb-4">
+              <li>Inability to bear any weight on the foot after an injury — this can indicate a fracture.</li>
+              <li>Significant swelling, redness, or warmth, especially with fever — which can suggest infection.</li>
+              <li>Numbness, tingling, or a burning sensation — which can point to nerve involvement rather than a purely mechanical problem.</li>
+            </ul>
+          </div>
+          
+          <p>Heel or foot pain that hasn't improved after several months of appropriate care is also a reasonable point to seek further evaluation.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with foot and ankle pain?</h2>
+          
+          <ul class="space-y-4 mb-8">
+            <li><strong>Targeted exercise is central, not just passive support.</strong> Stretching the plantar fascia and calf, and strengthening the muscles that support the arch, are core to effective treatment — and combining foot-strengthening exercise with orthotic support tends to outperform either alone. This also includes sensorimotor retraining — exercises such as the "short foot" that restore the foot's role as a source of balance and postural feedback (drawn from Janda's sensorimotor training), not just its raw strength.</li>
+            <li><strong>Properly fitted, professionally guided orthotics</strong> have solid evidence for reducing foot pain — especially when fitted and followed up properly rather than bought off a shelf.</li>
+            <li><strong>Footwear and activity changes matter more than most expect.</strong> Supportive, cushioned shoes and avoiding barefoot walking on hard surfaces are consistently helpful, and often make a noticeable difference on their own.</li>
+            <li><strong>For pain higher up the chain,</strong> addressing the foot is part of a broader plan — worth doing when knee or hip pain isn't fully explained by local treatment, while keeping expectations realistic (particularly for the lower back).</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4">What does a thorough foot and ankle assessment involve?</h3>
+          <p>A proper assessment goes well beyond measuring your foot for a generic insert. It typically includes a look at your foot posture and arch (flat, neutral, or high), how your foot actually moves during walking (which can differ from its static shape), and how your foot mechanics may be feeding into knee, hip, or lower-back symptoms — particularly when those areas haven't fully responded to local treatment. And because good orthotics depend on follow-up, our plan includes reassessing and refining them over time rather than a single fitting and done.</p>
+          
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-12 items-center my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Foot & Ankle Care and Custom Orthotics at Scandinavian Clinic</h2>
+              <p class="mb-4">If foot or heel pain hasn't fully responded to generic inserts or previous treatment — or if knee, hip, or back pain seems tied to how your feet work — a thorough assessment can help clarify what's actually contributing.</p>
+              
+              <p class="mb-6">For custom orthotics, Scandinavian Clinic works with Markus Poerschke of Salt Spring Footprints, a German-trained pedorthist (his European certification is equivalent to a North American Certified Pedorthist) and fifth-generation orthopaedic technician. Bringing in that level of craft means orthotics are made properly — matched to your foot, built from the right materials, and adjusted over time — combined with Eva's manual therapy and an individualised exercise program that addresses the whole mechanical picture, not the foot in isolation.</p>
+              
+              <div class="bg-accent/10 p-4 rounded-lg mb-6">
+                <p class="text-sm">Most extended health plans in BC cover Registered Massage Therapy, and custom orthotics may be covered under extended health depending on your plan.</p>
+              </div>
+              
+              <div class="mt-6">
+                <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors inline-block">Book Your Assessment</a>
+              </div>
+            </div>
+            <div>
+              <img src={imgKineticChain} alt="Kinetic chain from feet to body" class="w-full rounded-xl shadow-lg mb-6 bg-white" />
+              <img src={imgEvaConsultation} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why does my heel hurt most in the morning?</h3>
+              <p>That first-step pain is classic plantar fasciitis: the fascia tightens overnight, and the first steps after rest load it suddenly. It usually eases with movement and returns after long standing.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why didn't my orthotics fix my foot pain?</h3>
+              <p>Orthotics usually work best combined with exercise and the right footwear, and first fittings often need adjustment. Many people get relief only after professional follow-up and refinement — not from a one-time, off-the-shelf insert.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can foot problems really cause knee or hip pain?</h3>
+              <p>There's a well-documented biomechanical chain: foot overpronation is linked to inward rotation of the shin and increased pelvic tilt, which can add strain at the knee and hip. It's a real contributing factor worth assessing — strongest for the knee.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Will orthotics fix my back pain if it's caused by my feet?</h3>
+              <p>Honestly, that's uncertain. The theory is reasonable, but trials haven't shown a clear benefit of foot orthotics for low-back pain specifically — so we'd treat your feet as one part of a broader assessment, not an assumed fix.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Do I need custom orthotics, or will store-bought inserts work?</h3>
+              <p>Custom-fitted orthotics have stronger evidence than generic inserts, particularly when properly fitted and followed up by a trained pedorthist. For milder cases, supportive footwear and exercise sometimes do the job.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">When should I see someone about foot pain instead of treating it myself?</h3>
+              <p>Seek prompt evaluation for inability to bear weight after an injury, significant swelling or fever, or numbness and tingling — and consider a professional assessment if heel pain hasn't improved after a few months of self-care.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for foot and ankle treatment</h3>
+            <p class="mb-8 max-w-2xl mx-auto">Whether it's stubborn heel pain, or a knee, hip, or back problem that might be tied to how your feet work, a thorough assessment can clarify what's contributing — and, where custom orthotics are the right call, get them made properly.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Assessment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li>Khamis S, Yizhar Z. Effect of feet hyperpronation on pelvic alignment in a standing position. <em>Gait & Posture</em>. 2007;25(1):127–134.</li>
+              <li>Menz HB, Dufour AB, Riskowski JL, et al. Association of foot posture and function with lower extremity pain (Framingham Foot Study). 2013.</li>
+              <li>Gross KD, Felson DT, Niu J, et al. Flat feet are associated with knee pain and cartilage damage in older adults. <em>Arthritis Care & Research</em>. 2011.</li>
+              <li>Foot orthoses in the treatment of medial knee osteoarthritis (systematic review). 2020.</li>
+              <li>Chuter VH, Spink MJ, Searle A, Robinson AH. Foot orthotics for low back pain: the state of our understanding. <em>The Foot</em>. 2014.</li>
+              <li>Randomised controlled trial: prefabricated foot orthoses for chronic non-specific low back pain (no significant benefit). 2023.</li>
+              <li>Wainner RS, Whitman JM, Cleland JA, Flynn TW. Regional interdependence: a musculoskeletal examination model whose time has come. <em>Journal of Orthopaedic & Sports Physical Therapy</em>. 2007;37(11):658–660.</li>
+              <li>Sueki DG, Cleland JA, Wainner RS. A regional interdependence model of musculoskeletal dysfunction: research, mechanisms, and clinical implications. <em>Journal of Manual & Manipulative Therapy</em>. 2013;21(2):90–102.</li>
+              <li>Geraci MC, Brown W. Evidence-based treatment of hip and pelvic injuries in runners. <em>Physical Medicine and Rehabilitation Clinics of North America</em>. 2005;16(3):711–747.</li>
+              <li>Page P, Frank C, Lardner R. <em>Assessment and Treatment of Muscle Imbalance: The Janda Approach</em> (sensorimotor training; chain reactions; the foot's afferent role). Human Kinetics.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>

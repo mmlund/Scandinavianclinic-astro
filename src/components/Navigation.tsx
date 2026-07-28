@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo.jpg?url";
+import logo from "@/assets/logo.webp?url";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,4 +1,4 @@
-import heroEva from "@/assets/hero-eva.jpg?url";
+import heroEva from "@/assets/hero-eva.webp?url";
 
 export const Hero = () => {
   return (
