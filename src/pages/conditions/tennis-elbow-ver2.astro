@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgElbowProblem from '@/assets/Tennis_elbow_not_an_elbow_problem.png?url';
+import imgRadialNerve from '@/assets/Radial_nerve_path.png?url';
+import imgScapularControl from '@/assets/scapular_control_for_tennis_elbow.png?url';
+import imgWrongEnd from '@/assets/Scapula_cervical_core_control_for_tennis_elbow.png?url';
+import imgTendon from '@/assets/tennis-elbow-illustration.webp?url';
+import imgEvaConsultation from '@/assets/eva-andersson-portrait.webp?url';
+import logo from '@/assets/logo.webp?url';
+---
+
+<BaseLayout 
+  title="Tennis Elbow Treatment in North Vancouver | Scandinavian Clinic"
+  description="Tennis elbow is pain on the outside of the elbow, usually from repeated gripping or wrist use. A thorough assessment looks at the neck, upper back, shoulder blade and nerve as well as the tendon itself."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="https://scandinavianclinic.com">
+            <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+          </a>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Tennis Elbow Treatment in North Vancouver</h1>
+        
+        <p class="text-xl font-medium text-foreground mb-4"><strong>Quick answer</strong>: Tennis elbow is pain on the outside of the elbow, usually from repeated gripping or wrist use — you don't have to play tennis to get it. Most cases settle eventually, but a significant number don't respond to treatment aimed only at the elbow. That's because the painful tendon is often the place where a problem ends up, not where it's being generated. A thorough assessment looks at the neck, upper back, shoulder blade and nerve as well as the tendon itself.</p>
+        
+        <p class="text-lg text-muted-foreground mb-4">You don't need to play tennis. Gripping a coffee mug, turning a doorknob, using a mouse, lifting a kettlebell, holding a paint roller — any repeated gripping or twisting can start a sharp pain on the outside of the elbow. It begins as an annoyance and escalates until you're dropping things and changing how you use your hand.</p>
+
+        <p class="text-lg text-muted-foreground mb-4">Most people are then told the same thing: it's the tendon, rest it, brace it, do these wrist exercises. For many, that works. For the people it doesn't work for, the reason is usually that the tendon was never the whole problem.</p>
+
+        <p class="text-lg text-muted-foreground mb-12">At Scandinavian Clinic, Eva Andersson, RMT, assesses and treats the whole arm and the structures above it — the way she was trained in Sweden and in the Prague School tradition.</p>
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+          
+          <div class="my-8">
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Appointment</a>
+            <a href="https://scandinavianclinic.com" class="inline-block text-primary font-medium py-3 hover:underline">See all conditions Eva treats</a>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why tennis elbow is often not just an elbow problem</h2>
+
+          <img src={imgElbowProblem} alt="The arm as a chain — neck, shoulder blade, upper arm, forearm, elbow" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>This isn't a fringe position. In 2022, the American Physical Therapy Association published a national clinical practice guideline on lateral elbow pain that formally describes three types of presentation — and the third is "elbow plus cervical": elbow symptoms accompanied by neck pain, diffuse arm pain, or nerve-type pain. The guideline advises clinicians that they may add treatment directed at the neck, upper back or wrist when problems in those areas are found (Lucado et al., JOSPT, 2022).</p>
+          
+          <p>In other words: the idea that some tennis elbow is a regional problem rather than a local one is now written into mainstream guidance. What the guideline doesn't do — and what most clinics still don't do — is systematically look for it.</p>
+          
+          <p>And it's frequently there even when it doesn't announce itself. A case-control study of 165 people with tennis elbow found that more than a third had measurable dysfunction in the neck, and 41% had a positive nerve-tension test for the radial nerve — and this was in a group specifically selected to exclude anyone who reported neck or arm symptoms (Coombes et al., JMPT, 2014). These people did not think they had a neck problem. It was found on examination.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-8">The nerve can be part of it</h3>
+
+          <img src={imgRadialNerve} alt="The radial nerve pathway" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>The radial nerve runs from the neck, down the arm, and past the outside of the elbow on its way to the hand. Ultrasound imaging has shown that in people with tennis elbow, this nerve is measurably thicker and more sensitive to pressure along its course than in pain-free people (Cancela-Cilleruelo et al., Diagnostics, 2023). Where the nerve is involved, it can produce pain that looks and feels like tendon pain.</p>
+
+          <p>And treating above the elbow changes what happens at the elbow. This is the finding that is hardest to explain if tennis elbow is purely local:</p>
+          
+          <ul class="space-y-4">
+            <li>In a placebo-controlled, double-blind trial, a single treatment applied to the neck immediately increased pain-free grip strength in the affected hand (Vicenzino et al., Pain, 1996).</li>
+            <li>In a placebo-controlled trial with a sham comparison, a single two-minute mobilisation of the mid-back increased pain-free grip strength by an average of 4.4 kg compared with sham (Zunke et al., BMC Musculoskeletal Disorders, 2020).</li>
+          </ul>
+
+          <p class="font-medium mt-4">Nobody touched the elbow. The grip got stronger.</p>
+
+          <p class="mt-4"><strong>Honest limits.</strong> Both of those studies measured an immediate, single-session effect — they show the connection is real, not that one treatment fixes the problem. And these studies show that neck and mid-back findings travel with tennis elbow and influence it. They do not show that the neck causes it. That distinction matters, and any clinic that blurs it is overselling.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Where the load is actually coming from</h2>
+
+          <img src={imgScapularControl} alt="Shoulder-blade stabilisers and the forearm picking up the slack" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>If the elbow is where it ends up, the next question is what's driving it there. Two things come up repeatedly in assessment.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4">The shoulder blade</h3>
+          <p>People with tennis elbow have measurably reduced strength and endurance in the muscles that stabilise the shoulder blade — the middle and lower trapezius and serratus anterior — compared with matched, pain-free people (Day et al., JOSPT, 2015). When the shoulder blade isn't providing a stable base, the muscles further down the arm end up working as secondary stabilisers every time you grip.</p>
+          <p>Whether that weakness is a cause of the elbow pain or a consequence of it is genuinely not established — the authors of that study say so themselves. What it does mean is that if nobody tests it, nobody addresses it.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-8">The base underneath the shoulder blade</h3>
+          <p>Eva's training in Dynamic Neuromuscular Stabilisation (DNS) — developed at the Prague School of Rehabilitation Medicine — is built around the idea that the arm can only work well from a stable trunk, and that breathing and postural patterns set that foundation. There is supporting mechanistic work here: in one small controlled study of healthy adults, six weeks of shoulder-girdle stabilisation exercise increased hand grip and pinch strength (Kobesova et al., 2015).</p>
+          
+          <p>We want to be straight about what that is and isn't. It's a rationale for training the shoulder girdle as part of elbow rehabilitation. It is not evidence that DNS treats tennis elbow — no trial has tested DNS for any elbow condition. The Prague School approach (Janda, Lewit, Kolář) is best described as what it is: a systematic clinical-reasoning framework for assessing how movement dysfunction in one area shows up in another, developed over decades of clinical observation, which guides how Eva examines you. It is not a proven mechanism, and we won't present it as one.</p>
+
+          <p><strong>One more honest caveat.</strong> Movement faults are common in people with no pain at all. Around half of people with no shoulder symptoms whatsoever show the shoulder-blade movement pattern often labelled "scapular dyskinesis" (Salamh et al., IJSPT, 2023). So finding a movement fault doesn't automatically mean it's the problem. It means it goes on the list to be tested against your actual symptoms — not treated on sight.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why the tendon still matters</h2>
+
+          <img src={imgTendon} alt="Tennis elbow tendon illustration" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>The tendon is real, and it does need attention — just not exclusively.</p>
+
+          <p>Tennis elbow is now understood as a degenerative tendinopathy (wear and failed healing in the tendon), not active inflammation. That's part of why rest and anti-inflammatories so often disappoint, and why gradually rebuilding the tendon's capacity to handle load matters more than protecting it.</p>
+
+          <p>Exercise is better supported than passive treatment alone for the tendon itself (Yoon et al., J Clin Med, 2021). What Eva prescribes is pain-free isometric holds — sustained, gentle contractions without movement, at a level that doesn't provoke your symptoms. They're used because they can settle tendon pain while keeping the tendon working rather than protected.</p>
+
+          <p>You may have been given a heavier eccentric-loading programme elsewhere, or seen one online. Eva doesn't work that way, and there's a reasonable case for it: recent work argues directly against treating local eccentric exercise as the gold standard for this condition, recommending instead that the wrist, forearm and shoulder be addressed as a connected chain (Stasinopoulos, J Clin Med, 2022).</p>
+
+          <p>But the tendon's condition doesn't explain how much it hurts. MRI and ultrasound findings of tendon damage do not reliably correlate with pain or function in tennis elbow (Chourasia et al., JOSPT, 2013). And tendon abnormalities show up on scans in plenty of people with no symptoms at all — roughly 10% of people aged 35–44, rising to around 60% by ages 55–65 (Paluch et al., Shoulder & Elbow, 2022).</p>
+
+          <p>That is the clearest single argument for why elbow-only treatment has a ceiling. If the state of the tendon doesn't predict the pain, then treating only the tendon can't be the complete answer.</p>
+
+          <p class="font-medium mt-4 text-xl">Load the tendon. Also find out what's overloading it.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why your last treatment didn't work</h2>
+
+          <img src={imgWrongEnd} alt="The treated the wrong end idea — brace at the elbow, untouched neck and shoulder blade" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p><em>This section is for the people who have already done the brace, the wrist exercises, and possibly an injection.</em></p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-6">Neck symptoms predict a poor result</h3>
+          <p>In a pooled cohort of 349 people with tennis elbow, concomitant neck pain was the only factor that predicted a poor outcome at twelve months (Smidt et al., 2006). In a separate cohort, self-reported nerve symptoms independently predicted worse pain and disability after eight weeks of physiotherapy (Waugh et al., Arch Phys Med Rehabil, 2004).</p>
+          <p>If those things are present and nobody assesses them, the treatment plan is working against a headwind it can't see.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-8">Adding treatment above the elbow changes outcomes</h3>
+          <p>A 2024 multicentre randomised trial of 143 people found that adding treatment directed at the neck and upper limb to a standard multimodal physiotherapy programme produced substantially better pain and function at three months than the standard programme alone — 78% of that group rated themselves much improved, compared with 36% (Dunning et al., Clinical Rehabilitation, 2024).</p>
+          <p>In context: the added treatment in that trial bundled several techniques together, including some outside the scope of massage therapy in BC, so it can't tell us which single technique did the work — and Eva doesn't replicate that protocol. What it does support is the principle: treating beyond the elbow, in people who have findings beyond the elbow, produces better results than not doing so.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mb-4 mt-8">A steroid injection is not a long-term answer</h3>
+          <p>In a randomised trial, corticosteroid injection gave the best result at six weeks and the worst result long-term, with a high recurrence rate. Physiotherapy was better than a wait-and-see approach in the short term, and by twelve months most people in both groups had improved (Bisset et al., BMJ, 2006).</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How Eva assesses and treats tennis elbow</h2>
+          <p class="mb-6">Eva's assessment is longer than most people expect, and it deliberately works from the top down.</p>
+
+          <ul class="space-y-6 mt-6">
+            <li><strong>1. Neck and upper back.</strong> Cervical and thoracic mobility and segmental function, tested against your symptoms — because these findings are frequently present, frequently silent, and predict a poorer response to elbow-only care.</li>
+            <li><strong>2. Shoulder blade.</strong> Position, control, and the strength and endurance of the stabilisers. Where deficits are found and relate to your symptoms, they're trained.</li>
+            <li><strong>3. Nerve.</strong> Neurodynamic assessment of radial nerve mobility from the neck through the arm, plus the tissue interfaces it passes through — including around the supinator arch near the outside of the elbow. Where the nerve is involved, gentle mobilisation is used alongside restoring movement and control, never on its own.</li>
+            <li><strong>4. Trunk and breathing.</strong> The DNS-informed part of the assessment: how you stabilise and breathe, because the shoulder blade needs a base to work from. This is a framework for finding what to work on — not a separate treatment being claimed for your elbow.</li>
+            <li><strong>5. Soft tissue at the forearm.</strong> The extensor group and supinator are commonly overactive and tender, particularly extensor carpi radialis brevis. Soft-tissue and fascial work is used to settle overactive tissue so movement can be re-educated — not simply to "increase blood flow."</li>
+            <li><strong>6. Pain-free isometric holds.</strong> Sustained, gentle contractions held without movement, prescribed at a level that doesn't provoke your symptoms. These are used because they can settle tendon pain while keeping the tendon working rather than protected — and because they're something you can do at home, between sessions, without needing equipment.</li>
+          </ul>
+
+          <p class="mt-6">The sequence matters. Working from the neck down is how the contributing factors get found; the home exercises are what carry the work forward between appointments. Neither substitutes for the other.</p>
+          <p>Manual therapy's role should be stated proportionately: a 2024 Cochrane review found low-certainty evidence that manual therapy and exercise may modestly reduce pain and disability, with benefit unlikely to be sustained without continued exercise (Wallis et al., Cochrane, 2024). Hands-on work is a useful part of a plan — what you do between sessions is what sustains it.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to expect</h2>
+          
+          <p>Tennis elbow does get better on its own for most people — around 80% of cases resolve within a year without specific treatment (Sayegh & Strauch, Clin Orthop Relat Res, 2015). It's worth saying that plainly rather than implying you'll be stuck forever without help.</p>
+          
+          <p>What treatment is for is the rest of it: getting there faster, being able to keep working and training in the meantime, reducing the chance of recurrence, and — most importantly — the cases that aren't resolving, where something beyond the tendon is holding it up.</p>
+          
+          <p>Tendons remodel slowly because of their limited blood supply, so expect progress over weeks and months rather than days. Established cases can take considerably longer than general health resources suggest. Eva will be clear about expected timelines and adjust as you go.</p>
+          
+          <p class="font-medium">Your home exercises do more of the work than the sessions do. Consistency between appointments directly affects how fast this moves.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-12 items-center my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              
+              <ul class="space-y-4">
+                <li><strong>Assessment that starts above the elbow.</strong> Neck, upper back, shoulder blade, nerve and trunk are examined as standard — not as an afterthought when the elbow work hasn't landed.</li>
+                <li><strong>Swedish-trained orthopaedic manual therapy.</strong> Including neurodynamic assessment of the upper limb.</li>
+                <li><strong>Czech-trained in Dynamic Neuromuscular Stabilisation.</strong> Eva trained in the Prague School tradition (Janda, Lewit, Kolář), which is where the systematic approach to assessing movement across regions comes from. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Honest about what the evidence does and doesn't show.</strong> You'll find limits and caveats stated on this page. That's deliberate.</li>
+                <li><strong>Covered by most extended health plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+              </ul>
+              <div class="mt-6">
+                <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+              </div>
+            </div>
+            <div>
+              <img src={imgEvaConsultation} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why would my neck matter if my elbow is what hurts?</h3>
+              <p>Because the nerves supplying your forearm come from your neck, and because the shoulder blade and upper back set the base your arm works from. In one study of people with tennis elbow who reported no neck symptoms, over a third still had measurable neck dysfunction on examination and 41% had a positive nerve-tension test (Coombes et al., 2014). It doesn't mean your neck is the cause. It means it's worth checking.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does that mean my elbow isn't really the problem?</h3>
+              <p>No — the tendon is genuinely involved and genuinely needs loading. The point is that in a lot of people it isn't the only thing involved, and treatment that ignores everything else has a ceiling.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can you get tennis elbow without playing tennis?</h3>
+              <p>Yes — most people who get it never have. Weightlifting, climbing, painting, plumbing, carpentry, mouse use and repetitive kitchen work are all common causes.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is tennis elbow an inflammation?</h3>
+              <p>Not in the way most people assume. It's a degenerative, failed-healing change in the tendon rather than an actively inflamed one — which is why rest and anti-inflammatories alone often aren't enough.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">I had a scan that showed tendon damage. Doesn't that settle it?</h3>
+              <p>Not quite. Imaging findings in tennis elbow don't reliably track with how much pain or dysfunction people have (Chourasia et al., 2013), and similar tendon changes turn up in a large share of people with no symptoms at all — around 60% of people aged 55–65 (Paluch et al., 2022). A scan is one piece of information, not the whole picture.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why does it keep coming back after it feels better?</h3>
+              <p>Two common reasons. The pain settles before the tendon's load capacity has actually been rebuilt, so returning to the same demands reproduces the strain. And if something further up the chain is driving the overload and was never addressed, it's still driving it.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why didn't my brace or my injection work?</h3>
+              <p>A brace changes where load goes; it doesn't rebuild the tendon or change what's overloading it. A steroid injection gives good short-term relief but has been shown to produce worse long-term outcomes with a high recurrence rate (Bisset et al., BMJ, 2006).</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Do I have to stop training or playing my sport?</h3>
+              <p>Usually not entirely. Modifying the specific aggravating movement — grip, load, equipment, technique — while keeping the rest of your activity going is often more effective and more realistic than complete rest.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does massage therapy help tennis elbow?</h3>
+              <p>Hands-on treatment can help settle overactive tissue and support recovery, and the evidence supports it as part of a plan rather than a standalone fix (Wallis et al., Cochrane, 2024). What you do between sessions is what sustains it.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Will it go away on its own?</h3>
+              <p>For most people, yes, within about a year (Sayegh & Strauch, 2015). Treatment is about getting there sooner, staying functional in the meantime, reducing recurrence — and identifying the cases where it isn't resolving and finding out why.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule your visit</h2>
+            <p class="mb-8 max-w-2xl mx-auto">If your tennis elbow keeps returning, or hasn't responded to rest, bracing or an injection, the useful next step is an assessment that looks past the elbow.</p>
+            <p class="mb-8 max-w-2xl mx-auto">Most extended health plans in BC cover Registered Massage Therapy. For work-related (WorkSafeBC / WCB) cases, please call and speak with Eva directly to arrange — <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a>.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Appointment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ul class="list-none space-y-2 text-muted-foreground/80">
+              <li>Lucado AM, Day JM, Vincent JI, et al. Lateral elbow pain and muscle function impairments: clinical practice guideline. JOSPT. 2022;52(12):CPG1–CPG111.</li>
+              <li>Coombes BK, Bisset L, Vicenzino B. Cervical and thoracic spine mobility and radial nerve neurodynamics in lateral epicondylalgia. J Manipulative Physiol Ther. 2014;37(2):79–86.</li>
+              <li>Cancela-Cilleruelo I, Rodríguez-Jiménez J, Fernández-de-las-Peñas C, et al. Radial nerve ultrasound and pressure pain sensitivity in lateral epicondylalgia. Diagnostics. 2023;13(15):2488.</li>
+              <li>Vicenzino B, Collins D, Wright A. The initial effects of a cervical spine manipulative physiotherapy treatment on the pain and dysfunction of lateral epicondylalgia. Pain. 1996;68(1):69–74.</li>
+              <li>Zunke P, Auffarth A, Hitzl W, Moursy M. The effect of manual therapy to the thoracic spine on pain-free grip and sympathetic activity in patients with lateral epicondylalgia humeri. BMC Musculoskelet Disord. 2020;21:186.</li>
+              <li>Dunning J, Mourad F, Bliton P, et al. Cervical spine thrust manipulation and dry needling added to multimodal physical therapy for lateral epicondylalgia. Clinical Rehabilitation. 2024;38(8):1063–1079.</li>
+              <li>Day JM, Bush H, Nitz AJ, Uhl TL. Scapular muscle performance in individuals with lateral epicondylalgia. JOSPT. 2015;45(5):414–424.</li>
+              <li>Smidt N, Lewis M, van der Windt DAWM, et al. Lateral epicondylitis in general practice: course and prognostic indicators of outcome. J Rheumatol. 2006;33(10):2053–2059.</li>
+              <li>Waugh EJ, Jaglal SB, Davis AM, et al. Factors associated with prognosis of lateral epicondylitis after 8 weeks of physical therapy. Arch Phys Med Rehabil. 2004;85(2):308–318.</li>
+              <li>Chourasia AO, Buhr KA, Rabago DP, et al. Relationships between biomechanics, tendon pathology, and function in individuals with lateral epicondylosis. JOSPT. 2013;43(6):368–378.</li>
+              <li>Paluch Ł, Burden E, Batten T, et al. Prevalence of common extensor tendon abnormality on MRI in asymptomatic individuals. Shoulder & Elbow. 2022.</li>
+              <li>Sayegh ET, Strauch RJ. Does nonsurgical treatment improve longitudinal outcomes of lateral epicondylitis over no treatment? A meta-analysis. Clin Orthop Relat Res. 2015;473(3):1093–1107.</li>
+              <li>Bisset L, Beller E, Jull G, et al. Mobilisation with movement and exercise, corticosteroid injection, or wait and see for tennis elbow: randomised trial. BMJ. 2006;333(7575):939.</li>
+              <li>Salamh P, Hanney WJ, Boles T, et al. Is it time to normalize scapular dyskinesis? Int J Sports Phys Ther. 2023.</li>
+              <li>Kobesova A, Dzvonik J, Kolar P, et al. Effects of shoulder girdle dynamic stabilization exercise on hand muscle strength. Isokinetics and Exercise Science. 2015;23(1):21–32.</li>
+              <li>Yoon SY, Kim YW, Shin IS, et al. The beneficial effects of eccentric exercise in the management of lateral elbow tendinopathy. J Clin Med. 2021;10(17):3968.</li>
+              <li>Stasinopoulos D. Stop using the eccentric exercises as the gold standard treatment for lateral elbow tendinopathy. J Clin Med. 2022;11(5):1325.</li>
+              <li>Wallis JA, Bourne AM, Jessup RL, et al. Manual therapy and exercise for lateral elbow pain. Cochrane Database Syst Rev. 2024;(5):CD013042.</li>
+            </ul>
+            <p class="mt-4 text-muted-foreground/80">Background reading (Prague School / functional tradition): Lewit K, <em>Manipulative Therapy: Musculoskeletal Medicine</em>; Page P, Frank C, Lardner R, <em>Assessment and Treatment of Muscle Imbalance: The Janda Approach</em>; Kobesová A, Kolář P, <em>Developmental kinesiology (DNS)</em>.</p>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>
