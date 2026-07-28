@@ -22,7 +22,7 @@ PAGE CONTENT BEGINS
 
 What to Expect from a Thorough Assessment
 
-[QUICK ANSWER — top of page] A thorough assessment has four parts: a detailed history, an examination of how you move — where range is lost and where your left and right sides no longer match, testing of the individual joints and spinal segments, and evaluation of your muscles as a working system. Asymmetry in movement is a key indicator as is an abnormal range of motion. The findings, not assumptions, guide the treatment.
+[Intro Paragraph — top of page] A thorough assessment has four parts: a detailed history, an examination of how you move — where range is lost and where your left and right sides no longer match, testing of the individual joints and spinal segments, and evaluation of your muscles as a working system. Asymmetry in movement is a key indicator as is an abnormal range of motion. The findings, not assumptions, guide the treatment.
 
 How do you know whether a therapist will really assess you?
 
@@ -162,7 +162,7 @@ Hedged outcome claims ("may," "often," "typically"): pass — no "will fix" lang
 
 Conditions framed as common, not universal: pass.
 
-Structure audit (strategy Section 5.2/5.3): quick answer 58 words in first 30% — pass; all H2s question-phrased except practical/CTA sections — pass; H2 sections 120–180 words — pass; FAQ 7 items, 30–50 words each — pass; byline + last-updated — pass.
+Structure audit (strategy Section 5.2/5.3): intro paragraph 58 words in first 30% — pass; all H2s question-phrased except practical/CTA sections — pass; H2 sections 120–180 words — pass; FAQ 7 items, 30–50 words each — pass; byline + last-updated — pass.
 
 Open items for Mats
 
@@ -204,7 +204,7 @@ PAGE CONTENT BEGINS
 
 Why Does Pain Keep Coming Back After Treatment?
 
-[QUICK ANSWER — top of page] When pain keeps returning, it usually means the root cause was never identified — treatment eased the symptom where it hurt without addressing why it started. The reasons differ from person to person: often a movement or stabilisation pattern the body has adapted around, sometimes a nervous system that has grown more sensitive to pain over time. Finding which applies to you takes a thorough assessment.
+[Intro Paragraph — top of page] When pain keeps returning, it usually means the root cause was never identified — treatment eased the symptom where it hurt without addressing why it started. The reasons differ from person to person: often a movement or stabilisation pattern the body has adapted around, sometimes a nervous system that has grown more sensitive to pain over time. Finding which applies to you takes a thorough assessment.
 
 You have probably tried a number of things already. Maybe you had some relief — but then, weeks or months later, the same pattern in your lower back, neck, shoulder, or hip shows up again. More often it means the underlying cause hasn't been found and addressed yet.
 
@@ -302,7 +302,7 @@ DNS as a modality within RMT scope: pass — insurance framed as RMT coverage.
 
 Root-cause-first framing (Mats's correction): pass — recurrence attributed primarily to cause-not-found; sensitisation/motor-pattern presented as often-missed contributors found by assessment, with heavy cross-linking to the Thorough Assessment page, not as the sole explanation.
 
-AI-structure (strategy 5.2/5.3): quick answer ~60 words in first 30% — pass; H2s phrased as real patient questions (fan-out: "chiropractor vs physio vs massage," "physio not working for sciatica") — pass; sections self-contained — pass; FAQ conversational, self-contained — pass; byline + last-updated + reference list — pass.
+AI-structure (strategy 5.2/5.3): intro paragraph ~60 words in first 30% — pass; H2s phrased as real patient questions (fan-out: "chiropractor vs physio vs massage," "physio not working for sciatica") — pass; sections self-contained — pass; FAQ conversational, self-contained — pass; byline + last-updated + reference list — pass.
 
 Open items for Mats
 
