@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgHero from '@/assets/deskwork_can_lead-to_hip_pain.png?url';
+import imgCauses from '@/assets/Hip Pain Female Patient.png?url';
+import imgSitting from '@/assets/Lower_crossed_syndrome_and_hip_pain.png?url';
+import imgLowBack from '@/assets/Trunk_stability_and_the_hip.png?url';
+import imgEvaPortrait from '@/assets/eva-andersson-portrait.jpg?url';
+import logo from '@/assets/logo.jpg?url';
+---
+
+<BaseLayout 
+  title="Hip Pain Treatment in North Vancouver | Scandinavian Clinic"
+  description="Hip pain quietly reshapes your day. At Scandinavian Clinic, Eva Andersson, RMT, addresses the movement patterns contributing to your symptoms. North Vancouver RMT."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="https://scandinavianclinic.com">
+            <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+          </a>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Hip Pain Treatment in North Vancouver</h1>
+        
+        <div class="bg-accent/10 p-6 rounded-xl border border-accent/20 mb-8">
+          <p class="font-medium text-foreground mb-2"><strong>QUICK ANSWER</strong></p>
+          <p class="text-muted-foreground m-0"><strong>What causes hip pain?</strong> Hip pain has several common patterns: pain over the point of the hip (often a gluteal tendon problem, sometimes called bursitis), deeper groin pain with morning stiffness (often osteoarthritis), and — very commonly in people who sit a lot — hip and lower-back discomfort linked to weak glutes and tight hip flexors. Because these need different approaches, an assessment of how your hip, pelvis, and lower back work together tends to give more lasting relief than treating the sore spot alone.</p>
+        </div>
+        
+        <p class="text-lg text-muted-foreground mb-4">Hip pain quietly reshapes your day — climbing stairs, getting out of the car, sleeping on that side, or standing up after a long sit. Often there's no single injury behind it; it simply built up over time, frequently alongside long hours of sitting.</p>
+        
+        <p class="text-lg text-muted-foreground mb-8">At Scandinavian Clinic, Eva Andersson, RMT, uses clinical Registered Massage Therapy to look at how your hip, pelvis, and lower back work together — and to address the movement patterns contributing to your symptoms, not just the sore spot.</p>
+
+        <div class="my-8 flex flex-wrap gap-4 items-center">
+          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors">Book Your Assessment</a>
+          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+        </div>
+
+        <img src={imgHero} alt="A person standing up from a desk chair, hand on the outer/point of the hip, slight wince" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What are the most common causes of hip pain?</h2>
+          
+          <p>Two patterns account for most hip pain seen in practice, and telling them apart matters because they're managed differently.</p>
+          
+          <p><strong>Pain over the point of the hip (lateral hip pain).</strong> Sharp or aching pain on the outside of the hip that can spread down the outer thigh, often worse lying on that side at night, on stairs, or after long walks. This was traditionally called "trochanteric bursitis," but it's now usually called greater trochanteric pain syndrome, and it's understood to be a gluteal tendon problem more often than true inflammation of a bursa — which matters, because a tendon that has become overloaded responds to graded loading, not just rest and anti-inflammatories.</p>
+          
+          <p><strong>Deeper groin pain with stiffness (hip osteoarthritis).</strong> Groin pain — sometimes radiating to the knee or buttock, with stiffness that's worst in the morning or after sitting, and difficulty with tasks like putting on socks — is often linked to changes in the joint cartilage. It's very treatable, and importantly cartilage actually thrives on regular, well-controlled movement and load, so the aim is to restore comfortable functional load tolerance rather than to protect the joint from moving.</p>
+          
+          <img src={imgCauses} alt="Simple side-by-side: lateral point-of-hip vs. groin/arthritis pain locations" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>Other causes include muscle strains, tendon irritation, and nerve-related pain such as sciatica or a pinched nerve at the outer thigh (meralgia paraesthetica) — which is one reason persistent or unexplained hip pain is worth having properly assessed.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why does my hip hurt after sitting all day, without an injury?</h2>
+          
+          <p>This is one of the most common patterns, especially for people with desk jobs. Long hours of sitting keep the hip flexors at the front of the hip in a shortened position, while the gluteal muscles — which should be actively supporting the hip and pelvis — stay switched off for hours at a time. Czech neurologist Vladimir Janda described this front-to-back imbalance — tight hip flexors and lower-back muscles paired with weaker glutes and deep abdominals — as lower crossed syndrome (the lower-body counterpart to the upper crossed syndrome on our shoulder page).</p>
+          
+          <img src={imgSitting} alt="Lower crossed syndrome diagram — tight hip flexors + lower-back extensors vs. weak glutes + deep abdominals" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          
+          <p><strong>An honest note on the evidence:</strong> the specific mechanism Janda proposed — that tight hip flexors directly "switch off" the glutes — has not held up well in more recent research, and some researchers have questioned that part of the model. What is well-supported is the practical association: gluteal weakness reliably travels with hip and low-back pain, and people with chronic low-back pain have been found to have measurably weaker gluteal muscles than those without. So the pattern is a useful, clinically relevant lens — and it's assessed individually rather than assumed.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How does the hip relate to lower back pain?</h2>
+          <p>The hip and lower back work as one connected system, not two separate problems. In the Dynamic Neuromuscular Stabilization (DNS) framework developed by Professor Pavel Kolář and colleagues, the deep trunk and pelvic stabilising system — the diaphragm, pelvic floor, and abdominal wall (the abdominal "canister") — normally activates automatically to regulate intra-abdominal pressure (IAP) before the hip flexors engage during movement, stabilising the spine and pelvis from the inside. When that timing is disrupted — common with prolonged sitting — the lower back tends to compensate for inadequate hip and pelvic stability, which can contribute to pain in both areas at once (Frank, Kobesová & Kolář, Int J Sports Phys Ther, 2013).</p>
+          
+          <img src={imgLowBack} alt="Connected-system sketch: trunk/pelvis stabilisers leading to the hip" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>This has a practical treatment implication: adding hip and gluteal work to standard low-back-pain care has been shown to improve outcomes more than treating the back alone — which is why an assessment looks at the hip and lower back together, whichever one hurts more.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When does hip pain need prompt medical attention?</h2>
+          <p>Most hip pain responds well to conservative care and isn't urgent. But some situations warrant prompt medical evaluation rather than self-treatment:</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <ul class="mb-0 space-y-2">
+              <li>A sudden inability to bear weight or move the hip, especially after a fall — this can indicate a fracture and needs prompt assessment.</li>
+              <li>Severe pain with significant swelling, redness, warmth, or fever — which can indicate infection or significant inflammation.</li>
+              <li>Hip pain with unexplained weight loss, or a history of cancer — because, uncommonly, bone can be involved.</li>
+              <li>Numbness, tingling, or weakness down the leg — this can point to a nerve issue from the lower back (sciatica) or the outer thigh rather than the hip joint itself.</li>
+            </ul>
+          </div>
+          
+          <p>Outside of these, hip pain that hasn't settled after a couple of weeks is a reasonable point to have it properly assessed.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with hip pain?</h2>
+
+          <ul class="space-y-4">
+            <li><strong>For hip osteoarthritis, exercise is the strongest-supported treatment.</strong> High-quality evidence shows land-based exercise meaningfully reduces pain and improves function, with benefits that carry beyond the treatment period (Fransen et al., Cochrane Review, 2014).</li>
+            <li><strong>Manual therapy helps in the short term — with honest limits on the long term.</strong> Combined with exercise, manual therapy can improve pain and function, especially early on (Sampath et al., Clinical Rehabilitation, 2016). But a more rigorous review found no added long-term benefit of manual therapy over exercise alone for hip and knee osteoarthritis (JOSPT, 2022). The honest synthesis: it's a useful, often-helpful part of care — particularly early — but a durable plan should be built around exercise and strengthening.</li>
+            <li><strong>For sitting-related hip pain, restoring gluteal strength and hip-flexor length</strong> is a reasonable, evidence-consistent approach. Given the well-supported link between gluteal weakness and hip/low-back pain, a program that rebuilds gluteal strength and activation while addressing hip-flexor tightness fits this common presentation.</li>
+            <li><strong>For younger, active adults, longer targeted programs work best.</strong> Research on hip-related pain in younger and middle-aged adults found the best results with strengthening programs run for at least three months and matched to the presentation, rather than generic exercise.</li>
+          </ul>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Hip Pain</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Looking at the hip, pelvis, and lower back together</h3>
+          <p>Eva's assessment is deliberately broad. She reviews exactly where the pain is felt and what aggravates it (the key to telling lateral-hip tendon pain from groin/arthritis pain), tests gluteal strength and hip-flexor length for the sitting-related imbalance pattern, and looks at how the hip and lower back are sharing load — because these are the functional contributors that keep a hip overloaded.</p>
+
+          <ul class="space-y-4 my-8">
+            <li><strong>Manual therapy & soft-tissue work — settling the overactive muscles.</strong> Gentle, low-velocity joint mobilisation (within RMT scope — not high-velocity thrusts) and soft-tissue release of the tight, overactive hip flexors and lower-back muscles, to reduce guarding and open a window to re-train the underactive stabilisers.</li>
+            <li><strong>Gluteal activation & progressive loading — the core of recovery.</strong> An individualised program that rebuilds gluteal strength and control — supporting a well-centred hip under load — and, where a tendon is involved, loads it gradually, dosed and progressed over time rather than handed out as a generic sheet.</li>
+            <li><strong>DNS for trunk and pelvic stability.</strong> Retraining the deep trunk and pelvic stabilisers to regulate intra-abdominal pressure (IAP) — the diaphragm, pelvic floor, and abdominal canister working together — so they activate before hip movement and give the hip a stable, centred base to work from. This draws on the developmental-kinesiology basis of the method (Kobesová & Kolář, 2014). <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more about DNS →</a></li>
+            <li><strong>Restoring functional joint play & centration.</strong> Where a hip or pelvic segment moves stiffly, gentle mobilisation restores its accessory glide and reduces the reflex muscle guarding around it — often a compensation to altered stability rather than a joint simply "stuck" out of place (a principle emphasised by Karel Lewit). The aim, paired with the loading program, is better dynamic joint centration — the hip articulating in its optimal position under load — which is particularly valuable for protecting an osteoarthritic hip.</li>
+          </ul>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
+          <p>Hip rehabilitation usually unfolds over weeks, not days, and depends heavily on consistent home exercise between sessions. Eva will explain what the assessment finds, what functional factors may be contributing, and outline a realistic recovery plan for your situation. If imaging or another practitioner's input is warranted — for example after a fall, or if progress stalls — she'll suggest consulting your family physician for further evaluation.</p>
+          <p>The goal isn't an indefinite treatment schedule but giving you the movement control, dynamic joint centration, and loading program to manage the hip yourself.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-8 items-start my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <h3 class="text-xl font-semibold text-foreground mb-4">A whole-pattern approach to hip pain</h3>
+              <ul class="space-y-4 mb-8">
+                <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's training includes assessment of the hip, pelvis, and lower back as a connected system, not the sore joint alone.</li>
+                <li><strong>Czech-trained DNS therapist.</strong> Hip function depends on trunk and pelvic stability; DNS trains that foundation. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Assessment-first.</strong> Treatment follows a thorough assessment of the functional pattern behind the pain — including lower crossed syndrome, common in persistent hip and low-back complaints — rather than a generic exercise routine, and addresses the sore joint within that wider pattern rather than in isolation.</li>
+                <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+              </ul>
+              
+              <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+            </div>
+            <div>
+              <img src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why does my hip hurt after sitting all day, even without an injury?</h3>
+              <p>It's commonly linked to a muscle-imbalance pattern from prolonged sitting — tight hip flexors with weaker, underactive glutes (lower crossed syndrome) — which changes how load moves through the hip and lower back. It's a useful lens, though the exact mechanism is still debated, so it's assessed individually.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is my hip pain bursitis or arthritis?</h3>
+              <p>Pain over the point of the hip, worse lying on that side, is usually a lateral-hip tendon problem (greater trochanteric pain syndrome, often called bursitis); deeper groin pain with morning stiffness is more typical of arthritis. An assessment helps tell them apart, because they're managed differently.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does hip pain affect my lower back, or vice versa?</h3>
+              <p>Often, yes — the hip and lower back work as a connected system, and addressing hip and pelvic function alongside back care has been shown to improve outcomes more than treating the back alone.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does massage or manual therapy help with hip pain?</h3>
+              <p>It can, particularly in the short term and combined with exercise. For arthritic hip pain, the evidence for long-term added benefit of manual therapy over exercise alone is limited, so a lasting plan should also include strengthening (Sampath et al., 2016; JOSPT, 2022).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can strengthening my glutes actually fix hip pain?</h3>
+              <p>For pain linked to sitting and muscle imbalance, rebuilding gluteal strength and activation (alongside easing hip-flexor tightness) is a reasonable, evidence-consistent approach — best guided by an assessment rather than a generic routine.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">When should I see a doctor instead of starting treatment myself?</h3>
+              <p>Seek prompt care for sudden inability to bear weight after a fall, significant swelling or fever, or hip pain with unexplained weight loss.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for hip pain treatment</h3>
+            <p class="mb-8 max-w-2xl mx-auto">If your hip pain developed gradually — particularly alongside long hours of sitting — or hasn't fully resolved with previous treatment, a thorough assessment can identify the pattern behind it.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Assessment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li>Fransen M, McConnell S, Hernandez-Molina G, Reichenbach S. Exercise for osteoarthritis of the hip. <em>Cochrane Database of Systematic Reviews</em>. 2014;(4):CD007912.</li>
+              <li>Sampath KK, Mani R, Miyamori T, Tumilty S. The effects of manual therapy or exercise therapy or both in people with hip osteoarthritis: a systematic review and meta-analysis. <em>Clinical Rehabilitation</em>. 2016;30(12):1141–1155.</li>
+              <li>Adding manual therapy to exercise for hip and knee osteoarthritis (systematic review). <em>Journal of Orthopaedic & Sports Physical Therapy</em>. 2022.</li>
+              <li>Frank C, Kobesová A, Kolář P. Dynamic neuromuscular stabilization & sports rehabilitation. <em>International Journal of Sports Physical Therapy</em>. 2013;8(1):62–73.</li>
+              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
+              <li>Page P, Frank C, Lardner R. <em>Assessment and Treatment of Muscle Imbalance: The Janda Approach (lower crossed syndrome)</em>. Human Kinetics.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>
