@@ -1,10 +1,14 @@
-# Astro Starter Kit: Basics
+# Scandinavian Clinic Astro Rebuilt
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repository contains the source code for the Scandinavian Clinic website, rebuilt using [Astro](https://astro.build/).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Deployment
+
+This site is deployed to `go.scandinavianclinic.com` via **Cloudflare Pages**. 
+The Cloudflare Pages project is directly connected to this GitHub repository. 
+
+**To publish changes to the live site:**
+Simply push your commits to the `main` branch (e.g. `git push origin main`). The Cloudflare Pages integration will automatically trigger a new build and deploy it to the live site. There are no manual deploy commands or GitHub Actions workflows required.
 
 ## 🚀 Project Structure
 
