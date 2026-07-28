@@ -138,16 +138,23 @@ import logo from '@/assets/logo.jpg?url';
 
           <hr class="my-12 border-border" />
 
-          <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
-          <h3 class="text-xl font-semibold text-foreground mb-4">A clinical approach to back pain</h3>
-          <ul class="space-y-4 mb-8">
-            <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's five-year Scandinavian education provides a high level of biomechanical assessment training.</li>
-            <li><strong>Czech-trained in DNS.</strong> DNS focuses directly on the deep-core stabilisation that is often involved when back pain develops and recurs. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
-            <li><strong>Assessment-first philosophy.</strong> Treatment starts only after a thorough assessment, not from assumptions about where it hurts.</li>
-            <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
-          </ul>
-          
-          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+          <div class="grid md:grid-cols-2 gap-8 items-start my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <h3 class="text-xl font-semibold text-foreground mb-4">A clinical approach to back pain</h3>
+              <ul class="space-y-4 mb-8">
+                <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's five-year Scandinavian education provides a high level of biomechanical assessment training.</li>
+                <li><strong>Czech-trained in DNS.</strong> DNS focuses directly on the deep-core stabilisation that is often involved when back pain develops and recurs. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Assessment-first philosophy.</strong> Treatment starts only after a thorough assessment, not from assumptions about where it hurts.</li>
+                <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+              </ul>
+              
+              <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+            </div>
+            <div>
+              <img src={imgFooter} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
 
           <hr class="my-12 border-border" />
 
@@ -214,10 +221,6 @@ import logo from '@/assets/logo.jpg?url';
         <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
         <p>Covered by most extended health insurance plans.</p>
         <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
-        
-        <div class="mt-8">
-          <img src={imgFooter} alt="Eva Andersson, RMT" class="w-full max-w-3xl mx-auto rounded-lg shadow-sm" />
-        </div>
       </div>
     </footer>
     

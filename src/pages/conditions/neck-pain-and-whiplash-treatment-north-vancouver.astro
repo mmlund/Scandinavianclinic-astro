@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgHero from '@/assets/Neck Pain Root Causes.jpg?url';
+import imgHeadaches from '@/assets/headaches-illustration.png?url';
+import imgWhiplash from '@/assets/whiplash_hyper extension_and_flexion.png?url';
+import imgHowWeTreat from '@/assets/stretching_for_neck_pain.jpg?url';
+import imgEvaPortrait from '@/assets/eva-andersson-portrait.jpg?url';
+import logo from '@/assets/logo.jpg?url';
+---
+
+<BaseLayout 
+  title="Neck Pain & Whiplash Treatment in North Vancouver | Scandinavian Clinic"
+  description="Most neck pain comes from posture, muscle tension, and everyday load on the neck's joints. Whiplash is a distinct injury with its own recovery pattern. North Vancouver RMT."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="https://scandinavianclinic.com">
+            <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+          </a>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Neck Pain & Whiplash Treatment in North Vancouver</h1>
+        
+        <div class="bg-accent/10 p-6 rounded-xl border border-accent/20 mb-8">
+          <p class="font-medium text-foreground mb-2"><strong>QUICK ANSWER</strong></p>
+          <p class="text-muted-foreground m-0">Most neck pain comes from posture, muscle tension, and everyday load on the neck's joints, and the majority improves within a few weeks. Whiplash — from a sudden jolt of the head, usually in a car accident — is a distinct injury with its own recovery pattern. Neck pain can also be the source of headaches. Because each of these needs a slightly different approach, a thorough assessment comes first.</p>
+        </div>
+        
+        <p class="text-lg text-muted-foreground mb-4">Neck pain rarely stays in one place. It creeps into your shoulders, wraps around the base of your skull, and may show up as tension headaches you blame on stress or screen time. Turning your head to check a blind spot becomes stiff and guarded. Sleep gets disrupted because no pillow position feels right.</p>
+        
+        <p class="text-lg text-muted-foreground mb-8">Most people assume neck pain is caused by posture or stress. Sometimes that's part of it — but persistent neck pain usually involves joint restrictions and muscle imbalances. At Scandinavian Clinic, Eva Andersson, RMT, uses clinical Registered Massage Therapy to assess your neck pain properly and address the movement mechanics and muscle imbalances contributing to your pain.</p>
+
+        <div class="my-8 flex flex-wrap gap-4 items-center">
+          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors">Book Your Assessment</a>
+          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+        </div>
+
+        <img src={imgHero} alt="The cervical spine, supporting musculature, and the upstream patterns that drive persistent neck pain" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Understanding Neck Pain</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Where neck pain actually comes from</h3>
+          
+          <p>The cervical spine — the seven vertebrae in your neck — is designed for mobility. It lets you look up, turn your head, and tilt to the side. But that mobility also makes it vulnerable when the structures supporting it aren't working well. For most neck pain, no single structural cause can be pinpointed even with imaging, and active self-care is the well-supported starting point rather than a search for one definitive culprit.</p>
+          <p>What many people don't realise is that neck pain frequently originates below the neck — in the thoracic spine (upper and mid back) and shoulder-blade region. When the thoracic spine becomes stiff — common in desk workers, drivers, and anyone who spends hours on screens — the neck compensates by moving more than it should. Over time, that overwork creates strain and pain.</p>
+          
+          <h4 class="text-xl font-bold text-foreground mt-8 mb-4">Common symptoms we treat:</h4>
+          <ul class="space-y-2">
+            <li>Stiffness or pain when turning your head, especially to one side</li>
+            <li>Aching at the base of the skull or behind the eyes</li>
+            <li>Pain or tension radiating into the shoulder or between the shoulder blades</li>
+            <li>Difficulty finding a comfortable sleeping position</li>
+            <li>Headaches that start at the back of the head and move forward</li>
+            <li>Numbness, tingling, or a "heavy" feeling in one or both arms</li>
+          </ul>
+
+          <p>Neck pain tends to build gradually — from occasional stiffness to constant tightness, reduced range of motion, and secondary headaches. Earlier treatment usually means faster recovery.</p>
+          
+          <p><strong>When to seek treatment:</strong> if neck stiffness or pain has lasted more than two weeks, if you've lost range of motion, or if you're getting headaches or arm symptoms alongside neck pain, a clinical assessment will clarify what's happening. (For urgent warning signs, see the red-flag section below.)</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Can neck pain cause headaches?</h2>
+          
+          <p>Yes — and it's one of the least-explained parts of neck pain. Tightness and joint restriction at the base of the skull and upper neck can produce headaches that begin at the back of the head and spread forward — a pattern called cervicogenic headache.</p>
+          <p>This is distinct from migraine, though the two often overlap. Neck pain is actually a more common feature of migraine than nausea (Calhoun et al., Headache, 2010) — so having neck pain with headaches doesn't automatically mean the neck is the source. The distinction matters: cervicogenic headache comes from the neck's joints and muscles and tends to respond to exercise and manual therapy, and there is moderate-quality evidence that specific neck and shoulder-blade exercise helps cervicogenic headache over the longer term (Kay, Gross et al., Cochrane Review, 2012). Migraine-associated neck pain is often part of the migraine process itself. Because they need different approaches, an assessment — rather than a guess from symptoms — is the reliable way to tell them apart.</p>
+
+          <img src={imgHeadaches} alt="Cervicogenic headache referral pattern" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What is whiplash, and how is it different from ordinary neck pain?</h2>
+          <p>Whiplash is a specific injury, most often from a car accident, where the head is forcefully jerked backward and then forward, straining the neck's soft tissues. Unlike gradual, posture-driven neck pain, whiplash symptoms — neck pain and stiffness, headaches, dizziness, reduced range of motion — often don't appear right away, sometimes taking hours or a day or two to develop.</p>
+          
+          <img src={imgWhiplash} alt="Simple forward-back head-motion diagram in a rear-end collision" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>Whiplash injuries are graded by severity, from mild neck complaints without physical findings through to cases with measurable or neurological signs. Most people improve within a few weeks, and ICBC's own recovery information notes that most people recover within 12 weeks of a crash. More significant injuries can take longer, and — importantly — how the injury is managed early on genuinely affects the outcome.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mt-8 mb-4">What's the best way to recover from whiplash?</h3>
+          <p>Current evidence-based guidance favours early, gentle movement and returning to normal activity as soon as reasonably possible, along with advice, education, and reassurance — rather than resting in a collar or avoiding movement (Wong, Côté et al., OPTIMa Collaboration, Disability and Rehabilitation, 2014). Prolonged immobilisation and collar use are associated with worse, not better, outcomes.</p>
+          <p>It's also worth knowing that clear, accurate information about the injury — including reassurance that whiplash tissue damage is typically not severe and is expected to settle — is itself associated with better recovery. That's one reason a thorough, clearly explained assessment matters as much as the hands-on treatment.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When does neck pain or a neck injury need urgent care?</h2>
+          <p>Most neck pain, including most whiplash, does not need emergency care. But some symptoms call for immediate medical evaluation rather than a massage appointment:</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <ul class="mb-0 space-y-2">
+              <li>Sudden, severe neck pain or headache — especially if it feels like "the worst ever" — with dizziness, double vision, difficulty speaking, or facial numbness. These can indicate a tear in a neck artery (cervical artery dissection) and a risk of stroke.</li>
+              <li>Fever with headache and neck stiffness, which can indicate meningitis.</li>
+              <li>New numbness, weakness, or loss of coordination in the arms or legs.</li>
+              <li>Neck pain after significant trauma — a car accident, fall, or diving injury — should be evaluated promptly.</li>
+            </ul>
+          </div>
+          
+          <p>This is also why gentle, assessment-guided manual therapy is the appropriate approach for most neck pain. Forceful, high-velocity neck manipulation has, in rare cases, been statistically associated with cervical artery dissection and stroke, and health authorities advise that patients be informed of this before any such manipulation (Biller et al., American Heart Association/American Stroke Association, Stroke, 2014). Eva uses gentle, low-velocity joint mobilisation and soft-tissue therapy within RMT scope, and does not perform forceful high-velocity thrust manipulation.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with neck pain?</h2>
+
+          <ul class="space-y-4">
+            <li><strong>Manual therapy and exercise have supporting evidence.</strong> There is moderate-quality evidence that specific cervical and shoulder-blade (scapulothoracic) stretching and strengthening reduces pain and improves function in chronic neck pain — while a general, non-specific exercise program does not (Kay, Gross et al., 2012). In other words, the specific exercise matched to your assessment is what matters.</li>
+            <li><strong>Massage therapy has moderate evidence.</strong> A systematic review found moderate evidence that massage improves neck pain compared with inactive treatments, with less certainty for other outcomes (Cheng & Huang, 2014). It's a reasonable, helpful part of a plan — most effective combined with movement retraining.</li>
+            <li><strong>Gentle movement beats prolonged rest.</strong> Once the sharpest pain eases, gentle movement supports recovery better than keeping the neck still.</li>
+            <li><strong>Addressing posture and the surrounding structures, not just the neck.</strong> Long-standing neck pain is frequently driven as much by upper-back mobility and shoulder position as by the neck itself — which is why treatment aimed only at the neck often gives only temporary relief.</li>
+          </ul>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Neck Pain</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Clinical RMT that looks beyond the neck</h3>
+          <p>Eva's assessment is deliberately broad. She evaluates not just the cervical spine, but also the thoracic spine, rib mobility, shoulder-blade positioning, and jaw mechanics — because all of these can drive or maintain neck symptoms.</p>
+
+          <ul class="space-y-4 my-8">
+            <li><strong>Cervical & thoracic joint mobilisation — restoring movement where it's restricted.</strong> Eva uses gentle, low-velocity joint mobilisation within RMT scope to restore accessory glide and reduce muscle guarding — not forceful, high-velocity thrust manipulation. Restoring movement in a stiff thoracic spine often eases the neck, because when the upper back loses mobility the mid- and lower-neck segments are forced to compensate and overwork (a principle emphasised by Karel Lewit: the neck is frequently the victim of restriction lower down). Freeing the thoracic base takes that load off the neck.</li>
+            <li><strong>Neurodynamics — addressing nerve-related arm symptoms.</strong> When neck pain involves arm symptoms — tingling, numbness, or a heavy sensation — nerve tissue may be sensitised or its movement restricted. Eva evaluates nerve-tissue mobility and treats the surrounding soft-tissue interface restrictions along the neck, shoulder, and arm with gentle neurodynamic techniques.</li>
+            <li><strong>DNS for head centration & deep cervical flexors.</strong> The deep cervical flexors act as the "anterior stabiliser" of the neck — and the head can't sit well-centred over the chest without them working together with the deeper trunk and shoulder-blade stabilisers. In chronic neck pain these deep flexors often become inhibited, and the neck leans on the larger surface muscles (sternocleidomastoid, upper trapezius) instead. DNS retrains the deep cervical flexors to centrate the head over a stable thoracic base — restoring position without bracing or forced "good posture" — drawing on the developmental-kinesiology basis of the method (Kobesová & Kolář, 2014). <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more about DNS →</a></li>
+            <li><strong>Targeted soft-tissue work — releasing overactive muscles.</strong> Targeted release of the suboccipital muscles (skull base), upper trapezius, levator scapulae, and scalene muscles. This tight-versus-weak pattern — these surface muscles overactive while the deep cervical flexors and lower shoulder-blade stabilisers are inhibited — is what Janda called upper crossed syndrome (the same pattern described on our shoulder page). Lasting relief usually means settling the overactive muscles and reactivating the deep stabilisers they're compensating for.</li>
+          </ul>
+
+          <img src={imgHowWeTreat} alt="Photo of a cervical range-of-motion assessment" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">From assessment to self-management</h3>
+          <p>Neck pain treatment typically begins with a 60-minute assessment and treatment session. Eva will explain her findings clearly — what's restricted, what's compensating, and what needs to change.</p>
+          <p>Many patients with straightforward neck pain improve significantly within three to five sessions. Cases involving nerve symptoms, long-standing postural patterns, whiplash, or jaw-related contributions may take longer. You'll receive an honest timeline based on your assessment.</p>
+          <p>Between sessions, you'll practise targeted exercises to hold the mobility gains and build strength in the right areas. The aim is independence — not an indefinite treatment schedule.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-8 items-start my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <h3 class="text-xl font-semibold text-foreground mb-4">A clinical approach to neck and upper-body pain</h3>
+              <ul class="space-y-4 mb-8">
+                <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's education includes assessment of the cervical and thoracic spine, not the neck alone.</li>
+                <li><strong>Czech-trained DNS therapist.</strong> Retraining the deep cervical and postural stabilisers is central to preventing neck pain from recurring, not just relieving it temporarily. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Neurodynamic assessment.</strong> When nerve symptoms accompany neck pain, Eva can evaluate nerve-tissue mobility and treat the surrounding soft-tissue interface restrictions along the movement chain, rather than treating muscles alone.</li>
+                <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits, and ICBC visits following a motor vehicle accident can be arranged.</li>
+              </ul>
+              
+              <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+            </div>
+            <div>
+              <img src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can neck pain cause headaches?</h3>
+              <p>Yes. Tight muscles and joint restriction at the base of the skull can produce cervicogenic headaches — distinct from migraine, though the two often overlap. Neck pain is actually a more common migraine symptom than nausea (Calhoun et al., 2010), so telling them apart is worth a proper assessment.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">How long does whiplash take to heal?</h3>
+              <p>Most people improve within a few weeks, and ICBC notes most people recover within 12 weeks of a crash. More significant injuries can take longer, and early, active management helps.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Should I rest my neck after a whiplash injury?</h3>
+              <p>Generally no. Current guidance favours early, gentle movement and a return to normal activity over prolonged rest or a collar (Wong et al., 2014).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">When should I see a doctor instead of booking massage therapy?</h3>
+              <p>Seek immediate care for sudden severe neck pain or headache with dizziness, double vision, facial numbness, or difficulty speaking; for fever with neck stiffness; or for new numbness or weakness in the limbs. Neck pain after a car accident, fall, or significant trauma should be evaluated promptly.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is massage therapy safe and effective for neck pain?</h3>
+              <p>For most neck pain, yes. There is moderate evidence that massage improves neck pain compared with inactive treatment (Cheng & Huang, 2014). Gentle, assessment-guided treatment is the appropriate approach; forceful, high-velocity neck manipulation carries a rare association with artery injury (Biller et al., 2014).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does ICBC cover treatment for whiplash from a car accident?</h3>
+              <p>Registered Massage Therapy for whiplash following a motor vehicle accident in BC is commonly covered, though the specific claims process depends on your circumstances. Call the clinic and we can talk you through arranging an ICBC visit.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for neck pain or whiplash treatment</h3>
+            <p class="mb-8 max-w-2xl mx-auto">Persistent neck pain — or a recent whiplash injury — deserves more than stretching advice. Book an RMT assessment to identify the functional movement patterns contributing to your symptoms.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Assessment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li>Kay TM, Gross A, Goldsmith CH, et al. Exercises for mechanical neck disorders. <em>Cochrane Database of Systematic Reviews</em>. 2012;(8):CD004250.</li>
+              <li>Cheng YH, Huang GC. Efficacy of massage therapy on pain and dysfunction in patients with neck pain: a systematic review and meta-analysis. <em>Evidence-Based Complementary and Alternative Medicine</em>. 2014;2014:204360.</li>
+              <li>Calhoun AH, Ford S, Millen C, et al. The prevalence of neck pain in migraine. <em>Headache</em>. 2010;50(8):1273–1277.</li>
+              <li>Wong JJ, Côté P, Shearer HM, et al. Clinical practice guidelines for the management of conditions related to traffic collisions (OPTIMa Collaboration). <em>Disability and Rehabilitation</em>. 2014;37(6):471–489.</li>
+              <li>Biller J, Sacco RL, Albuquerque FC, et al. Cervical arterial dissections and association with cervical manipulative therapy: AHA/ASA scientific statement. <em>Stroke</em>. 2014;45(10):3155–3174.</li>
+              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>
