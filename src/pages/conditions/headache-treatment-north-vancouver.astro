@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+// Image imports
+import imgHero from '@/assets/Cervicogenic_headaches.png?url';
+import imgWhyHard from '@/assets/Trigeminocervical_convergence_headache_related.png?url';
+import imgManyCauses from '@/assets/Many_causes-of_headache.png?url';
+import imgEvaPortrait from '@/assets/eva-andersson-portrait.jpg?url';
+import logo from '@/assets/logo.jpg?url';
+---
+
+<BaseLayout 
+  title="Headache Treatment in North Vancouver | Scandinavian Clinic"
+  description="Can your neck cause headaches? Often, yes. Eva Andersson, RMT, uses clinical massage therapy to assess and treat the neck contributors to your headaches."
+  robots="noindex"
+>
+  <div class="min-h-screen bg-background pt-20">
+    
+    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
+      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="https://scandinavianclinic.com">
+            <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
+          </a>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
+          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
+        </div>
+      </div>
+    </header>
+    
+    <main class="pt-24 pb-16">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Headache Treatment in North Vancouver</h1>
+        
+        <div class="bg-accent/10 p-6 rounded-xl border border-accent/20 mb-8">
+          <p class="font-medium text-foreground mb-2"><strong>QUICK ANSWER</strong></p>
+          <p class="text-muted-foreground m-0">Can your neck cause headaches? Often, yes. Not all headaches are the same: tension-type headache is the most common and is now linked more to a nervous system that has become sensitive to pain than to simple muscle tightness, while a cervicogenic headache actually starts in the neck and is felt in the head. The neck-related kind is frequently mistaken for tension headache or migraine — and it's the type that tends to respond well to hands-on treatment and specific neck exercises. A thorough assessment of neck movement and posture helps work out which pattern is present.</p>
+        </div>
+        
+        <p class="text-lg text-muted-foreground mb-4">Recurring headaches wear you down — the low-grade ache that sits behind your eyes by mid-afternoon, the tightness that climbs from the base of your skull, the days you push through with a screen in front of you. Many of these headaches have a neck component that often goes unrecognised.</p>
+        
+        <p class="text-lg text-muted-foreground mb-8">At Scandinavian Clinic, Eva Andersson, RMT, uses clinical Registered Massage Therapy to assess how your neck and posture may be contributing to your headaches, and to treat those contributors.</p>
+
+        <div class="my-8 flex flex-wrap gap-4 items-center">
+          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors">Book Your Assessment</a>
+          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+        </div>
+
+        <img src={imgHero} alt="Cervicogenic headaches illustration showing pain referral patterns" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+
+        <div class="prose prose-lg max-w-none text-muted-foreground">
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why is it so hard to tell what kind of headache I have?</h2>
+          
+          <p>This confusion is genuinely common — not a sign something has been missed. Cervicogenic (neck-related) headache is frequently mistaken for tension-type headache and migraine because their symptoms overlap heavily.</p>
+          
+          <p>The reason is in the wiring. Pain signals from the upper neck and pain signals from the head converge on the same relay station in the brainstem — the trigeminocervical nucleus — so the brain can genuinely struggle to tell whether pain is coming from the neck or the head itself. That's why many people describe headaches with features of more than one type, and why "is it my neck, tension, or migraine?" is such a common question. Sorting it out is exactly what an assessment is for.</p>
+
+          <img src={imgWhyHard} alt="Diagram showing the convergence of neck and head pain signals in the trigeminocervical nucleus" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What is a neck-related (cervicogenic) headache, and how is it different?</h2>
+          
+          <p>A cervicogenic headache is head pain that actually starts from a problem in the neck — most often the joints and soft tissues of the upper three cervical vertebrae — but is felt in the head because of how those nerve pathways connect. Several features point toward it: pain that's usually one-sided, that starts at the base of the skull and travels up or forward toward the eye, that's brought on by certain neck movements or sustained awkward positions, and that comes with reduced neck movement. Unlike migraine, marked sensitivity to light and noise is less typical.</p>
+          
+          <p>Targeted diagnostic-block studies point to the C2–3 joint as the single most common source, involved in roughly 70% of cases (sources of cervicogenic headache in the upper cervical joints, 2021). This isn't a new idea in the manual-therapy world: Czech physician Karel Lewit described the link between upper-neck dysfunction and headache decades ago as the cervicocranial syndrome — a concept that modern diagnostic studies have since borne out. It's also why an assessment of upper-neck movement is central to evaluating this kind of headache.</p>
+          
+          <img src={imgManyCauses} alt="Illustration of many causes of headache, particularly pointing to upper cervical neck origins" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why do headaches come with desk work?</h2>
+          <p>Long hours of forward-head posture — "tech neck," from looking down at a phone or leaning toward a screen — load the upper neck over time, and this is a well-recognised contributor to neck-related headache. What's less often explained is that it rarely involves the neck joints alone.</p>
+          <p>People with cervicogenic headache are highly likely to also have weak deep neck flexors — the small stabilising muscles at the front of the neck — with the larger, more superficial neck muscles becoming overactive to compensate. That tight-surface/weak-deep pattern is the same upper crossed syndrome described on our neck and shoulder pages. It's the whole pattern — posture, deep-muscle weakness, and surface-muscle overactivity together — that a thorough assessment looks at, not just the joints. Because the deep neck flexors and the diaphragm work together, how you breathe is also looked at as part of that assessment, though it's one contributor among several rather than a proven cause on its own.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">When do headaches need urgent medical attention?</h2>
+          <p>Most recurring headaches are not dangerous and respond well to conservative care. But some features need prompt medical evaluation rather than hands-on treatment:</p>
+          
+          <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
+            <ul class="mb-0 space-y-2">
+              <li>A sudden, severe headache unlike any before — a "thunderclap" headache that peaks within seconds to a minute. Treat as an emergency.</li>
+              <li>A headache following a head or neck injury, or with fever and a stiff neck, confusion, vision changes, slurred speech, or weakness on one side of the body.</li>
+              <li>A new headache pattern in someone over 50 with no prior headache history, or a headache that is steadily worsening.</li>
+            </ul>
+          </div>
+          
+          <p>Uncommon structural causes (fractures, tumours, or inflammatory arthritis affecting the upper neck) are recognised, which is part of why a careful history matters before assuming a purely mechanical cause. When in doubt with any of the above, seek medical care first.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with headaches?</h2>
+
+          <p>The right approach depends on the type of headache — which is the whole reason assessment comes first.</p>
+
+          <ul class="space-y-4">
+            <li><strong>For neck-related (cervicogenic) headache, hands-on treatment and specific neck exercise both have strong evidence.</strong> In a landmark trial, both manual therapy and a targeted deep neck flexor (craniocervical flexion) exercise program reduced headache frequency and intensity, with benefits maintained at 12 months — and combining them helped a few more people still (Jull et al., Spine, 2002). Broader evidence reviews likewise find manual therapy effective for cervicogenic headache specifically (Bronfort et al., UK evidence report, 2010). Gentle, sustained joint mobilisation techniques have shown durable benefit (comparative review, Frontiers in Neurology, 2025).</li>
+            <li><strong>For tension-type headache, soft-tissue work is the better-supported hands-on approach.</strong> Overall manual therapy performs comparably to preventive medication for chronic tension-type headache, and when the techniques are separated out, soft-tissue and myofascial treatment shows benefit for pain intensity and frequency, while forceful high-velocity neck manipulation has not been shown superior to no treatment for this headache type. That fits an RMT approach well.</li>
+            <li><strong>Active exercise belongs alongside the hands-on work.</strong> Deep neck flexor retraining is as effective as manual therapy on its own (Jull, above), so the durable results come from combining the two — plus addressing posture and breathing — rather than relying on hands-on treatment alone.</li>
+          </ul>
+          
+          <p><strong>A note on safety and scope.</strong> Eva uses gentle, low-velocity joint mobilisation and soft-tissue techniques within RMT scope — not high-velocity thrust manipulation, which carries a rare association with neck-artery injury (see our neck pain page). For headaches, that low-velocity, exercise-supported approach is both well-aligned with the evidence and the appropriate scope.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Headaches</h2>
+          <h3 class="text-2xl font-semibold text-foreground mb-4">Assessing the neck, posture, and breathing together</h3>
+          <p>Eva's assessment works to distinguish whether your headaches have a significant neck contribution, rather than assuming. It typically includes a detailed history of where the headache sits, what triggers it, and associated symptoms; a hands-on examination of upper-neck movement; testing of deep neck flexor strength and endurance; and a look at posture (and, where relevant, breathing pattern) — recognised contributors that a headache workup focused only on the painful area tends to miss.</p>
+
+          <ul class="space-y-4 my-8">
+            <li><strong>Low-velocity mobilisation of the upper neck.</strong> Gentle mobilisation to restore movement and reduce guarding in the upper cervical segments most often involved — within RMT scope, not high-velocity thrusts.</li>
+            <li><strong>Soft-tissue & myofascial work.</strong> Releasing the overactive suboccipital, upper trapezius, levator scapulae, and scalene muscles — the better-supported hands-on approach for tension-type headache and a useful complement for the neck-related kind.</li>
+            <li><strong>Deep neck flexor retraining (DNS).</strong> Retraining the deep cervical flexors to steady the head — the active component the evidence most strongly supports alongside hands-on treatment (Jull et al.) — and, where relevant, addressing breathing pattern as part of the same deep-stabiliser picture.</li>
+            <li><strong>Posture and self-management.</strong> Practical changes to how you sit and set up your screen, plus a short home program, so the gains hold between sessions.</li>
+          </ul>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
+          <p>Many people with a clear neck contribution notice meaningful change within a few weeks, though longer-standing patterns take a bit longer, and consistency with the home exercises matters as much as the hands-on work. Eva will explain what the assessment finds, whether the pattern looks primarily neck-related, tension-type, or mixed, and outline a realistic plan. If features suggest migraine or another cause that would benefit from medical management, or if any red flags are present, she'll suggest consulting your physician.</p>
+          <p>The goal is to give you the control — the exercises, the breathing, and the posture habits — to manage the headaches yourself, not an open-ended treatment schedule.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-8 items-start my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <h3 class="text-xl font-semibold text-foreground mb-4">A neck-and-whole-pattern approach to headaches</h3>
+              <ul class="space-y-4 mb-8">
+                <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's training includes detailed assessment of the upper cervical spine, the region most often involved in neck-related headache.</li>
+                <li><strong>Czech-trained DNS therapist.</strong> The deep neck flexors and breathing pattern — core to the DNS approach — are exactly the contributors most often missed in a headache workup. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
+                <li><strong>Assessment-first.</strong> Treatment follows a thorough assessment of which pattern is present, rather than generic headache advice.</li>
+                <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+              </ul>
+              
+              <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+            </div>
+            <div>
+              <img src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-8">Frequently asked questions</h2>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">How do I know if my headache is coming from my neck?</h3>
+              <p>Features that point toward a neck source include one-sided pain that starts at the base of the skull, headaches brought on by certain neck movements or sustained positions, and reduced neck movement. An assessment helps clarify whether the neck is contributing.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why do I keep getting confused between headache types?</h3>
+              <p>It's a genuinely common problem: neck-related headache, tension headache, and migraine share overlapping symptoms because their pain pathways converge on the same brainstem relay (the trigeminocervical nucleus).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can poor posture from desk work really cause headaches?</h3>
+              <p>It can contribute. Prolonged forward-head posture loads the upper neck and commonly goes with weak deep neck flexors — both associated with neck-related headache.</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does massage or manual therapy actually help headaches?</h3>
+              <p>It depends on the type. Hands-on treatment (with exercise) has strong evidence for neck-related headache, and soft-tissue techniques help tension-type headache. It's most effective combined with deep neck flexor exercise rather than on its own (Jull et al., 2002).</p>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">When should I see a doctor instead of starting treatment myself?</h3>
+              <p>Seek prompt medical care for a sudden, severe "worst-ever" headache, a headache after a head or neck injury, or a headache with fever, confusion, vision changes, or one-sided weakness.</p>
+            </div>
+          </div>
+
+          <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
+            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for headache treatment</h3>
+            <p class="mb-8 max-w-2xl mx-auto">If your headaches keep recurring, seem tied to neck stiffness, posture, or desk work, or haven't been well explained by previous evaluation, a thorough assessment can help clarify whether the pattern is neck-related, tension-type, or a mix.</p>
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Assessment</a>
+            <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
+          </div>
+
+          {/* REFERENCES */}
+          <div class="mt-16 pt-8 border-t border-border/50 text-sm">
+            <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
+            <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
+              <li>Jull G, Trott P, Potter H, et al. A randomized controlled trial of exercise and manipulative therapy for cervicogenic headache. <em>Spine</em>. 2002;27(17):1835–1843.</li>
+              <li>Bronfort G, Haas M, Evans R, et al. Effectiveness of manual therapies: the UK evidence report. <em>Chiropractic & Osteopathy</em>. 2010;18:3.</li>
+              <li>Sources of cervicogenic headache among the upper cervical synovial joints. <em>Pain Medicine</em>. 2021.</li>
+              <li>Comparative safety and efficacy of manual therapy interventions for cervicogenic headache. <em>Frontiers in Neurology</em>. 2025.</li>
+              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
+              <li>Lewit K. <em>Manipulative Therapy: Musculoskeletal Medicine (cervicocranial syndrome)</em>. Churchill Livingstone/Elsevier.</li>
+            </ol>
+            <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    
+    <footer class="bg-muted py-12 mt-12 border-t border-border">
+      <div class="container mx-auto px-4 text-center text-muted-foreground text-sm space-y-4">
+        <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3 | <a href="tel:+16049264883" class="hover:text-primary transition-colors">(604) 926-4883</a></p>
+        <p>Covered by most extended health insurance plans.</p>
+        <p><a href="https://scandinavianclinic.com" class="hover:text-primary underline transition-colors">scandinavianclinic.com</a></p>
+      </div>
+    </footer>
+    
+    <ConsentBanner client:load />
+    
+    <script>
+      // Pass URL query parameters to all booking links
+      if (typeof window !== 'undefined') {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.toString()) {
+          document.querySelectorAll('.booking-link').forEach(el => {
+            const link = el as HTMLAnchorElement;
+            try {
+              const url = new URL(link.href);
+              queryParams.forEach((value, key) => {
+                url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            } catch (e) {
+              // Ignore invalid URLs
+            }
+          });
+        }
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose p { margin-bottom: 1.5em; line-height: 1.75; }
+  .prose h3 { margin-top: 2em; margin-bottom: 1em; }
+  .prose ul { margin-top: 1em; margin-bottom: 1.5em; }
+</style>
