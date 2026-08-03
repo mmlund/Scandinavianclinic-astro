@@ -1,7 +1,7 @@
-import manualTherapy from "@/assets/orthopedic-manual-therapy.webp?url";
-import customizedTreatment from "@/assets/customized-treatment.webp?url";
-import dnsTreatment from "@/assets/dns-treatment.webp?url";
-import preventionVideo from "@/assets/prevention-video.mp4?url";
+import manualTherapy from "@/assets/clinic/manual-therapy-treatment.webp?url";
+import customizedTreatment from "@/assets/clinic/customized-treatment.webp?url";
+import dnsTreatment from "@/assets/clinic/dns-treatment.webp?url";
+import preventionVideo from "@/assets/clinic/prevention-video.mp4?url";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
 
