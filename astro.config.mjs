@@ -9,6 +9,12 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://scandinavianclinic.com',
+  output: 'static',
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    }
+  },
   integrations: [react(), sitemap()],
 
   vite: {
