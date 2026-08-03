@@ -1,11 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/tennis-elbow-hero.webp?url';
-import imgIllustration from '@/assets/conditions/tennis-elbow-illustration.webp?url';
-import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/tennis-elbow-hero.webp';
+import imgIllustration from '@/assets/conditions/tennis-elbow-illustration.webp';
+import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -54,7 +55,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <h2 class="text-3xl font-bold text-foreground mb-6">Understanding Tennis Elbow</h2>
           <h3 class="text-2xl font-semibold text-foreground mb-4">More than a tendon problem</h3>
 
-          <img src={imgHero} alt="Pain at the lateral epicondyle radiating down the forearm extensors" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" />
+          <Image src={imgHero} alt="Pain at the lateral epicondyle radiating down the forearm extensors" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" loading="eager" fetchpriority="high" />
 
           <p>Tennis elbow involves the tendons of the forearm extensor muscles where they attach to the bony bump on the outside of the elbow (the lateral epicondyle). These muscles control wrist extension and grip — they work every time you lift, grip, type, or twist your forearm.</p>
           
@@ -77,7 +78,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <p class="font-medium">When to seek treatment: if elbow pain has lasted more than three to four weeks despite rest, if a brace hasn't helped, or if grip weakness is affecting daily activities or work, an assessment can clarify whether the issue is tendon, nerve, chain-related, or a mix — which determines the right treatment.</p>
 
-          <img src={imgIllustration} alt="Chain diagram: Trunk to Scapula to Elbow" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgIllustration} alt="Chain diagram: Trunk to Scapula to Elbow" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <h3 class="text-2xl font-semibold text-foreground mb-4">Why is my tennis elbow taking so long to heal?</h3>
           <p>General health resources often describe recovery in weeks to a few months, but real recovery — especially for cases that were present a while before treatment started — commonly takes several months, and sometimes up to a year or more for established cases. This isn't a sign something has gone wrong: tendons heal and remodel slowly because they have a limited blood supply, and a degenerative tendon needs time and the right load to rebuild. Knowing this upfront helps set realistic expectations and avoid the discouragement of expecting a two-week fix.</p>
@@ -139,7 +140,7 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgEvaConsultation} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgEvaConsultation} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

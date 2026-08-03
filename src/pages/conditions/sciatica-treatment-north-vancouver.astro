@@ -1,16 +1,17 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgPathway from '@/assets/conditions/sciatic-nerve-pathway.webp?url';
-import imgClassification from '@/assets/conditions/sciatica-symptom-classification.jpg?url';
-import imgDiscVsPiriformis from '@/assets/conditions/sciatica-disc-vs-piriformis.webp?url';
-import imgSupportedPosition from '@/assets/conditions/sciatica-supported-position.jpg?url';
-import imgNeurodynamicTest from '@/assets/conditions/sciatica-neurodynamic-test.jpeg?url';
-import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp?url';
+import imgPathway from '@/assets/conditions/sciatic-nerve-pathway.webp';
+import imgClassification from '@/assets/conditions/sciatica-symptom-classification.jpg';
+import imgDiscVsPiriformis from '@/assets/conditions/sciatica-disc-vs-piriformis.webp';
+import imgSupportedPosition from '@/assets/conditions/sciatica-supported-position.jpg';
+import imgNeurodynamicTest from '@/assets/conditions/sciatica-neurodynamic-test.jpeg';
+import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -45,7 +46,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
           
-          <img src={imgPathway} alt="Sciatic nerve pathway from lower back to leg" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" />
+          <Image src={imgPathway} alt="Sciatic nerve pathway from lower back to leg" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" loading="eager" fetchpriority="high" />
 
           <p>Typical Symptoms with Sciatica: A sharp, burning, or electric pain that shoots from your lower back or buttock down into your leg — sometimes all the way to your foot. Sitting becomes the worst position. Driving is miserable. Sciatica has a recognisable pattern <a href="#ref-1" class="text-xs align-super text-primary hover:underline">[1]</a>, though the exact cause varies from person to person:</p>
           
@@ -71,7 +72,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <p>Sciatica describes pain that follows the path of the sciatic nerve — the largest nerve in your body, running from the lower spine through the buttock and down each leg. The pain is a symptom, not a diagnosis. What matters is why the nerve is irritated, because different causes require different treatment.</p>
           <p>Pain from the hip joint, sacroiliac joint, or referred muscle pain (common with general lower back pain) can closely mimic sciatic symptoms. Accurate assessment matters because nerve-root irritation calls for a different treatment approach than muscle-referred pain that can mimic it.</p>
 
-          <img src={imgDiscVsPiriformis} alt="Disc-related nerve compression vs Piriformis syndrome" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgDiscVsPiriformis} alt="Disc-related nerve compression vs Piriformis syndrome" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <h4 class="text-xl font-bold text-foreground mt-8 mb-4">Common causes of sciatic nerve irritation:</h4>
           <ul class="space-y-4">
@@ -81,7 +82,7 @@ import logo from '@/assets/brand/logo.webp?url';
             <li><strong>Neural sensitization.</strong> Sometimes the nerve itself becomes hypersensitive — because of how it moves and responds mechanically in relation to the surrounding tissue. This may require a different treatment approach (Butler; Shacklock) <a href="#ref-4" class="text-xs align-super text-primary hover:underline">[4, 5]</a>.</li>
           </ul>
 
-          <img src={imgClassification} alt="Classification of sciatica types and causes" class="w-full max-w-3xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgClassification} alt="Classification of sciatica types and causes" class="w-full max-w-3xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <hr class="my-12 border-border" />
 
@@ -113,7 +114,7 @@ import logo from '@/assets/brand/logo.webp?url';
             <li><strong>Addressing the underlying pattern, not just the symptom.</strong> Because sciatica often develops from a combination of factors — spinal mechanics, muscle imbalance, and movement habits — treatment aimed only at the painful area may give temporary relief without resolving what irritated the nerve in the first place <a href="#ref-10" class="text-xs align-super text-primary hover:underline">[10]</a>. This is why an assessment that looks at proper core function may give more lasting results.</li>
           </ul>
 
-          <img src={imgSupportedPosition} alt="Clinical illustration of a supported position for sciatica relief" class="w-full max-w-xl mx-auto rounded-lg shadow-md my-10" />
+          <Image src={imgSupportedPosition} alt="Clinical illustration of a supported position for sciatica relief" class="w-full max-w-xl mx-auto rounded-lg shadow-md my-10" />
 
           <hr class="my-12 border-border" />
 
@@ -127,7 +128,7 @@ import logo from '@/assets/brand/logo.webp?url';
               <li><strong>Piriformis & deep hip rotator treatment — releasing the buttock muscles.</strong> When the buttock muscles are compressing or irritating the nerve, targeted soft-tissue massage work releases the piriformis and surrounding structures. But release alone might not be enough — the reason the piriformis tightened must also be addressed.</li>
             </ul>
             <div class="flex justify-center md:justify-end">
-              <img src={imgNeurodynamicTest} alt="Neurodynamic assessment and positioning test" class="w-4/5 rounded-lg shadow-md" />
+              <Image src={imgNeurodynamicTest} alt="Neurodynamic assessment and positioning test" class="w-4/5 rounded-lg shadow-md" />
             </div>
           </div>
 
@@ -160,7 +161,7 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgEvaConsultation} alt="Eva Andersson in a consultation pose" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgEvaConsultation} alt="Eva Andersson in a consultation pose" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

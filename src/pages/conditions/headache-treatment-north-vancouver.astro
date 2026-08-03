@@ -1,12 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/cervicogenic-headache-causes.webp?url';
-import imgWhyHard from '@/assets/conditions/trigeminocervical-convergence.webp?url';
-import imgManyCauses from '@/assets/conditions/headache-causes-overview.webp?url';
-import imgEvaPortrait from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/cervicogenic-headache-causes.webp';
+import imgWhyHard from '@/assets/conditions/trigeminocervical-convergence.webp';
+import imgManyCauses from '@/assets/conditions/headache-causes-overview.webp';
+import imgEvaPortrait from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -49,7 +50,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
         </div>
 
-        <img src={imgHero} alt="Cervicogenic headaches illustration showing pain referral patterns" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+        <Image src={imgHero} alt="Cervicogenic headaches illustration showing pain referral patterns" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" loading="eager" fetchpriority="high" />
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
 
@@ -61,7 +62,7 @@ import logo from '@/assets/brand/logo.webp?url';
           
           <p>The reason is in the wiring. Pain signals from the upper neck and pain signals from the head converge on the same relay station in the brainstem — the trigeminocervical nucleus — so the brain can genuinely struggle to tell whether pain is coming from the neck or the head itself. That's why many people describe headaches with features of more than one type, and why "is it my neck, tension, or migraine?" is such a common question. Sorting it out is exactly what an assessment is for.</p>
 
-          <img src={imgWhyHard} alt="Diagram showing the convergence of neck and head pain signals in the trigeminocervical nucleus" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgWhyHard} alt="Diagram showing the convergence of neck and head pain signals in the trigeminocervical nucleus" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <hr class="my-12 border-border" />
 
@@ -71,7 +72,7 @@ import logo from '@/assets/brand/logo.webp?url';
           
           <p>Targeted diagnostic-block studies point to the C2–3 joint as the single most common source, involved in roughly 70% of cases (sources of cervicogenic headache in the upper cervical joints, 2021). This isn't a new idea in the manual-therapy world: Czech physician Karel Lewit described the link between upper-neck dysfunction and headache decades ago as the cervicocranial syndrome — a concept that modern diagnostic studies have since borne out. It's also why an assessment of upper-neck movement is central to evaluating this kind of headache.</p>
           
-          <img src={imgManyCauses} alt="Illustration of many causes of headache, particularly pointing to upper cervical neck origins" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgManyCauses} alt="Illustration of many causes of headache, particularly pointing to upper cervical neck origins" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <hr class="my-12 border-border" />
 
@@ -143,7 +144,7 @@ import logo from '@/assets/brand/logo.webp?url';
               <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
             </div>
             <div>
-              <img src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

@@ -1,14 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/shoulder-pain-hero.webp?url';
-import imgCauses from '@/assets/conditions/shoulder-pain-common-causes.png?url';
-import imgChain from '@/assets/conditions/shoulder-kinetic-chain.png?url';
-import imgPosture from '@/assets/conditions/hyperkyphosis-posture.png?url';
-import imgAssessment from '@/assets/conditions/shoulder-range-of-motion-assessment.webp?url';
-import imgFooter from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/shoulder-pain-hero.webp';
+import imgCauses from '@/assets/conditions/shoulder-pain-common-causes.png';
+import imgChain from '@/assets/conditions/shoulder-kinetic-chain.png';
+import imgPosture from '@/assets/conditions/hyperkyphosis-posture.png';
+import imgAssessment from '@/assets/conditions/shoulder-range-of-motion-assessment.webp';
+import imgFooter from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -45,7 +46,7 @@ import logo from '@/assets/brand/logo.webp?url';
         
         <div class="prose prose-lg max-w-none text-muted-foreground">
           
-          <img src={imgHero} alt="The shoulder — pain at the front and outer shoulder, worse overhead, worse at night." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgHero} alt="The shoulder — pain at the front and outer shoulder, worse overhead, worse at night." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" loading="eager" fetchpriority="high" />
 
           <div class="my-8">
             <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
@@ -79,7 +80,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Shoulder pain is not one condition</h2>
 
-          <img src={imgCauses} alt="The differential — a simple grid of the main problems that present as shoulder pain, grouped by whether movement is limited by pain or by stiffness." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgCauses} alt="The differential — a simple grid of the main problems that present as shoulder pain, grouped by whether movement is limited by pain or by stiffness." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>The diagnosis matters here more than it does almost anywhere else in the body, because the treatments diverge. The problems that commonly present as shoulder pain include:</p>
           
@@ -107,7 +108,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Why the rotator cuff gets overloaded</h2>
 
-          <img src={imgChain} alt="The chain — neck, thoracic spine, ribs, shoulder blade, and shoulder." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgChain} alt="The chain — neck, thoracic spine, ribs, shoulder blade, and shoulder." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>Karel Lewit and the Prague School look beyond the shoulder joint itself. When a rotator cuff is irritated, it is usually the victim carrying extra load because another part of the system isn't doing its share.</p>
 
@@ -129,7 +130,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Trunk Posture and Shoulders</h2>
 
-          <img src={imgPosture} alt="Open scissors — the ribcage flared up and the pelvis tipped forward, the two planes diverging, with the shoulder blade's changed resting position marked." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgPosture} alt="Open scissors — the ribcage flared up and the pelvis tipped forward, the two planes diverging, with the shoulder blade's changed resting position marked." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>As an example, Hyperkyphosis (an extreme forward curve of the upper back) causes shoulder problems by pulling your shoulder blades forward and down, which limits your arm movement, pinches your tendons, and leads to painful conditions like shoulder impingement.</p>
 
@@ -150,7 +151,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <h2 class="text-3xl font-bold text-foreground mb-6">How Eva treats shoulder pain</h2>
           <p>What treatment looks like depends on what the assessment finds — a stiff shoulder, an overloaded cuff, and a shoulder problem driven by the neck require three completely different plans. The sequence below outlines the general approach:</p>
 
-          <img src={imgAssessment} alt="Range of motion shoulder assessment" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgAssessment} alt="Range of motion shoulder assessment" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <ol class="list-decimal pl-5 space-y-4 mb-8">
             <li><strong>Establish the underlying issue:</strong> Neck movement, thoracic spine and rib mobility, shoulder motion during arm elevation, joint centration, trunk posture, and whether limitation is driven by pain or structural stiffness.</li>
@@ -192,7 +193,7 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgFooter} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgFooter} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

@@ -1,13 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgElbowProblem from '@/assets/conditions/tennis-elbow-nerve-involvement.png?url';
-import imgRadialNerve from '@/assets/conditions/tennis-elbow-radial-nerve-path.png?url';
-import imgScapularControl from '@/assets/conditions/tennis-elbow-scapular-control.png?url';
-import imgWrongEnd from '@/assets/conditions/tennis-elbow-shoulder-girdle-imbalance.png?url';
-import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp?url';
+import imgElbowProblem from '@/assets/conditions/tennis-elbow-nerve-involvement.png';
+import imgRadialNerve from '@/assets/conditions/tennis-elbow-radial-nerve-path.png';
+import imgScapularControl from '@/assets/conditions/tennis-elbow-scapular-control.png';
+import imgWrongEnd from '@/assets/conditions/tennis-elbow-shoulder-girdle-imbalance.png';
+import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -44,7 +45,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
           
-          <img src={imgElbowProblem} alt="The elbow itself — pain at the lateral epicondyle radiating into the forearm extensors, tender point marked." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgElbowProblem} alt="The elbow itself — pain at the lateral epicondyle radiating into the forearm extensors, tender point marked." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" loading="eager" fetchpriority="high" />
 
           <div class="my-8">
             <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Appointment</a>
@@ -67,7 +68,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Why the pain is at the elbow</h2>
 
-          <img src={imgRadialNerve} alt="The chain — neck, shoulder blade, upper arm, forearm, elbow — with the elbow marked as where it hurts and the chain marked as where the disturbance sits." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgRadialNerve} alt="The chain — neck, shoulder blade, upper arm, forearm, elbow — with the elbow marked as where it hurts and the chain marked as where the disturbance sits." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>Karel Lewit, one of the founders of the Prague School of Rehabilitation Medicine, treated lateral elbow pain as the end result of dysfunction elsewhere rather than as a local injury. In his approach, the regions to examine are:</p>
           <ul class="space-y-2 mb-6">
@@ -90,7 +91,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Dysfunction in the movement system</h2>
 
-          <img src={imgScapularControl} alt="Shoulder-blade comparison — a stable, well-positioned scapula with a relaxed forearm, alongside a poorly controlled one with the forearm extensors marked as compensating." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgScapularControl} alt="Shoulder-blade comparison — a stable, well-positioned scapula with a relaxed forearm, alongside a poorly controlled one with the forearm extensors marked as compensating." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>The disturbance Lewit describes is not a single faulty structure. It is a pattern across the movement system — joints that have lost their joint play, muscles holding tone they don't need, and a grip that recruits far more than it should. The painful tendon sits at the end of that pattern.</p>
 
@@ -115,7 +116,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Why elbow-only treatment stalls</h2>
 
-          <img src={imgWrongEnd} alt="Brace and wrist exercise drawn at the elbow, with the neck and shoulder blade left untouched." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgWrongEnd} alt="Brace and wrist exercise drawn at the elbow, with the neck and shoulder blade left untouched." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>A 2024 multicentre randomised trial of 143 people compared standard multimodal physiotherapy with the same programme plus treatment directed at the neck and upper limb. At three months, 78% of the group receiving the wider treatment rated themselves much improved, against 36% of those treated locally (<a href="https://pubmed.ncbi.nlm.nih.gov/38676324/" class="text-primary hover:underline" target="_blank">Dunning et al., Clinical Rehabilitation, 2024</a>).</p>
           <p>A corticosteroid injection follows a different pattern: best results at six weeks, worst results long-term, with a high rate of recurrence. In the same trial, physiotherapy outperformed a wait-and-see approach in the short term, and by twelve months most people in both groups had improved (<a href="https://www.bmj.com/content/333/7575/939" class="text-primary hover:underline" target="_blank">Bisset et al., BMJ, 2006</a>).</p>
@@ -156,7 +157,7 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgEvaConsultation} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgEvaConsultation} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

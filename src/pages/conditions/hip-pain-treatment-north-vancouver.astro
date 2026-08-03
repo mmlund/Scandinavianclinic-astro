@@ -1,13 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/desk-work-hip-pain.webp?url';
-import imgCauses from '@/assets/conditions/hip-pain-patient-assessment.webp?url';
-import imgSitting from '@/assets/conditions/lower-crossed-syndrome-hip.webp?url';
-import imgLowBack from '@/assets/conditions/trunk-stability-hip.webp?url';
-import imgEvaPortrait from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/desk-work-hip-pain.webp';
+import imgCauses from '@/assets/conditions/hip-pain-patient-assessment.webp';
+import imgSitting from '@/assets/conditions/lower-crossed-syndrome-hip.webp';
+import imgLowBack from '@/assets/conditions/trunk-stability-hip.webp';
+import imgEvaPortrait from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -50,7 +51,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
         </div>
 
-        <img src={imgHero} alt="A person standing up from a desk chair, hand on the outer/point of the hip, slight wince" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" />
+        <Image src={imgHero} alt="A person standing up from a desk chair, hand on the outer/point of the hip, slight wince" class="w-full max-w-3xl mx-auto rounded-xl shadow-md my-10 bg-white" loading="eager" fetchpriority="high" />
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
 
@@ -64,7 +65,7 @@ import logo from '@/assets/brand/logo.webp?url';
           
           <p><strong>Deeper groin pain with stiffness (hip osteoarthritis).</strong> Groin pain — sometimes radiating to the knee or buttock, with stiffness that's worst in the morning or after sitting, and difficulty with tasks like putting on socks — is often linked to changes in the joint cartilage. It's very treatable, and importantly cartilage actually thrives on regular, well-controlled movement and load, so the aim is to restore comfortable functional load tolerance rather than to protect the joint from moving.</p>
           
-          <img src={imgCauses} alt="Simple side-by-side: lateral point-of-hip vs. groin/arthritis pain locations" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgCauses} alt="Simple side-by-side: lateral point-of-hip vs. groin/arthritis pain locations" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>Other causes include muscle strains, tendon irritation, and nerve-related pain such as sciatica or a pinched nerve at the outer thigh (meralgia paraesthetica) — which is one reason persistent or unexplained hip pain is worth having properly assessed.</p>
 
@@ -74,7 +75,7 @@ import logo from '@/assets/brand/logo.webp?url';
           
           <p>This is one of the most common patterns, especially for people with desk jobs. Long hours of sitting keep the hip flexors at the front of the hip in a shortened position, while the gluteal muscles — which should be actively supporting the hip and pelvis — stay switched off for hours at a time. Czech neurologist Vladimir Janda described this front-to-back imbalance — tight hip flexors and lower-back muscles paired with weaker glutes and deep abdominals — as lower crossed syndrome (the lower-body counterpart to the upper crossed syndrome on our shoulder page).</p>
           
-          <img src={imgSitting} alt="Lower crossed syndrome diagram — tight hip flexors + lower-back extensors vs. weak glutes + deep abdominals" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgSitting} alt="Lower crossed syndrome diagram — tight hip flexors + lower-back extensors vs. weak glutes + deep abdominals" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
           
           <p><strong>An honest note on the evidence:</strong> the specific mechanism Janda proposed — that tight hip flexors directly "switch off" the glutes — has not held up well in more recent research, and some researchers have questioned that part of the model. What is well-supported is the practical association: gluteal weakness reliably travels with hip and low-back pain, and people with chronic low-back pain have been found to have measurably weaker gluteal muscles than those without. So the pattern is a useful, clinically relevant lens — and it's assessed individually rather than assumed.</p>
 
@@ -83,7 +84,7 @@ import logo from '@/assets/brand/logo.webp?url';
           <h2 class="text-3xl font-bold text-foreground mb-6">How does the hip relate to lower back pain?</h2>
           <p>The hip and lower back work as one connected system, not two separate problems. In the Dynamic Neuromuscular Stabilization (DNS) framework developed by Professor Pavel Kolář and colleagues, the deep trunk and pelvic stabilising system — the diaphragm, pelvic floor, and abdominal wall (the abdominal "canister") — normally activates automatically to regulate intra-abdominal pressure (IAP) before the hip flexors engage during movement, stabilising the spine and pelvis from the inside. When that timing is disrupted — common with prolonged sitting — the lower back tends to compensate for inadequate hip and pelvic stability, which can contribute to pain in both areas at once (Frank, Kobesová & Kolář, Int J Sports Phys Ther, 2013).</p>
           
-          <img src={imgLowBack} alt="Connected-system sketch: trunk/pelvis stabilisers leading to the hip" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgLowBack} alt="Connected-system sketch: trunk/pelvis stabilisers leading to the hip" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>This has a practical treatment implication: adding hip and gluteal work to standard low-back-pain care has been shown to improve outcomes more than treating the back alone — which is why an assessment looks at the hip and lower back together, whichever one hurts more.</p>
 
@@ -149,7 +150,7 @@ import logo from '@/assets/brand/logo.webp?url';
               <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
             </div>
             <div>
-              <img src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgEvaPortrait} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

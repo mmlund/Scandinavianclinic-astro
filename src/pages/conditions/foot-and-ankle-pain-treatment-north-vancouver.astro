@@ -1,15 +1,16 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/foot-anatomy.webp?url';
-import imgConnection from '@/assets/conditions/foot-kinetic-chain-alignment.webp?url';
-import imgOrthotics from '@/assets/conditions/custom-orthotics-manufacturing.webp?url';
-import imgKineticChain from '@/assets/conditions/foot-to-body-kinetic-chain.webp?url';
-import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/foot-anatomy.webp';
+import imgConnection from '@/assets/conditions/foot-kinetic-chain-alignment.webp';
+import imgOrthotics from '@/assets/conditions/custom-orthotics-manufacturing.webp';
+import imgKineticChain from '@/assets/conditions/foot-to-body-kinetic-chain.webp';
+import imgEvaConsultation from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -51,7 +52,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
           
-          <img src={imgHero} alt="Anatomy of the foot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" />
+          <Image src={imgHero} alt="Anatomy of the foot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10" loading="eager" fetchpriority="high" />
 
           <h2 class="text-3xl font-bold text-foreground mb-6">What's causing my heel or foot pain?</h2>
           
@@ -63,7 +64,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">How your feet connect to your knees, hips, and back</h2>
           
-          <img src={imgConnection} alt="Body alignment starts with the feet and links to knee, hip, and back pain" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgConnection} alt="Body alignment starts with the feet and links to knee, hip, and back pain" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>This connection surprises many people — and it's one that even medical training tends to overlook — but it's well documented. In physiotherapy it's called regional interdependence: the principle that a problem in one area, like the foot, can contribute to symptoms in a seemingly unrelated area, like the knee, hip, or lower back (Wainner et al., JOSPT, 2007; Sueki et al., J Man Manip Ther, 2013). Your foot is the base of that chain: when it changes how it loads, the joints above it adjust in turn.</p>
 
@@ -91,7 +92,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Why don't orthotics always work — and what makes a good one?</h2>
           
-          <img src={imgOrthotics} alt="Manufacturing custom foot orthotics" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgOrthotics} alt="Manufacturing custom foot orthotics" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>"I tried orthotics and they didn't help" is one of the most common frustrations we hear — and it usually isn't that orthotics don't work, but that the fit, the specific correction, or the plan around them wasn't right. Many people get relief only after the orthotics are adjusted, combined with the right footwear, and paired with an exercise program.</p>
 
@@ -154,8 +155,8 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgKineticChain} alt="Kinetic chain from feet to body" class="w-full rounded-xl shadow-lg mb-6 bg-white" />
-              <img src={imgEvaConsultation} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgKineticChain} alt="Kinetic chain from feet to body" class="w-full rounded-xl shadow-lg mb-6 bg-white" />
+              <Image src={imgEvaConsultation} alt="Eva Andersson, RMT" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 

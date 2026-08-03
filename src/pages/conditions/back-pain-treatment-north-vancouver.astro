@@ -1,13 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
-import imgHero from '@/assets/conditions/back-pain-causes.webp?url';
-import imgStabilization1 from '@/assets/conditions/back-pain-stability-chain-left.jpg?url';
-import imgStabilization2 from '@/assets/conditions/back-pain-stability-chain-right.jpg?url';
-import imgSciaticaAssessment from '@/assets/conditions/core-pressure-assessment.webp?url';
-import imgFooter from '@/assets/clinic/eva-portrait.webp?url';
+import imgHero from '@/assets/conditions/back-pain-causes.webp';
+import imgStabilization1 from '@/assets/conditions/back-pain-stability-chain-left.jpg';
+import imgStabilization2 from '@/assets/conditions/back-pain-stability-chain-right.jpg';
+import imgSciaticaAssessment from '@/assets/conditions/core-pressure-assessment.webp';
+import imgFooter from '@/assets/clinic/eva-portrait.webp';
 import logo from '@/assets/brand/logo.webp?url';
 ---
 
@@ -44,7 +45,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
         <div class="prose prose-lg max-w-none text-muted-foreground">
 
-          <img src={imgHero} alt="The lower back as the area under load — hips, mid-back, and pelvis marked as the regions sharing or failing to share the work." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgHero} alt="The lower back as the area under load — hips, mid-back, and pelvis marked as the regions sharing or failing to share the work." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" loading="eager" fetchpriority="high" />
 
           <div class="my-8">
             <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
@@ -81,8 +82,8 @@ import logo from '@/assets/brand/logo.webp?url';
           <h2 class="text-3xl font-bold text-foreground mb-6">Why your lower back is the place that hurts</h2>
 
           <div class="flex flex-col md:flex-row gap-6 my-10">
-            <img src={imgStabilization1} alt="The chain — feet, hips, pelvis, lumbar spine, thoracic spine, neck (left)" class="w-full md:w-1/2 rounded-lg shadow-md bg-white object-cover" />
-            <img src={imgStabilization2} alt="The chain — feet, hips, pelvis, lumbar spine, thoracic spine, neck (right)" class="w-full md:w-1/2 rounded-lg shadow-md bg-white object-cover" />
+            <Image src={imgStabilization1} alt="The chain — feet, hips, pelvis, lumbar spine, thoracic spine, neck (left)" class="w-full md:w-1/2 rounded-lg shadow-md bg-white object-cover" />
+            <Image src={imgStabilization2} alt="The chain — feet, hips, pelvis, lumbar spine, thoracic spine, neck (right)" class="w-full md:w-1/2 rounded-lg shadow-md bg-white object-cover" />
           </div>
           <p class="text-sm text-center text-muted-foreground -mt-6 mb-12 italic">The chain — feet, hips, pelvis, lumbar spine, thoracic spine, neck — with the lower back marked as where it hurts and the other regions marked as where the restriction sits.</p>
 
@@ -116,7 +117,7 @@ import logo from '@/assets/brand/logo.webp?url';
 
           <h2 class="text-3xl font-bold text-foreground mb-6">Breathing and the stability of your spine</h2>
 
-          <img src={imgSciaticaAssessment} alt="The pressurised cylinder — diaphragm above, pelvic floor below, abdominal wall in front, multifidus behind." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <Image src={imgSciaticaAssessment} alt="The pressurised cylinder — diaphragm above, pelvic floor below, abdominal wall in front, multifidus behind." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
           <p>The diaphragm is a breathing muscle, and it is also a postural one. Working alongside the abdominal wall, back muscles, and pelvic floor, the diaphragm generates pressure inside the abdomen (intra-abdominal pressure) that stabilizes the lumbar spine from the inside — before an arm or a leg moves. Raising that pressure produces a measurable difference in spinal stability independent of the big back muscles (<a href="https://pubmed.ncbi.nlm.nih.gov/10956340/" target="_blank" class="text-primary hover:underline">Hodges et al., J Appl Physiol, 2000</a>).</p>
 
@@ -173,7 +174,7 @@ import logo from '@/assets/brand/logo.webp?url';
               </div>
             </div>
             <div>
-              <img src={imgFooter} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+              <Image src={imgFooter} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
             </div>
           </div>
 
