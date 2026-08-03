@@ -1,36 +1,44 @@
 import manualTherapy from "@/assets/clinic/manual-therapy-treatment.webp?url";
 import customizedTreatment from "@/assets/clinic/customized-treatment.webp?url";
 import dnsTreatment from "@/assets/clinic/dns-treatment.webp?url";
-import preventionVideo from "@/assets/clinic/prevention-video.mp4?url";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { Card } from "@/components/ui/card";
 import { Activity, Target, Heart, Stethoscope } from "lucide-react";
 
-export const Services = () => {
+interface ServicesProps {
+  images?: {
+    manualTherapy?: string;
+    customizedTreatment?: string;
+    dnsTreatment?: string;
+  };
+}
+
+export const Services = ({ images }: ServicesProps = {}) => {
   const services = [
     {
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Orthopedic Manual Therapy & Registered Massage Therapy",
       description: "Combination of treatments: spine and joint mobilization, soft tissue including fascia, specific stretching, and neurodynamics to restore function and decrease pain.",
-      image: manualTherapy
+      image: images?.manualTherapy || manualTherapy
     },
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Dynamic Neuromuscular Stabilization",
       titleHref: "/d-n-s",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
-      video: preventionVideo
+      youtubeVideoId: "REPLACE_WITH_YOUTUBE_VIDEO_ID"
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Customized Treatment Plans",
       description: "Tailored assessment and treatment specific to your condition, ensuring we address the root cause of your pain.",
-      image: customizedTreatment
+      image: images?.customizedTreatment || customizedTreatment
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Prevention & Self-Management",
       description: "Empowering you with tools and knowledge to take care of yourself and prevent future injuries.",
-      image: dnsTreatment
+      image: images?.dnsTreatment || dnsTreatment
     }
   ];
 
@@ -58,16 +66,8 @@ export const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-64 overflow-hidden">
-                {'video' in service && service.video ? (
-                  <video
-                    src={service.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster={service.image}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                {'youtubeVideoId' in service && service.youtubeVideoId ? (
+                  <YouTubeEmbed videoId={service.youtubeVideoId} title={service.title} />
                 ) : (
                   <img
                     src={service.image}
@@ -76,8 +76,8 @@ export const Services = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 text-primary-foreground pointer-events-none">
                   {service.icon}
                 </div>
               </div>

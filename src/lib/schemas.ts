@@ -126,6 +126,19 @@ const breadcrumb = (items: { name: string; url: string }[]) => ({
   })),
 });
 
+const videoObject = (v: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  embedUrl: string;
+}) => ({
+  "@type": "VideoObject",
+  name: v.name,
+  description: v.description,
+  thumbnailUrl: v.thumbnailUrl,
+  embedUrl: v.embedUrl,
+});
+
 // =====================================================================
 // HOME
 // =====================================================================
@@ -138,6 +151,12 @@ export const homeSchema = {
       name: "Scandinavian Clinic",
       url: "https://scandinavianclinic.com",
     },
+    videoObject({
+      name: "Dynamic Neuromuscular Stabilization",
+      description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
+      thumbnailUrl: "https://i.ytimg.com/vi/REPLACE_WITH_YOUTUBE_VIDEO_ID/hqdefault.jpg",
+      embedUrl: "https://www.youtube-nocookie.com/embed/REPLACE_WITH_YOUTUBE_VIDEO_ID"
+    }),
     breadcrumb([{ name: "Home", url: "https://scandinavianclinic.com/" }]),
   ],
 };

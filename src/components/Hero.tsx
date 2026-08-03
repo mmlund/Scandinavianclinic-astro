@@ -1,12 +1,16 @@
 import heroEva from "@/assets/clinic/eva-hero.webp?url";
 
-export const Hero = () => {
+interface HeroProps {
+  imageSrc?: string;
+}
+
+export const Hero = ({ imageSrc }: HeroProps) => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroEva}
+          src={imageSrc || heroEva}
           alt="Professional orthopedic therapy environment"
           className="w-full h-full object-cover"
         />

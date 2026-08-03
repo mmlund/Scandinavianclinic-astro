@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
@@ -11,6 +12,18 @@ import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { homeSchema } from '@/lib/schemas';
 import { ConsentBanner } from '@/components/ConsentBanner';
+
+import heroEvaRaw from "@/assets/clinic/eva-hero.webp";
+import evaPortraitRaw from "@/assets/clinic/eva-portrait.webp";
+import manualTherapyRaw from "@/assets/clinic/manual-therapy-treatment.webp";
+import customizedTreatmentRaw from "@/assets/clinic/customized-treatment.webp";
+import dnsTreatmentRaw from "@/assets/clinic/dns-treatment.webp";
+
+const optHero = await getImage({ src: heroEvaRaw, width: 1600 });
+const optAbout = await getImage({ src: evaPortraitRaw, width: 800 });
+const optManualTherapy = await getImage({ src: manualTherapyRaw, width: 800 });
+const optCustomizedTreatment = await getImage({ src: customizedTreatmentRaw, width: 800 });
+const optDnsTreatment = await getImage({ src: dnsTreatmentRaw, width: 800 });
 ---
 
 <BaseLayout 
@@ -21,9 +34,16 @@ import { ConsentBanner } from '@/components/ConsentBanner';
   <div class="min-h-screen">
     <Navigation client:load />
     <main>
-      <Hero client:load />
-      <About client:idle />
-      <Services client:idle />
+      <Hero client:load imageSrc={optHero.src} />
+      <About client:idle imageSrc={optAbout.src} />
+      <Services 
+        client:idle 
+        images={{ 
+          manualTherapy: optManualTherapy.src, 
+          customizedTreatment: optCustomizedTreatment.src, 
+          dnsTreatment: optDnsTreatment.src 
+        }} 
+      />
       <ConditionsWeTreat client:idle />
       <Testimonials client:idle />
       <Booking client:idle />
