@@ -4,15 +4,17 @@ import { ConsentBanner } from '@/components/ConsentBanner';
 
 // Image imports
 import imgHero from '@/assets/Shoulder-pain-hero.webp?url';
-import imgUpperCrossed from '@/assets/Upper-Cross-syndrome.webp?url';
-import imgScapularAssessment from '@/assets/range-of-motion-shoulder-assessment.webp?url';
-import imgCoreStability from '@/assets/core_stability_linked_to_shoulder.webp?url';
+import imgCauses from '@/assets/shoulder_pain_common_causes.png?url';
+import imgChain from '@/assets/the_chain_neck_thoracic_spine_ribs_shouldergirdle_shoulder.png?url';
+import imgPosture from '@/assets/open_scissors_hyperkyphosis.png?url';
+import imgAssessment from '@/assets/range-of-motion-shoulder-assessment.webp?url';
+import imgFooter from '@/assets/eva-andersson-portrait.webp?url';
 import logo from '@/assets/logo.webp?url';
 ---
 
 <BaseLayout 
   title="Shoulder Pain Treatment in North Vancouver | Scandinavian Clinic"
-  description="Shoulder pain with overhead reaching and sleeping? Understand rotator cuff-related shoulder pain, subacromial pain, and how shoulder-blade mechanics and core stability affect recovery. North Vancouver RMT."
+  description="Shoulder pain is not a single condition. The diagnosis matters because treatments diverge. Get a targeted assessment to find the root cause."
   robots="noindex"
 >
   <div class="min-h-screen bg-background pt-20">
@@ -35,120 +37,164 @@ import logo from '@/assets/logo.webp?url';
       <div class="container mx-auto px-4 max-w-4xl">
         <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-8">Shoulder Pain Treatment in North Vancouver</h1>
         
-        <img src={imgHero} alt="Shoulder pain visualization" class="w-full rounded-xl shadow-md my-8" />
+        <p class="text-xl font-medium text-foreground mb-4"><strong>Quick Answer:</strong> "Shoulder pain" is not a single condition.</p>
         
-        <h2 class="text-3xl font-bold text-foreground mb-6">What causes shoulder pain?</h2>
+        <p class="text-lg text-muted-foreground mb-4">At least a dozen distinct problems produce pain in roughly the same place, and which one you have determines what will help — a stiff, globally restricted shoulder needs the opposite handling from an overloaded rotator cuff. What they have in common is that the shoulder rarely fails on its own: it depends on the neck, the mid-back, the ribs, and the shoulder blade, and when those aren't doing their share, the shoulder takes the load.</p>
         
-        <p class="text-lg text-muted-foreground mb-4">Most shoulder pain — especially the kind that hurts with overhead reaching and at night — involves the rotator cuff and the surrounding tissues, often without a single injury. It's now usually called subacromial pain or rotator cuff-related shoulder pain. In many people it builds gradually from how the shoulder blade and posture load the shoulder, which is why treatment that addresses shoulder-blade control and the wider pattern — not just the sore joint — tends to give more lasting results than generic shoulder exercises alone.</p>
+        <p class="text-lg text-muted-foreground mb-12">Shoulder pain narrows your life quietly. Reaching a top shelf, putting on a jacket, fastening a seatbelt, sleeping on that side — all become things you plan around. Often there was no injury. The ache crept in and then wouldn't leave.</p>
         
-        <p class="text-lg text-muted-foreground mb-4">Shoulder pain has a way of narrowing your life. Reaching a top shelf, putting on a jacket, fastening a seatbelt, sleeping on that side — all become things you plan around. Often it isn't one dramatic injury; the ache simply crept in and then wouldn't leave.</p>
-
-        <p class="text-lg text-muted-foreground mb-8">At Scandinavian Clinic, Eva Andersson, RMT, uses clinical Registered Massage Therapy to look at how your shoulder blade, posture, and trunk work together — and to address the movement pattern contributing to your symptoms, not just the sore spot.</p>
-
-        <div class="my-8 flex flex-wrap gap-4 items-center">
-          <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors">Book Your Assessment</a>
-          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
-        </div>
-
         <div class="prose prose-lg max-w-none text-muted-foreground">
-
-          <hr class="my-12 border-border" />
-
-          <h2 class="text-3xl font-bold text-foreground mb-6">Why do people develop shoulder pain without a specific injury?</h2>
-          <p>Many people with shoulder pain can't name a moment it started — it crept in over weeks or months. This is very common, and there's a well-described pattern behind a lot of it.</p>
-          <p>When certain muscles around the chest and upper neck tend to tighten (the pectorals, upper trapezius, levator scapulae) while the muscles that should steer and steady the shoulder blade become relatively weak (lower trapezius, serratus anterior, deep neck flexors), the shoulder blade sits and moves differently and the shoulders round forward. Czech physician Vladimir Janda described this tight-versus-weak pattern as upper crossed syndrome. It's a useful way to understand why desk work, driving, and repetitive overhead activity so often lead to shoulder pain without a distinct injury.</p>
           
-          <img src={imgUpperCrossed} alt="Upper Crossed Syndrome Pattern" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+          <img src={imgHero} alt="The shoulder — pain at the front and outer shoulder, worse overhead, worse at night." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
 
-          <p>An honest caveat worth stating: posture and shoulder-blade position don't perfectly predict pain — plenty of people have rounded shoulders or an altered blade position and no pain at all. So this pattern is best understood as a common contributing factor and a practical thing to assess and address, rather than the single cause of every shoulder problem. That's exactly why it's assessed individually rather than assumed.</p>
-
-          <hr class="my-12 border-border" />
-
-          <h2 class="text-3xl font-bold text-foreground mb-6">What is "impingement," and is that still the right word?</h2>
-          <p>You may have been told your shoulder pain is "impingement" — the idea that the tendons get pinched under the tip of the shoulder blade during movement. The picture is more nuanced than that label suggests. Current shoulder practice increasingly uses subacromial pain syndrome or rotator cuff-related shoulder pain, and treats "impingement" as one possible mechanism rather than a firm structural diagnosis.</p>
-          <p>Part of the reason for the shift: when surgery to "decompress" that space was tested against a placebo (sham) operation, it worked no better than the placebo (Beard et al., CSAW trial, The Lancet, 2018). In other words, the pain is real, but it's usually better understood — and better treated — as an irritated, overloaded rotator cuff system than as a purely mechanical pinch to be surgically removed. That's good news, because it points toward active rehabilitation rather than the operating room for most people.</p>
-
-          <h3 class="text-2xl font-semibold text-foreground mt-8 mb-4">Is a rotator cuff tear the same thing?</h3>
-          <p>Not the same, though they're related. The rotator cuff is the group of muscles and tendons that stabilise and move the shoulder. Those tendons can become irritated and overloaded, and in more significant cases develop a partial or full tear. It's worth knowing that rotator cuff changes and even painless tears are a normal part of ageing and don't always cause symptoms — so the aim isn't to fear a tear, but to rebuild the tendon's load capacity: addressing rotator cuff sensitivity early and restoring strength supports long-term shoulder durability.</p>
-          
-          <div class="bg-blue-50/50 dark:bg-blue-950/20 border-l-4 border-blue-500 p-6 rounded-r-xl my-8">
-            <p class="m-0"><strong>One thing worth noting:</strong> if pain travels down the arm past the elbow, or comes with numbness, tingling, or weakness in the hand, this can suggest cervical (neck) nerve involvement or regional tissue sensitivity rather than a purely local shoulder problem — which is why a full functional assessment matters before assuming a shoulder-only cause. (See our <a href="/conditions/neck-pain-and-whiplash-treatment-north-vancouver/" class="text-primary hover:underline">neck pain page</a>.)</p>
+          <div class="my-8">
+            <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-medium py-3 px-6 rounded-md transition-colors mr-4">Book Your Assessment</a>
+            <a href="https://scandinavianclinic.com" class="inline-block text-primary font-medium py-3 hover:underline">See all conditions Eva treats</a>
           </div>
 
-          <hr class="my-12 border-border" />
-
-          <h2 class="text-3xl font-bold text-foreground mb-6">Why isn't my shoulder exercise program working?</h2>
-          <p>This is one of the most common frustrations in shoulder rehab, and it usually comes down to what the program targets. Exercise genuinely helps shoulder pain — but a program aimed only at the rotator cuff muscles, without addressing how the shoulder blade moves and steadies against the ribcage, often gives incomplete or short-lived results.</p>
-          
-          <img src={imgScapularAssessment} alt="Shoulder-blade comparison — well-controlled vs. poorly-controlled (dyskinetic) scapula during arm raise" class="w-full max-w-2xl mx-auto rounded-lg shadow-md mt-10 mb-4 bg-white" />
-          <p class="text-sm text-center text-muted-foreground mb-10 italic">Assessment of movement patterns in a patient with shoulder pain.</p>
-
-          <p>The shoulder blade's control matters because it sets the foundation the rotator cuff works from. Adding scapular-focused stabilisation to general shoulder exercise has been shown to improve pain and function more than general exercise alone (Zhong et al., Frontiers in Neurology, 2024) — though the review authors are careful to note the certainty of this evidence is still moderate at best, and better trials are needed. The practical takeaway isn't "one magic exercise"; it's that the right, well-dosed, sustained program matched to your assessment tends to outperform a generic handout.</p>
-
-          <hr class="my-12 border-border" />
-
-          <h2 class="text-3xl font-bold text-foreground mb-6">How does the rest of the body affect the shoulder?</h2>
-          <p>The shoulder doesn't work in isolation — it relies on stable, well-timed support from the shoulder blade and trunk to move well. This is the core idea of Dynamic Neuromuscular Stabilization (DNS), developed from the developmental-kinesiology work of Professor Pavel Kolář and colleagues at Prague's Charles University (Frank, Kobesová & Kolář, Int J Sports Phys Ther, 2013): stable movement of any limb depends on coordinated activation of the deep trunk stabilization system — driven by intra-abdominal pressure and diaphragmatic breathing — which provides the foundation for dynamic centration of the shoulder blade (its neutral position of best joint contact), rather than the isolated strength of one muscle.</p>
-          
-          <img src={imgCoreStability} alt="Core stability linked to shoulder mechanics" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
-
-          <p>In practical terms, a shoulder that seems locally weak or restricted may be compensating for a stability problem elsewhere — which is why a thorough assessment looks beyond the shoulder joint itself.</p>
+          <h2 class="text-2xl font-bold text-foreground mb-4">Common symptoms:</h2>
+          <ul class="space-y-2 mb-8">
+            <li>Pain reaching overhead, out to the side, or behind your back</li>
+            <li>Pain at night, especially lying on that side</li>
+            <li>Weakness or a sense the arm won't do what you ask</li>
+            <li>Catching, clicking, or a painful arc partway through the movement</li>
+            <li>Stiffness that limits the movement itself, not just the comfort of it</li>
+            <li>Aching that spreads into the upper arm</li>
+          </ul>
 
           <hr class="my-12 border-border" />
 
-          <h2 class="text-3xl font-bold text-foreground mb-6">When does shoulder pain need urgent or medical attention?</h2>
-          <p>Most shoulder pain is not an emergency and responds well to conservative care. But some situations need prompt medical evaluation rather than self-treatment:</p>
+          <h2 class="text-3xl font-bold text-foreground mb-6">When does shoulder pain need urgent attention?</h2>
+          <p>Most shoulder pain is not an emergency. However, some situations need prompt medical care rather than physical therapy:</p>
           
           <div class="bg-red-50/50 dark:bg-red-950/20 border-l-4 border-red-500 p-6 rounded-r-xl my-8">
-            <ul class="m-0 space-y-4">
-              <li><strong>Sudden, significant arm weakness or an inability to lift the arm</strong> after a fall or injury — this can indicate a substantial rotator cuff tear or other structural damage that needs imaging.</li>
-              <li><strong>Shoulder pain with chest pain, shortness of breath, sweating, or pain spreading to the jaw or left arm</strong> — rarely, shoulder pain can be a sign of a heart problem. Treat this as a medical emergency and call for help.</li>
-              <li><strong>Pain after significant trauma</strong>, or a shoulder that looks deformed, needs prompt assessment.</li>
-            </ul>
+            <h4 class="text-lg font-bold text-foreground flex items-center gap-2 mb-2">🚨 Emergency Red Flags</h4>
+            <p class="m-0 mb-4">Seek emergency medical care immediately if shoulder pain comes with chest pain, shortness of breath, sweating, or pain spreading to the jaw or left arm. Shoulder pain can occasionally signal a cardiac event.</p>
+            <p class="m-0">Also seek prompt medical evaluation for sudden, significant weakness or inability to lift the arm after a fall, pain following major trauma, or a shoulder joint that appears visibly deformed.</p>
           </div>
+
+          <p>Outside of these situations, shoulder pain that hasn't improved after a couple of weeks is a reasonable point to have it assessed.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">Shoulder pain is not one condition</h2>
+
+          <img src={imgCauses} alt="The differential — a simple grid of the main problems that present as shoulder pain, grouped by whether movement is limited by pain or by stiffness." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>The diagnosis matters here more than it does almost anywhere else in the body, because the treatments diverge. The problems that commonly present as shoulder pain include:</p>
           
-          <p>Outside of these, shoulder pain that hasn't improved after a couple of weeks is a reasonable point to get it properly assessed rather than continuing to guess.</p>
-
-          <hr class="my-12 border-border" />
-
-          <h2 class="text-3xl font-bold text-foreground mb-6">What actually helps with shoulder pain?</h2>
-          <ul class="space-y-4">
-            <li><strong>Exercise is the well-supported first-line treatment.</strong> For most rotator cuff-related shoulder pain, structured exercise reduces pain and improves function, and is recommended ahead of injections or surgery (JOSPT systematic-review update, 2020).</li>
-            <li><strong>Scapular-focused work adds benefit — with honest limits.</strong> Adding shoulder-blade stabilisation to general exercise improves pain and function more than general exercise alone, though the certainty of the evidence is moderate and still developing (Zhong et al., 2024). It works best when the program is well-dosed and sustained over at least six weeks, not a one-off handout.</li>
-            <li><strong>Manual therapy helps as a complement, not a cure.</strong> Hands-on treatment can enhance the effect of an exercise program for rotator cuff-related pain, but it works best combined with active rehabilitation rather than on its own.</li>
-            <li><strong>Addressing the wider pattern, not just the joint.</strong> Because a lot of non-traumatic shoulder pain sits within the tight-versus-weak pattern Janda described (upper crossed syndrome), addressing chest and upper-back muscle balance and shoulder-blade control — rather than treating the shoulder joint in isolation — tends to give more complete and lasting improvement.</li>
-            <li><strong>Individualised beats generic over time.</strong> Programs matched to a person's specific scapular and postural findings tend to hold their benefit better than a standard one-size-fits-all routine.</li>
+          <ul class="space-y-2 mb-6">
+            <li>Rotator cuff–related pain (an irritated, overloaded cuff)</li>
+            <li>Rotator cuff tears (traumatic or age-related)</li>
+            <li>Frozen shoulder (global stiffness)</li>
+            <li>Osteoarthritis of the main shoulder joint</li>
+            <li>Acromioclavicular (AC) joint problems at the tip of the shoulder</li>
+            <li>Long head of biceps tendon pain at the front</li>
+            <li>Instability and labral tears</li>
+            <li>Calcific tendinopathy (a calcium deposit in the tendon, which can be dramatically painful)</li>
+            <li>Referred pain from the neck (with a shoulder that examines and images normally)</li>
+            <li>Scapular and thoracic movement problems (where the shoulder itself is structurally sound)</li>
+            <li>Referred pain from internal organs</li>
           </ul>
 
+          <p>The physical tests don't cleanly separate them on their own. Commonly used shoulder tests have reasonable sensitivity but poor specificity — the Hawkins-Kennedy test correctly identifies about 74% of affected shoulders, but only rules out 57% of unaffected ones; Neer's sign sits at 78% and 58% (Hegedus et al., 2012). A positive test tells you less than most people assume.</p>
+
+          <p>This is also why research on shoulder pain is difficult to apply. A scoping review of studies on subacromial pain syndrome from 1972 to 2019 found no single recognized diagnostic criteria, concluding that studies are too varied to compare easily (Karel et al., 2023). When a trial reports that exercise helps shoulder pain, it is reporting an average across a mixed group of people whose underlying problems were not identical.</p>
+
+          <p>So the useful question isn't which treatment works for shoulder pain in general. It's what is actually happening in your shoulder, and what is putting it under load.</p>
+
           <hr class="my-12 border-border" />
 
-          <h2 class="text-3xl font-bold text-foreground mb-6">How We Treat Shoulder Pain</h2>
-          <h3 class="text-2xl font-semibold text-foreground mb-4">Looking at the shoulder blade and trunk, not just the joint</h3>
-          <p>Our assessment is deliberately broad. We look at how the shoulder blade positions and moves during arm motion, the balance between tight and weak muscles consistent with upper crossed syndrome, and how trunk stability supports the shoulder — because local shoulder symptoms are often the structural endpoint of instability further down the chain (a core principle of the functional tradition: the site of pain is often not its source).</p>
+          <h2 class="text-3xl font-bold text-foreground mb-6">Why the rotator cuff gets overloaded</h2>
 
-          <ul class="space-y-4 my-8">
-            <li><strong>Manual therapy & soft-tissue work — inhibiting the overactive muscles.</strong> In Janda's model, tightness is not simply a shortened muscle but tonic (postural) overactivity that goes hand-in-hand with the nervous system inhibiting the phasic stabilisers (lower trapezius, serratus anterior, deep neck flexors). Soft-tissue release is used to settle those overactive tonic muscles (pectorals, upper trapezius, levator scapulae) — opening a window to re-educate the inhibited stabilisers, as a complement to exercise, not a stand-alone fix.</li>
-            <li><strong>Scapular centration & rotator cuff loading — the core of recovery.</strong> A progressive, individualised program that trains dynamic scapular centration — shoulder-blade control anchored by trunk stability — alongside rotator cuff strength, dosed and built up over time rather than handed out as a generic sheet.</li>
-            <li><strong>Postural muscle balance (Janda) — the tight-and-weak pattern.</strong> Where the assessment finds it, addressing the chest/upper-trap tightness and the weak lower-trapezius and serratus anterior that shift how the shoulder blade sits and moves.</li>
-            <li><strong>DNS for trunk and shoulder-girdle stability.</strong> Retraining the deep stabilising system so the shoulder has a stable base to work from, drawing on the developmental-kinesiology basis of the method (Kobesová & Kolář, 2014). <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more about DNS →</a></li>
+          <img src={imgChain} alt="The chain — neck, thoracic spine, ribs, shoulder blade, and shoulder." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>Karel Lewit and the Prague School look beyond the shoulder joint itself. When a rotator cuff is irritated, it is usually the victim carrying extra load because another part of the system isn't doing its share.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mt-8 mb-4">1. Disrupted joint centration and shoulder rhythm</h3>
+          <p>For your shoulder to move smoothly without pain, two things must work in precise teamwork:</p>
+          <ul class="space-y-4 mb-6">
+            <li><strong>Joint centration:</strong> The head of your arm bone must stay centered in its shallow socket throughout movement. If it drifts off-center, the bone rides upward and compresses the rotator cuff tendons above it.</li>
+            <li><strong>Arm-and-blade rhythm (Scapulohumeral rhythm):</strong> As you raise your arm, your arm bone and shoulder blade move in a steady 2:1 ratio (2 degrees of arm movement for every 1 degree of shoulder blade rotation).</li>
           </ul>
+          <p>When this timing breaks down — causing the blade to shrug, tip forward, or wing outward — the arm bone pinches the tissues inside the joint. Research shows that as shoulder rhythm becomes increasingly disrupted, pain levels directly rise. Retraining this shoulder-blade coordination alongside general exercises improves pain and function far more than exercise alone (Zhong et al., 2024).</p>
 
-          <h2 class="text-3xl font-bold text-foreground mb-6">What to Expect</h2>
-          <p>Shoulder rehabilitation takes patience — meaningful change usually unfolds over weeks, not days, and depends heavily on consistent home exercise between sessions. Eva will explain what the assessment finds, what functional factors may be contributing to the issue, and outline a realistic recovery plan for your situation. If imaging or another practitioner's input is warranted — for example after significant trauma or if progress stalls — she'll recommend it directly.</p>
-          <p>The goal is not an indefinite treatment schedule but giving you the control and program to manage the shoulder yourself.</p>
+          <h3 class="text-2xl font-semibold text-foreground mt-8 mb-4">2. A stiff mid-back and ribs</h3>
+          <p>Your arm cannot reach fully overhead unless your mid-back extends and rotates to allow it. Restoring mid-back and rib mobility frequently improves overhead reach in the very same session, before anything has even been done to the shoulder itself.</p>
+
+          <h3 class="text-2xl font-semibold text-foreground mt-8 mb-4">3. Referred pain from the neck</h3>
+          <p>Neck dysfunction commonly refers pain directly into the shoulder. A classic pattern is shoulder pain accompanied by restricted neck movement — where treating the neck relieves the shoulder. (Learn more on our <a href="/conditions/neck-pain-and-whiplash-treatment-north-vancouver" class="text-primary hover:underline">neck pain page</a>).</p>
 
           <hr class="my-12 border-border" />
 
-          <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
-          <h3 class="text-xl font-semibold text-foreground mb-4">A whole-pattern approach to shoulder pain</h3>
-          <ul class="space-y-4 mb-8">
-            <li><strong>Swedish-trained orthopedic manual therapy.</strong> Eva's training includes detailed assessment of shoulder-blade and postural mechanics, not the shoulder joint alone.</li>
-            <li><strong>Czech-trained DNS therapist.</strong> Shoulder function depends on trunk and shoulder-girdle stability; DNS trains that foundation. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">Learn more</a></li>
-            <li><strong>Assessment-first.</strong> Treatment follows a thorough assessment of the pattern behind the pain, rather than a generic shoulder routine.</li>
-            <li><strong>Covered by most insurance plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+          <h2 class="text-3xl font-bold text-foreground mb-6">Trunk Posture and Shoulders</h2>
+
+          <img src={imgPosture} alt="Open scissors — the ribcage flared up and the pelvis tipped forward, the two planes diverging, with the shoulder blade's changed resting position marked." class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <p>As an example, Hyperkyphosis (an extreme forward curve of the upper back) causes shoulder problems by pulling your shoulder blades forward and down, which limits your arm movement, pinches your tendons, and leads to painful conditions like shoulder impingement.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What about frozen shoulder?</h2>
+          <p>"Frozen shoulder" is a widely used label rather than a precise structural diagnosis, but the presentation it describes is real and distinctive: movement is limited by global stiffness rather than only by pain, in every direction, with turning the arm outward (external rotation) usually the most restricted.</p>
+          <p>It is often described as passing through three stages and resolving on its own within a year or two. However, a systematic review examining this natural history concluded that the theory of predictable recovery phases leading to complete resolution without treatment is unfounded (Wong et al., Physiotherapy, 2017) — a meaningful proportion of people experience stiffness or reduced reach years later.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What about a scan or a rotator cuff tear?</h2>
+          <p>Rotator cuff changes — including tears that cause no pain at all — are a normal part of getting older. A finding on an MRI report does not automatically prove it is the true source of your pain, nor does it decide treatment on its own.</p>
+          <p>Where pain travels down the arm past the elbow, or comes with numbness, tingling, or weakness in the hand, that points toward a neck issue rather than a purely local shoulder problem — another key distinction evaluated during assessment.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">How Eva treats shoulder pain</h2>
+          <p>What treatment looks like depends on what the assessment finds — a stiff shoulder, an overloaded cuff, and a shoulder problem driven by the neck require three completely different plans. The sequence below outlines the general approach:</p>
+
+          <img src={imgAssessment} alt="Range of motion shoulder assessment" class="w-full max-w-2xl mx-auto rounded-lg shadow-md my-10 bg-white" />
+
+          <ol class="list-decimal pl-5 space-y-4 mb-8">
+            <li><strong>Establish the underlying issue:</strong> Neck movement, thoracic spine and rib mobility, shoulder motion during arm elevation, joint centration, trunk posture, and whether limitation is driven by pain or structural stiffness.</li>
+            <li><strong>Soft tissue treatment for tight muscles:</strong> Massage, facia release, specific stretching, trigger point therapy, and targeted soft-tissue work.</li>
+            <li><strong>Restore mobility:</strong> Specific mobilization of the thoracic spine, ribs, and neck, as well as the shoulder joint itself where restricted.</li>
+            <li><strong>Retrain shoulder-blade coordination:</strong> Specific exercises to restore proper muscle patterns.</li>
+            <li><strong>Weight-bearing through the arm:</strong> Dynamic Neuromuscular Stabilization uses positions from infant motor development — such as loading through the hands e.g. in four-point kneeling — before progressing to reaching overhead. These developmental positions promote shoulder blade and core coordination naturally without “overthinking” (Kobesová & Kolář, J Bodyw Mov Ther, 2014). <a href="https://scandinavianclinic.com" class="text-primary hover:underline">[Learn more about DNS →]</a></li>
+            <li><strong>Progressive loading:</strong> Light rotator cuff activation, progressing toward the functional demands of your daily life, work, or sports. Structured exercise is the evidence-based first-line treatment for rotator cuff–related shoulder pain (Pieters et al., JOSPT, 2020).</li>
+          </ol>
+
+          <p>If you perform repetitive tasks — whether in sports like tennis, swimming, and climbing, or in daily work like computer use, painting, reaching, and heavy lifting — the issue is often a combination of factors: stiffness in the mid-back, limited shoulder mobility, and muscle compensation. Your specific reaching, lifting, or stroke mechanics are evaluated alongside the shoulder itself.</p>
+
+          <hr class="my-12 border-border" />
+
+          <h2 class="text-3xl font-bold text-foreground mb-6">What to expect</h2>
+          <p>The timeline depends on which problem you have, and you will receive an honest estimate after your initial assessment:</p>
+          <ul class="space-y-2 mb-6">
+            <li>A shoulder driven by thoracic stiffness may improve quickly.</li>
+            <li>An irritated rotator cuff typically requires several weeks of treatment.</li>
+            <li>A genuinely stiff or frozen shoulder is often measured in months.</li>
           </ul>
           
-          <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+          <p>Assessment and treatment begin in the first session. Eva will explain what the examination revealed, what is affecting the shoulder, and what the plan involves — including if findings indicate care outside her scope of practice.</p>
+          <p>Home exercises often play an essential role. The focus is always on movement quality rather than high repetition counts.</p>
+
+          <hr class="my-12 border-border" />
+
+          <div class="grid md:grid-cols-2 gap-12 items-center my-12">
+            <div>
+              <h2 class="text-3xl font-bold text-foreground mb-6">Why Scandinavian Clinic</h2>
+              <ul class="space-y-4">
+                <li><strong>Targeted differential assessment:</strong> Identifying the cause of your shoulder pain. Neck, thoracic spine, ribs, shoulder girdle, and posture are examined as standard.</li>
+                <li><strong>Swedish-trained orthopedic manual therapy:</strong> Combines soft-tissue techniques, joint mobilization, rehabilitation, and functional biomechanical assessment.</li>
+                <li><strong>Czech-trained in Dynamic Neuromuscular Stabilization:</strong> Trained in the Prague School tradition of Lewit, Janda, and Kolář. <a href="https://scandinavianclinic.com" class="text-primary hover:underline">[Learn more]</a></li>
+                <li><strong>Covered by most extended health plans:</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+              </ul>
+              <div class="mt-6">
+                <a href="https://scandinavianclinic.com" class="text-primary font-medium hover:underline">See all conditions Eva treats</a>
+              </div>
+            </div>
+            <div>
+              <img src={imgFooter} alt="Eva Andersson consultation" class="w-full rounded-xl shadow-lg" />
+            </div>
+          </div>
 
           <hr class="my-12 border-border" />
 
@@ -156,63 +202,68 @@ import logo from '@/assets/logo.webp?url';
           
           <div class="space-y-6">
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Why does my shoulder hurt when I haven't injured it?</h3>
-              <p>Gradual-onset shoulder pain is often linked to the tight-versus-weak muscle pattern Janda called upper crossed syndrome — tight chest and upper-trapezius muscles with weaker shoulder-blade stabilisers — which changes how the shoulder blade sits and moves. It's a common contributing factor, which is why it's assessed individually.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why does my shoulder hurt when I never injured it?</h3>
+              <p>Because the shoulder relies heavily on the neck, mid-back, ribs, and shoulder blade to function properly. When those regions don't do their share, the shoulder carries more load than it was designed for. Gradual-onset shoulder pain usually follows this pattern rather than a single traumatic moment.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Is my shoulder pain "impingement" or a rotator cuff tear?</h3>
-              <p>They're related but different: "impingement" (better called subacromial pain) describes an irritated, overloaded cuff, while a tear is actual tendon damage. Rotator cuff changes, including painless tears, are also a normal part of ageing and don't always cause symptoms. An assessment helps clarify what's contributing and how to rebuild the cuff's load capacity.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why do I need an assessment — isn't shoulder pain just shoulder pain?</h3>
+              <p>No. At least a dozen distinct conditions cause shoulder pain, and they require different approaches.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Is impingement surgery usually necessary?</h3>
-              <p>Usually not. When "decompression" surgery was tested against a placebo operation, it worked no better (Beard et al., 2018) — which is why structured exercise-based rehab is the recommended first-line approach for most people.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Do I need surgery?</h3>
+              <p>Usually not. Structured exercise-based rehabilitation is the recommended first-line approach for most rotator cuff–related shoulder pain, ahead of corticosteroid injections or surgery (Pieters et al., 2020).</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Why hasn't my shoulder exercise program worked?</h3>
-              <p>Programs aimed only at the rotator cuff, without training shoulder-blade control, often give incomplete results. Adding scapular-focused, well-dosed exercise improves outcomes (Zhong et al., 2024).</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Is my rotator cuff torn?</h3>
+              <p>It might be, but that may matter less than you think. Rotator cuff changes and asymptomatic tears are very common as we age. A finding on a scan does not automatically prove it is the primary source of your symptoms.</p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why would you treat my mid-back or neck for shoulder pain?</h3>
+              <p>Because the arm cannot reach fully overhead without the mid-back extending and rotating, and because neck dysfunction frequently refers pain directly into the shoulder. Overhead reach often improves immediately after freeing up thoracic and rib restrictions.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Can posture really affect shoulder pain?</h3>
-              <p>It can contribute — rounded-shoulder, forward-head patterns are associated with the muscle imbalance linked to shoulder pain. That said, posture doesn't perfectly predict pain, so it's one factor to assess, not the whole story.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Why aren't you starting me on rotator cuff strengthening exercises right away?</h3>
+              <p>Because loading a joint that isn't tracking properly reinforces the dysfunction that caused the pain. Restoring joint centration and movement quality comes first; strengthening follows.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">Does massage or manual therapy help?</h3>
-              <p>Manual therapy appears to help most when combined with an appropriate exercise program, rather than on its own.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Can posture really affect my shoulder?</h3>
+              <p>Yes. The alignment of your ribcage directly dictates where your shoulder blade rests, changing muscle tension and limiting how far the blade can travel when you lift your arm.</p>
             </div>
             
             <div>
-              <h3 class="text-xl font-bold text-foreground mb-2">When should I see a doctor instead of starting treatment myself?</h3>
-              <p>Seek prompt care for sudden arm weakness or inability to lift the arm after injury, and treat shoulder pain with chest pain, shortness of breath, or pain spreading to the jaw or left arm as a possible medical emergency.</p>
+              <h3 class="text-xl font-bold text-foreground mb-2">Does massage help shoulder pain?</h3>
+              <p>Yes. Relieving tension in overactive muscles around the neck, chest, and shoulder blade is an effective part of treatment when combined with joint mobilization and movement retraining.</p>
             </div>
           </div>
 
           <div class="bg-accent/10 p-8 rounded-2xl text-center my-16 border border-accent/20">
-            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule Your Visit</h2>
-            <h3 class="text-xl font-medium text-muted-foreground mb-6">Book your appointment for shoulder pain treatment</h3>
-            <p class="mb-8 max-w-2xl mx-auto">If your shoulder pain developed gradually, hasn't fully responded to previous exercise programs, or keeps limiting overhead activity and sleep, a thorough assessment can identify the pattern behind it.</p>
+            <h2 class="text-3xl font-bold text-foreground mb-4">Schedule your visit</h2>
+            <p class="mb-8 max-w-2xl mx-auto">If your shoulder pain developed without an injury, hasn't responded to previous exercise programs, or is limiting your sleep and daily reaching, an assessment can identify what is actually going on.</p>
             <a href="https://booking.scandinavianclinic.com" class="booking-link inline-block bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-4 px-8 rounded-lg shadow-lg transition-all hover:scale-105 mb-4">Book Your Assessment</a>
             <p class="text-sm text-muted-foreground">Suite 202 – 101 West 16th Street, North Vancouver · (604) 926-4883</p>
           </div>
 
-          {/* REFERENCES */}
           <div class="mt-16 pt-8 border-t border-border/50 text-sm">
             <h3 class="text-lg font-bold text-foreground mb-4">References</h3>
             <ol class="list-decimal pl-5 space-y-2 text-muted-foreground/80">
-              <li>Beard DJ, Rees JL, Cook JA, et al. Arthroscopic subacromial decompression for subacromial shoulder pain (CSAW): a multicentre, pragmatic, parallel group, placebo-controlled, three-group, randomised surgical trial. <em>The Lancet</em>. 2018;391(10118):329–338.</li>
+              <li>Karel YHJM, et al. Terminology and diagnostic criteria used in studies investigating patients with subacromial pain syndrome from 1972 to 2019: a scoping review. <em>Physiotherapy</em>. 2023.</li>
+              <li>Hegedus EJ, Goode AP, Cook CE, et al. Diagnostic accuracy of clinical tests for subacromial impingement syndrome: a systematic review and meta-analysis. <em>Br J Sports Med</em>. 2012;46(14):964–978.</li>
               <li>Zhong Z, Zang W, Tang Z, et al. Effect of scapular stabilization exercises on subacromial pain (impingement) syndrome: a systematic review and meta-analysis of randomized controlled trials. <em>Frontiers in Neurology</em>. 2024;15:1357763.</li>
-              <li>An update of systematic reviews examining the effectiveness of conservative physical therapy interventions for subacromial shoulder pain. <em>Journal of Orthopaedic & Sports Physical Therapy</em>. 2020.</li>
-              <li>Frank C, Kobesová A, Kolář P. Dynamic neuromuscular stabilization & sports rehabilitation. <em>International Journal of Sports Physical Therapy</em>. 2013;8(1):62–73.</li>
-              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>Journal of Bodywork and Movement Therapies</em>. 2014;18(1):23–33.</li>
-              <li>Page P, Frank C, Lardner R. <em>Assessment and Treatment of Muscle Imbalance: The Janda Approach (upper crossed syndrome)</em>. Human Kinetics.</li>
+              <li>Pieters L, Lewis J, Kuppens K, et al. An update of systematic reviews examining the effectiveness of conservative physical therapy interventions for subacromial shoulder pain. <em>JOSPT</em>. 2020;50(3):131–141.</li>
+              <li>Wong CK, Levine WN, Deo K, et al. Natural history of frozen shoulder: fact or fiction? A systematic review. <em>Physiotherapy</em>. 2017;103(1):40–47.</li>
+              <li>Kobesová A, Kolář P. Developmental kinesiology: three levels of motor control in the assessment and treatment of the motor system. <em>J Bodyw Mov Ther</em>. 2014;18(1):23–33.</li>
+              <li>Frank C, Kobesová A, Kolář P. Dynamic neuromuscular stabilization & sports rehabilitation. <em>Int J Sports Phys Ther</em>. 2013;8(1):62–73.</li>
+              <li>Lewit K. <em>Manipulative Therapy: Musculoskeletal Medicine</em>. Churchill Livingstone; 2009.</li>
+              <li>Page P, Frank C, Lardner R. <em>Assessment and Treatment of Muscle Imbalance: The Janda Approach</em>. Human Kinetics; 2010.</li>
             </ol>
             <p class="mt-8 text-xs italic text-muted-foreground">Written by Eva Andersson, RMT · Last updated July 2026</p>
           </div>
-
         </div>
       </div>
     </main>
