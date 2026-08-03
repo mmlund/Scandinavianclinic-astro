@@ -26,7 +26,7 @@ export const Services = ({ images }: ServicesProps = {}) => {
       title: "Dynamic Neuromuscular Stabilization",
       titleHref: "/d-n-s",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
-      youtubeVideoId: "REPLACE_WITH_YOUTUBE_VIDEO_ID"
+      youtubeVideoId: "Dt-hermwK3U"
     },
     {
       icon: <Target className="w-8 h-8" />,
