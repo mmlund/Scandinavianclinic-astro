@@ -12,7 +12,7 @@ export default defineConfig({
   output: 'static',
   image: {
     service: {
-      entrypoint: 'astro/assets/services/sharp'
+      entrypoint: './src/sharp.js'
     }
   },
   integrations: [react(), sitemap()],
