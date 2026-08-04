@@ -20,33 +20,32 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
-                <button
-                  onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-                  className="hover:text-accent transition-colors"
-                >
-                  About Eva
-                </button>
+                <a href="/" className="hover:text-accent transition-colors">Home</a>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                  className="hover:text-accent transition-colors"
-                >
-                  Services
-                </button>
+                <a href="/about-me" className="hover:text-accent transition-colors">About Eva</a>
               </li>
               <li>
-                <button
-                  onClick={() => document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })}
-                  className="hover:text-accent transition-colors"
-                >
-                  Testimonials
-                </button>
+                <a href="/first-visit" className="hover:text-accent transition-colors">The Assessment</a>
+              </li>
+              <li>
+                <a href="/conditions" className="hover:text-accent transition-colors">Conditions</a>
+              </li>
+              <li>
+                <a href="/how-recovery-works/why-pain-keeps-coming-back" className="hover:text-accent transition-colors">How Recovery Works</a>
+              </li>
+              <li>
+                <a href="/athletes-and-performance" className="hover:text-accent transition-colors">Athletes & Performance</a>
+              </li>
+              <li>
+                <a href="/fees" className="hover:text-accent transition-colors">Fees & Insurance</a>
               </li>
               <li>
                 <a
-                  href="/booking"
-                  className="hover:text-accent transition-colors"
+                  href="https://booking.scandinavianclinic.com"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors font-medium text-accent"
                 >
                   Book Appointment
                 </a>

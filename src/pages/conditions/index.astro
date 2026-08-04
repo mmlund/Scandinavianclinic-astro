@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { ConditionsWeTreat } from '@/components/ConditionsWeTreat';
+import ConditionBodyMap from '@/components/ConditionBodyMap.astro';
+---
+
+<BaseLayout 
+  title="Conditions We Treat | Scandinavian Clinic"
+  description="Assessment-based treatment for chronic pain, sports injuries, and complex musculoskeletal conditions. Explore the areas we treat."
+>
+  <div class="min-h-screen flex flex-col">
+    <Navigation client:load />
+    <main class="flex-grow pt-24">
+      <ConditionsWeTreat client:idle>
+        <ConditionBodyMap />
+      </ConditionsWeTreat>
+    </main>
+    <Footer client:idle />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>

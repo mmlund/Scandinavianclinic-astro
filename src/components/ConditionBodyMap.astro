@@ -1,0 +1,115 @@
+---
+import bodyMapImg from "@/assets/conditions/body-map-figure.png";
+
+const regions = [
+  { label: 'Headaches', href: '/conditions/headache-treatment-north-vancouver', cx: 1500, cy: 244, side: 'left' },
+  { label: 'Neck pain\nand whiplash', href: '/conditions/neck-pain-and-whiplash-treatment-north-vancouver', cx: 1580, cy: 516, side: 'right' },
+  { label: 'Shoulder', href: '/conditions/shoulder-pain-treatment-north-vancouver', cx: 1550, cy: 675, side: 'left' },
+  { label: 'Tennis elbow', href: '/conditions/tennis-elbow-treatment-north-vancouver', cx: 1439, cy: 1069, side: 'left' },
+  { label: 'Back pain', href: '/conditions/back-pain-treatment-north-vancouver', cx: 1580, cy: 1150, side: 'right' },
+  { label: 'Hip pain', href: '/conditions/hip-pain-treatment-north-vancouver', cx: 1652, cy: 1344, side: 'left' },
+  { label: 'Sciatica', href: '/conditions/sciatica-treatment-north-vancouver', cx: 1619, cy: 1600, side: 'right' },
+  { label: 'Foot and ankle', href: '/conditions/foot-and-ankle-pain-treatment-north-vancouver', cx: 1848, cy: 2500, side: 'right' },
+];
+---
+
+<div class="condition-body-map w-full max-w-4xl mx-auto my-12">
+  {/* Mobile View: text links only, hidden on sm+ */}
+  <div class="sm:hidden flex flex-col gap-3 px-4">
+    {regions.map((region) => (
+      <a 
+        href={region.href} 
+        class="block p-4 rounded-lg bg-secondary/30 text-foreground font-medium hover:text-accent hover:bg-secondary/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors"
+      >
+        {region.label.replace('\n', ' ')}
+      </a>
+    ))}
+  </div>
+
+  {/* Desktop View: SVG Illustration, visible on sm+ */}
+  <div class="hidden sm:block relative w-full aspect-[3000/2800]">
+    <svg 
+      viewBox="0 0 3000 2800" 
+      class="w-full h-full"
+      role="img"
+      aria-labelledby="bodyMapTitle"
+    >
+      <title id="bodyMapTitle">Interactive body map showing areas of pain we treat</title>
+      
+      <image 
+        href={bodyMapImg.src} 
+        x="732" 
+        y="24" 
+        width="1536" 
+        height="2752" 
+      />
+
+      {regions.map((region) => {
+        const isLeft = region.side === 'left';
+        const textX = isLeft ? 650 : 2350;
+        const lineX1 = isLeft ? 680 : 2320;
+        const lineX2 = isLeft ? region.cx - 80 : region.cx + 80;
+        const textAnchor = isLeft ? "end" : "start";
+
+        return (
+          <g class="group cursor-pointer">
+            <line 
+              x1={lineX1} 
+              y1={region.cy} 
+              x2={lineX2} 
+              y2={region.cy} 
+              class="stroke-foreground/20 group-hover:stroke-accent transition-colors duration-300" 
+              stroke-width="4"
+              stroke-dasharray="8 8"
+            />
+            
+            <a href={region.href} class="outline-none focus-visible:outline focus-visible:outline-4 focus-visible:outline-accent focus-visible:outline-offset-8">
+              <text 
+                x={textX} 
+                y={region.cy} 
+                text-anchor={textAnchor}
+                class="text-[72px] fill-foreground group-hover:fill-accent group-focus-within:fill-accent font-normal group-hover:font-medium group-focus-within:font-medium transition-all duration-300"
+              >
+                {region.label.split('\n').map((line, idx, arr) => (
+                  <tspan 
+                    x={textX} 
+                    dy={idx === 0 ? `${0.35 - (arr.length - 1) * 0.6}em` : '1.2em'}
+                  >
+                    {line}
+                  </tspan>
+                ))}
+              </text>
+            </a>
+
+            <a 
+              href={region.href} 
+              aria-label={`View treatment for ${region.label}`}
+              class="outline-none focus-visible:outline focus-visible:outline-4 focus-visible:outline-accent focus-visible:outline-offset-4"
+            >
+              <circle 
+                cx={region.cx} 
+                cy={region.cy} 
+                r="80" 
+                class="fill-transparent group-hover:fill-accent/30 group-focus-within:fill-accent/30 transition-colors duration-300"
+              />
+            </a>
+          </g>
+        );
+      })}
+    </svg>
+  </div>
+
+  {/* Accessible list visible at all widths */}
+  <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 px-4 text-sm md:text-base">
+    {regions.map((region) => (
+      <li>
+        <a 
+          href={region.href} 
+          class="text-primary hover:text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 transition-colors"
+        >
+          {region.label.replace('\n', ' ')}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

@@ -139,6 +139,21 @@ const videoObject = (v: {
   embedUrl: v.embedUrl,
 });
 
+const conditionsItemList = {
+  "@type": "ItemList",
+  name: "Conditions Treated",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, item: { "@type": "MedicalCondition", name: "Back Pain", url: "https://scandinavianclinic.com/conditions/back-pain-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 2, item: { "@type": "MedicalCondition", name: "Sciatica", url: "https://scandinavianclinic.com/conditions/sciatica-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 3, item: { "@type": "MedicalCondition", name: "Neck Pain & Whiplash", url: "https://scandinavianclinic.com/conditions/neck-pain-and-whiplash-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 4, item: { "@type": "MedicalCondition", name: "Headaches", url: "https://scandinavianclinic.com/conditions/headache-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 5, item: { "@type": "MedicalCondition", name: "Shoulder", url: "https://scandinavianclinic.com/conditions/shoulder-pain-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 6, item: { "@type": "MedicalCondition", name: "Hip", url: "https://scandinavianclinic.com/conditions/hip-pain-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 7, item: { "@type": "MedicalCondition", name: "Tennis Elbow", url: "https://scandinavianclinic.com/conditions/tennis-elbow-treatment-north-vancouver" } },
+    { "@type": "ListItem", position: 8, item: { "@type": "MedicalCondition", name: "Foot & Ankle", url: "https://scandinavianclinic.com/conditions/foot-and-ankle-pain-treatment-north-vancouver" } }
+  ]
+};
+
 // =====================================================================
 // HOME
 // =====================================================================
@@ -151,6 +166,12 @@ export const homeSchema = {
       name: "Scandinavian Clinic",
       url: "https://scandinavianclinic.com",
     },
+    {
+      "@type": "Person",
+      "@id": EVA_ID,
+      url: "https://scandinavianclinic.com/about-me"
+    },
+    conditionsItemList,
     videoObject({
       name: "Dynamic Neuromuscular Stabilization",
       description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",

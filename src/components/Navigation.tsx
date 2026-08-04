@@ -9,6 +9,24 @@ import {
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/brand/logo.webp?url";
 
+const conditions = [
+  { name: "Back Pain", path: "/conditions/back-pain-treatment-north-vancouver" },
+  { name: "Sciatica", path: "/conditions/sciatica-treatment-north-vancouver" },
+  { name: "Neck Pain & Whiplash", path: "/conditions/neck-pain-and-whiplash-treatment-north-vancouver" },
+  { name: "Headaches", path: "/conditions/headache-treatment-north-vancouver" },
+  { name: "Shoulder", path: "/conditions/shoulder-pain-treatment-north-vancouver" },
+  { name: "Hip", path: "/conditions/hip-pain-treatment-north-vancouver" },
+  { name: "Tennis Elbow", path: "/conditions/tennis-elbow-treatment-north-vancouver" },
+  { name: "Foot & Ankle", path: "/conditions/foot-and-ankle-pain-treatment-north-vancouver" }
+];
+
+const recovery = [
+  { name: "Why Pain Keeps Coming Back", path: "/how-recovery-works/why-pain-keeps-coming-back" },
+  { name: "Core Stability and Breathing", path: "/how-recovery-works/core-stability-and-breathing" },
+  { name: "Posture", path: "/how-recovery-works/posture" },
+  { name: "What DNS Is", path: "/d-n-s" }
+];
+
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,7 +66,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-3 xl:gap-5 text-[13px] xl:text-sm">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Home</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">About Eva</a>
+            <a href="/about-me" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">About Eva</a>
             <a href="/first-visit" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">The Assessment</a>
             
             <DropdownMenu>
@@ -56,9 +74,9 @@ export const Navigation = () => {
                 Conditions <ChevronDown size={14} />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="bg-background z-50">
-                {["Sciatica", "Low Back Pain", "Neck Pain", "Shoulder", "Tennis Elbow", "Hip Pain", "Headaches", "Post-Surgical Rehab"].map(c => (
-                  <DropdownMenuItem key={c} asChild>
-                    <a href={c === "Sciatica" ? "/conditions/sciatica-treatment-north-vancouver" : "#"}>{c}</a>
+                {conditions.map(c => (
+                  <DropdownMenuItem key={c.name} asChild>
+                    <a href={c.path}>{c.name}</a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -69,35 +87,20 @@ export const Navigation = () => {
                 How Recovery Works <ChevronDown size={14} />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="bg-background z-50">
-                <DropdownMenuItem asChild>
-                  <a href="/why-pain-comes-back">Why Pain Keeps Coming Back</a>
-                </DropdownMenuItem>
-                {["Breathing and Pain", "Posture as Stabilisation", "Core Stability", "What DNS Is"].map(c => (
-                  <DropdownMenuItem key={c} asChild>
-                    <a href="#">{c}</a>
+                {recovery.map(c => (
+                  <DropdownMenuItem key={c.name} asChild>
+                    <a href={c.path}>{c.name}</a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none whitespace-nowrap">
-                For <ChevronDown size={14} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="bg-background z-50">
-                {["Desk Workers", "Trail Runners", "Racquet Sport", "Post-Surgical", "Long-Drive"].map(c => (
-                  <DropdownMenuItem key={c} asChild>
-                    <a href="#">{c}</a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Services & RMT</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Testimonials</a>
+            <a href="/athletes-and-performance" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Athletes & Performance</a>
+            <a href="/fees" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Fees & Insurance</a>
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Contact / Book</a>
             
             <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground ml-2 whitespace-nowrap">
-              <a href="#" target="_blank" rel="noopener noreferrer">Contact / Book</a>
+              <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer">Book Your Assessment</a>
             </Button>
           </div>
 
@@ -112,34 +115,28 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 bg-background rounded-lg shadow-lg">
+          <div className="lg:hidden mt-4 py-4 bg-background rounded-lg shadow-lg max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col gap-4">
               <a href="/" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Home</a>
-              <a href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About Eva</a>
+              <a href="/about-me" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About Eva</a>
               <a href="/first-visit" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">The Assessment</a>
               
-              <div className="px-4 py-2 text-left font-medium text-foreground">Conditions</div>
-              {["Sciatica", "Low Back Pain", "Neck Pain", "Shoulder", "Tennis Elbow", "Hip Pain", "Headaches", "Post-Surgical Rehab"].map(c => (
-                <a key={c} href={c === "Sciatica" ? "/conditions/sciatica-treatment-north-vancouver" : "#"} onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c}</a>
+              <div className="px-4 py-2 text-left font-medium text-foreground bg-secondary/20">Conditions</div>
+              {conditions.map(c => (
+                <a key={c.name} href={c.path} onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c.name}</a>
               ))}
               
-              <div className="px-4 py-2 text-left font-medium text-foreground mt-2">How Recovery Works</div>
-              <a href="/why-pain-comes-back" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">Why Pain Keeps Coming Back</a>
-              {["Breathing and Pain", "Posture as Stabilisation", "Core Stability", "What DNS Is"].map(c => (
-                <a key={c} href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c}</a>
+              <div className="px-4 py-2 text-left font-medium text-foreground mt-2 bg-secondary/20">How Recovery Works</div>
+              {recovery.map(c => (
+                <a key={c.name} href={c.path} onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c.name}</a>
               ))}
               
-              <div className="px-4 py-2 text-left font-medium text-foreground mt-2">For</div>
-              {["Desk Workers", "Trail Runners", "Racquet Sport", "Post-Surgical", "Long-Drive"].map(c => (
-                <a key={c} href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c}</a>
-              ))}
-
-              <a href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left mt-2">Services & RMT</a>
-              <a href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Testimonials</a>
-              <a href="#" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact / Book</a>
+              <a href="/athletes-and-performance" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left mt-2">Athletes & Performance</a>
+              <a href="/fees" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Fees & Insurance</a>
+              <a href="/contact" onClick={closeMobile} className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact / Book</a>
               
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mx-4">
-                <a href="#" target="_blank" rel="noopener noreferrer" onClick={closeMobile}>Book Appointment</a>
+                <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" onClick={closeMobile}>Book Your Assessment</a>
               </Button>
             </div>
           </div>

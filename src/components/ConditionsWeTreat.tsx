@@ -47,7 +47,7 @@ const conditions = [
   },
 ];
 
-export const ConditionsWeTreat = () => {
+export const ConditionsWeTreat = ({ children }: { children?: React.ReactNode }) => {
   return (
     <section id="conditions-we-treat" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -63,6 +63,8 @@ export const ConditionsWeTreat = () => {
             Massage Therapy. Common reasons patients seek treatment include:
           </p>
         </div>
+
+        {children}
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {conditions.map((c, i) => (

@@ -1,0 +1,1 @@
+const fs = require('fs'); const html = fs.readFileSync('dist/client/conditions/tennis-elbow-ver2/index.html', 'utf8'); const matches = html.match(/<img[^>]+src="([^"]+)"[^>]*>/g); console.log(matches.slice(0, 3).join('\n'));

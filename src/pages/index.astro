@@ -2,53 +2,132 @@
 import { getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
-import { Hero } from '@/components/Hero';
-import { About } from '@/components/About';
-import { Services } from '@/components/Services';
-import { ConditionsWeTreat } from '@/components/ConditionsWeTreat';
-import { Testimonials } from '@/components/Testimonials';
-import { Booking } from '@/components/Booking';
-import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { homeSchema } from '@/lib/schemas';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import ConditionBodyMap from '@/components/ConditionBodyMap.astro';
 
-import heroEvaRaw from "@/assets/clinic/eva-hero.webp";
-import evaPortraitRaw from "@/assets/clinic/eva-portrait.webp";
-import manualTherapyRaw from "@/assets/clinic/manual-therapy-treatment.webp";
-import customizedTreatmentRaw from "@/assets/clinic/customized-treatment.webp";
-import dnsTreatmentRaw from "@/assets/clinic/dns-treatment.webp";
+import sciaticaSupportedRaw from "@/assets/conditions/sciatica-supported-position.jpg";
 
-const optHero = await getImage({ src: heroEvaRaw, width: 1600 });
-const optAbout = await getImage({ src: evaPortraitRaw, width: 800 });
-const optManualTherapy = await getImage({ src: manualTherapyRaw, width: 800 });
-const optCustomizedTreatment = await getImage({ src: customizedTreatmentRaw, width: 800 });
-const optDnsTreatment = await getImage({ src: dnsTreatmentRaw, width: 800 });
+const optHero = await getImage({ src: sciaticaSupportedRaw, width: 1600 });
 ---
 
 <BaseLayout 
-  title="Registered Massage Therapy in North Vancouver – Clinical Treatment and Root-Cause Recovery | Scandinavian Clinic"
-  description="Clinical registered massage therapy in North Vancouver focused on assessment, root-cause treatment, and long-term recovery. Biomechanical analysis, corrective exercise, and hands-on treatment for pain, injury, and dysfunction."
+  title="Registered Massage Therapy in North Vancouver | Scandinavian Clinic"
+  description="Clinical registered massage therapy in North Vancouver. Assessment-based treatment for back pain, sciatica, neck pain, headaches, shoulder, hip, elbow and foot problems. Covered by most extended health plans."
+  robots="noindex, nofollow"
   jsonLd={homeSchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
-    <main>
-      <Hero client:load imageSrc={optHero.src} />
-      <About client:idle imageSrc={optAbout.src} />
-      <Services 
-        client:idle 
-        images={{ 
-          manualTherapy: optManualTherapy.src, 
-          customizedTreatment: optCustomizedTreatment.src, 
-          dnsTreatment: optDnsTreatment.src 
-        }} 
-      />
-      <ConditionsWeTreat client:idle />
-      <Testimonials client:idle />
-      <Booking client:idle />
-      <Contact client:idle />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Registered Massage Therapy in North Vancouver</h1>
+      
+      <h3 class="text-2xl font-medium text-primary mt-0 mb-6">First, release the pain. Then, prevent it from coming back.</h3>
+      
+      <p class="text-xl">Clinical registered massage therapy with Eva Andersson, RMT — assessment-based treatment for pain, injury and movement problems.</p>
+      
+      <p class="text-lg font-medium">
+        <a href="https://booking.scandinavianclinic.com" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a> · Initial visit $190 (60 min) · <a href="/fees" class="underline hover:text-accent transition-colors">Fees and insurance</a>
+      </p>
+      
+      <p class="italic text-base text-muted-foreground">Official RMT receipts provided for extended health and ICBC.</p>
+
+      <div class="my-10 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={optHero.src} alt="Eva Andersson in the treatment room" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What makes this different from a massage?</h2>
+      
+      <p>Every session begins with an examination. What gets treated follows what that examination finds, rather than the diagnosis you arrived with — and it covers the area that hurts along with the regions loading it, because those are often not the same place.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 id="conditions-we-treat" class="text-3xl font-semibold mb-6">Where it hurts</h2>
+      
+      <div class="not-prose my-10">
+        <ConditionBodyMap />
+      </div>
+      
+      <p class="mt-8 font-medium">
+        <a href="/conditions" class="text-accent hover:text-primary underline flex items-center gap-1 transition-colors">
+          See all conditions treated <span aria-hidden="true">&rarr;</span>
+        </a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Three things that shape the treatment</h2>
+      
+      <p><strong>Assessment before treatment.</strong> A structured history and physical examination come before any hands-on work — movement tested for range and symmetry, spinal segments tested individually, muscles assessed as a system. Each finding is then checked against your symptoms, because a finding only matters if it relates to what you came in with. <a href="/first-visit" class="text-accent hover:text-primary underline">What the assessment involves &rarr;</a></p>
+
+      <p><strong>Manual treatment and movement retraining together.</strong> Soft-tissue work, joint mobilisation and stretching to settle the problem; then retraining how the area is loaded, so it holds. The clinic has a private treatment room and access to a rehabilitation floor, which means a movement pattern can be tested under real load rather than assumed.</p>
+
+      <p><strong>Swedish and Czech training.</strong> Five years of university-level training in orthopedic manual therapy in Sweden, and advanced training in Dynamic Neuromuscular Stabilisation at the Prague School of Rehabilitation Medicine. Over 30 years in practice, in BC since 1994. <a href="/about-me" class="text-accent hover:text-primary underline">About Eva &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why does pain keep coming back?</h2>
+      
+      <p>Usually because the treatment addressed where it hurt rather than why it hurt. Easing a tight muscle brings real relief — but if the pattern that overloaded the area is still there, the pain has every reason to return.</p>
+
+      <p>In one study following 65,790 adults after a first episode of low back pain, about half recovered and stayed recovered. Just under a third appeared to recover and kept needing care.</p>
+
+      <p class="font-medium">
+        <a href="/how-recovery-works/why-pain-keeps-coming-back" class="text-accent hover:text-primary underline">Why pain keeps coming back &rarr;</a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How recovery works</h2>
+      
+      <p>The explanations behind the treatment, for anyone who wants to understand what is actually being addressed.</p>
+
+      <ul class="space-y-4">
+        <li><strong><a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">Core stability and breathing</a></strong> — why strength isn't stability, and what the diaphragm has to do with your back.</li>
+        <li><strong><a href="/how-recovery-works/posture" class="text-accent hover:text-primary underline">Posture</a></strong> — why "sit up straight" stops working the moment you stop thinking about it.</li>
+        <li><strong><a href="/d-n-s" class="text-accent hover:text-primary underline">What DNS is</a></strong> — movement retraining based on how stability develops in the first year of life.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Your first visit</h2>
+      
+      <p>Book <strong>60 minutes</strong>. There is time for the full history, the examination and treatment in the same session.</p>
+
+      <p>Bring <strong>shorts and a tank top</strong> — the examination depends on being able to see your spine and joints move. Arrive 10 minutes early for the intake form. Bring any previous imaging if you have it.</p>
+
+      <p class="font-medium">
+        <a href="/first-visit" class="text-accent hover:text-primary underline">What to expect &rarr;</a> · <a href="/fees" class="text-accent hover:text-primary underline">Fees and insurance &rarr;</a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Book an appointment</h2>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" class="booking-link underline text-accent hover:text-primary transition-colors text-xl">Book Your Assessment</a>
+      </p>
+
+      <p>For ICBC, WorkSafeBC, RCMP or MSP-exempt programs, call <strong>(604) 926-4883</strong> rather than booking online.</p>
+
+      <div class="bg-secondary/20 p-6 rounded-lg mt-8 not-prose">
+        <h3 class="text-xl font-bold mb-4 text-foreground">Scandinavian Clinic</h3>
+        <p class="text-muted-foreground mb-4">
+          Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3<br />
+          <a href="tel:+16049264883" class="text-primary hover:text-accent underline">(604) 926-4883</a> · <a href="mailto:info@scandinavianclinic.com" class="text-primary hover:text-accent underline">info@scandinavianclinic.com</a>
+        </p>
+        <p class="font-medium text-foreground mb-4">Monday, Wednesday and Thursday, 8:00 am – 5:00 pm</p>
+        <p class="text-sm text-muted-foreground">
+          Inside Liberation Fitness, corner of 16th and Lonsdale — second floor, door next to Scotiabank.<br />
+          <a href="/contact" class="text-accent hover:text-primary underline mt-2 inline-block">Directions &rarr;</a>
+        </p>
+      </div>
     </main>
+
     <Footer client:idle />
     <ConsentBanner client:load />
   </div>
