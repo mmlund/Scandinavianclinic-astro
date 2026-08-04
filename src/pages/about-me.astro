@@ -1,0 +1,167 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { aboutMeSchema } from '@/lib/schemas';
+
+import evaPortraitRaw from "@/assets/clinic/eva-portrait.webp";
+import treatmentRoomRaw from "@/assets/_archive/facility-treatment-room.webp";
+import gymRaw from "@/assets/clinic/liberation-fitness-gym.jpeg";
+
+const optPortrait = await getImage({ src: evaPortraitRaw, width: 1200 });
+const optRoom = await getImage({ src: treatmentRoomRaw, width: 800 });
+const optGym = await getImage({ src: gymRaw, width: 800 });
+---
+
+<BaseLayout 
+  title="About Eva Andersson, RMT | Scandinavian Clinic"
+  description="Over 30 years of clinical practice across Sweden and Canada. Registered Massage Therapist providing assessment-based orthopedic manual therapy."
+  robots="noindex, nofollow"
+  jsonLd={aboutMeSchema}
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Eva Andersson, RMT</h1>
+      
+      <h2 class="text-2xl font-semibold mt-10 mb-6">Who is Eva Andersson, and what is her training?</h2>
+      
+      <p>Eva Andersson has practised as a Registered Massage Therapist in British Columbia since 1994, with over 30 years of clinical experience across Sweden and Canada. Her training is five years of university-level orthopedic manual therapy in Sweden, with advanced training in Dynamic Neuromuscular Stabilisation at the Prague School of Rehabilitation Medicine. Her practice is built on assessment: identifying the mechanical source of a problem before choosing a treatment.</p>
+      
+      <div class="my-10 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={optPortrait.src} alt="Eva Andersson, clinical setting, treatment room" class="w-full h-auto object-cover max-h-[600px] object-center" />
+      </div>
+
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">First, release the pain. Then, prevent it from coming back.</h2>
+      
+      <p>Many patients arrive at Scandinavian Clinic after struggling to find treatment that reaches the actual problem.</p>
+      <p>The approach here rests on a clinical conviction: that most musculoskeletal pain, however complex it looks, can usually be traced to specific dysfunctions — a spinal segment that has stopped moving, a restricted joint, a movement pattern that loads one region more than it should.</p>
+      <p>Treating pain in a clinic is a short-term solution on its own. What matters more is that you understand what produced it and have the means to manage it yourself.</p>
+      <p>All ages are welcome, and most cases are straightforward. The clinical reasoning matters most for the ones that aren't.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How Eva works</h2>
+      
+      <p><strong>The body is one mechanical system.</strong> Muscles, joints and coordination don't function in separate compartments, so it makes little sense to assess them that way.</p>
+      
+      <p><strong>Assessment before treatment.</strong> When patients ask "how do you treat this?", the answer is that it depends on what the examination finds — a shortened muscle, a restricted joint, an asymmetric pattern. The intervention follows the finding, not the diagnosis you arrived with. <a href="/first-visit" class="text-accent hover:text-primary underline">What the assessment involves &rarr;</a></p>
+      
+      <p><strong>Specific, rather than general.</strong> Treatment is aimed at what the examination identified, rather than at the region in general. In one randomised trial, 409 people with back or neck pain lasting at least two weeks received either a course of manual therapy — spinal mobilisation, massage and stretching, to a maximum of six sessions — or advice on staying active and managing pain, supported by an information booklet. At twelve weeks, 69% of the manual therapy group reported a clinically important reduction in pain, compared with 42% of the advice group (<a href="https://pubmed.ncbi.nlm.nih.gov/17515742/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Skillgate et al., <em>Clin J Pain</em>, 2007</a>). The difference was still present at one year (<a href="https://pubmed.ncbi.nlm.nih.gov/20137063/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Skillgate et al., <em>BMC Musculoskelet Disord</em>, 2010</a>).</p>
+      
+      <p><strong>Early where possible.</strong> Functional problems caught early tend to need less work than the same problems caught after years of compensation.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Background and training</h2>
+      
+      <p>Eva's clinical foundation was established in Sweden, where manual therapy has an orthopedic tradition going back to 1813.</p>
+      
+      <p><strong>Five years of university-level training in orthopedic manual therapy</strong>, with a strong emphasis on clinical reasoning, functional anatomy and biomechanical assessment. She is licensed in British Columbia as a Registered Massage Therapist and works within that scope, applying the orthopedic assessment training to the examination.</p>
+      
+      <p><strong>Over 30 years of clinical practice</strong> across Sweden, Czechia and Canada, treating thousands of patients — acute back pain and chronic back pain, rotator cuff problems, tennis elbow, Achilles tendinitis, whiplash, and a wide range of injuries from sport, work and daily loading.</p>
+      
+      <p><strong>Registered with the College of Massage Therapists of British Columbia</strong>, practising in BC since 1994. Because of that registration, treatment is eligible for coverage under most extended health plans and under ICBC. <a href="/fees" class="text-accent hover:text-primary underline">Fees and insurance &rarr;</a></p>
+      
+      <p>Eva lives on the North Shore and spends her own time hiking, biking, paddling and skiing.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Continuing clinical training</h2>
+      
+      <ul class="list-none pl-0 space-y-4">
+        <li class="pl-0"><strong>Dynamic Neuromuscular Stabilisation</strong>, at the Prague School of Rehabilitation Medicine — courses A, B, C and D, plus the special skills courses in Sports II Running, Spine and Ribcage Mobilisation, and Viscero-Somatic Patterns, and DNS Yoga. All courses and examinations required of DNS clinicians completed. <a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">How this works in practice &rarr;</a></li>
+        <li class="pl-0"><strong>Muscle function diagnosis</strong> — workshop and case studies with Prof. Vladimir Janda, MD, DSc.</li>
+        <li class="pl-0"><strong>Mobilisation and relaxation techniques using muscular facilitation and inhibition</strong> — with Prof. Karel Lewit, MD, DSc.</li>
+        <li class="pl-0"><strong>Sports medicine</strong> — with Dr. Jan Ekstrand, MD, PhD.</li>
+        <li class="pl-0"><strong>Fascia treatment</strong> — with Robert Schleip, PhD.</li>
+        <li class="pl-0"><strong>Fascial manipulation</strong> — Stecco method.</li>
+        <li class="pl-0"><strong>End-range loading</strong> — with Dr. David De Camillis.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">The clinic</h2>
+      
+      <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+        <div class="rounded-2xl overflow-hidden shadow-lg h-64">
+          <img src={optRoom.src} alt="The treatment room" class="w-full h-full object-cover object-center" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg h-64">
+          <img src={optGym.src} alt="Liberation Fitness gym" class="w-full h-full object-cover object-center" />
+        </div>
+      </div>
+      
+      <p>Scandinavian Clinic is in Central Lonsdale, North Vancouver, inside Liberation Fitness — a setting chosen deliberately, because it allows both halves of the work to happen in one place.</p>
+      
+      <p><strong>A private treatment room.</strong> Assessment and manual therapy take place in a quiet, private room with orthopedic treatment tables.</p>
+      
+      <p><strong>An active rehabilitation floor.</strong> For the movement retraining part of treatment, the clinic has full access to the strength and conditioning equipment next door. Where it's useful, free weights, cables and stabilisation equipment are used to test movement patterns under real load, teach exercises properly, and check that what was restored on the table holds up when you're actually loading it.</p>
+      
+      <p>That combination is the point. A movement pattern that works lying down and falls apart under load hasn't changed yet, and finding that out requires somewhere to load it.</p>
+      
+      <p><a href="/contact" class="text-accent hover:text-primary underline">How to find us &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How long has Eva been practising?</h3>
+          <p class="mt-0">Over 30 years, in Sweden, Czechia and Canada, and in British Columbia since 1994.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">What's the difference between this and a regular massage?</h3>
+          <p class="mt-0">Every session begins with an examination, and the treatment follows what it finds. The techniques include massage and soft-tissue work, alongside joint mobilisation, stretching and movement retraining, chosen according to the assessment. <a href="/first-visit" class="text-accent hover:text-primary underline">What the assessment involves &rarr;</a></p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is Eva accepting new patients?</h3>
+          <p class="mt-0">Yes. You can book online, or call (604) 926-4883.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do you treat children and older patients?</h3>
+          <p class="mt-0">Yes. All ages are welcome, and the examination and treatment are adapted accordingly.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is treatment covered by insurance?</h3>
+          <p class="mt-0">Eva is a Registered Massage Therapist, so treatments are covered by most BC extended health plans and under ICBC. <a href="/fees" class="text-accent hover:text-primary underline">Fees and insurance &rarr;</a></p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Can I request a specific technique?</h3>
+          <p class="mt-0">You can, and it's worth discussing. What the examination finds may point somewhere else, and that conversation happens before treatment begins rather than after.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Book an Appointment</h2>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+      
+      <p class="text-sm text-muted-foreground italic mt-8">Last updated August 2026</p>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
