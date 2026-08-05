@@ -1,0 +1,166 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+import img1Raw from "@/assets/_archive/runner.png";
+import img2Raw from "@/assets/_archive/Explaining-dns.png";
+
+const img1 = await getImage({ src: img1Raw, width: 800 });
+const img2 = await getImage({ src: img2Raw, width: 800 });
+---
+
+<BaseLayout 
+  title="Sports Performance and Injury Prevention — RMT North Vancouver | Scandinavian Clinic"
+  description="For North Shore trail runners, riders, skiers and climbers. Assessment of the movement patterns behind recurring overuse injuries, and what changes when stability is addressed rather than trained around."
+  robots="noindex"
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Athletes and Performance</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">Why do overuse injuries keep happening to fit people?</h2>
+      
+      <p>Because fitness and movement quality are different things. When the demand of an activity exceeds what your stabilising system can control, the body doesn't stop — it switches to a less efficient strategy and carries on. Performance holds up for a while. The load, meanwhile, goes into joints and tendons rather than through the muscles meant to carry it.</p>
+      
+      <p>For the trail runners, riders, skiers and climbers on the North Shore, fitness is rarely the problem. You have the strength and the drive. The question is whether the foundation underneath will support what you want to be doing in twenty years.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img1.src} alt="Runner" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">The point where control runs out</h2>
+      
+      <p>Every athlete has a threshold where the demands of the activity exceed what their deep stabilising system can control. Below it, movement is organised and load is shared. Above it, the nervous system falls back on cruder strategies.</p>
+      
+      <p>You can still perform past that point — often for years. But instead of load being managed by the muscular chains built for it, more of it goes into discs, joint capsules and tendons.</p>
+      
+      <p>The trade is invisible while it's happening, which is what makes it worth looking for. Performance is maintained in the short term by drawing on joint health, and that tends to show up later as the overuse injuries that keep returning.</p>
+      
+      <p>Raising the threshold is a different task from getting fitter. It's about how movement is organised, not how much work you can do.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Where the power goes</h2>
+      
+      <p>Energy you generate to move — pedalling, climbing, running — either goes into the movement or dissipates through joints that weren't designed to absorb it. The second is what leaves the lower back, knees and hips carrying load that isn't theirs.</p>
+      
+      <p>Before an arm or leg moves, the trunk has to become solid enough to push from. When it does, force transfers cleanly. When it doesn't, effort leaks away and the joints downstream take the difference.</p>
+      
+      <p>That solidity isn't strength. It's timing and pressure — whether the deep system activates ahead of the movement and generates support evenly. <a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">How core stability and breathing work &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why strength training doesn't necessarily fix it</h2>
+      
+      <p>Strength work loads a pattern. If the pattern is efficient, it gets stronger. If it isn't, the compensation gets stronger too — and it holds up under heavier loads before it fails, which delays the problem rather than solving it.</p>
+      
+      <p>This is the common presentation in fit, well-trained people: a training history with no obvious gaps, and a knee, hip or lower back that keeps flaring under high volume. Strength is not the missing piece. Coordination usually is.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What gets examined</h2>
+      
+      <p>The examination covers the whole chain, in both directions, and then tests each finding against your symptoms.</p>
+      
+      <p><strong>Under load, not just at rest.</strong> A movement pattern that's clean on a treatment table and falls apart in a single-leg landing hasn't been assessed. The clinic has access to the strength and conditioning floor next door, so patterns can be loaded and watched rather than inferred. <a href="/about-me" class="text-accent hover:text-primary underline">More about the facility &rarr;</a></p>
+      
+      <p><strong>Breathing during effort.</strong> Many people lose their stabilising pattern at exactly the point breathing demand rises — which for endurance athletes is most of the time.</p>
+      
+      <p><strong>The chain above and below the symptom.</strong> A knee that hurts on descents is frequently a hip or foot problem. <a href="/conditions/foot-and-ankle-pain-treatment-north-vancouver" class="text-accent hover:text-primary underline">Foot and ankle &rarr;</a> · <a href="/conditions/hip-pain-treatment-north-vancouver" class="text-accent hover:text-primary underline">Hip &rarr;</a></p>
+      
+      <p><strong>Sport-specific demand.</strong> What actually happens in your sport — the landing, the pedal stroke, the reach — rather than a generic screen.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Getting back to the original pattern</h2>
+      
+      <p>The training uses positions from the first year of life, where these stabilising patterns first developed. They look nothing like sport, which is the usual objection, and the reason for it is that they make the correct coordination happen without conscious effort.</p>
+      
+      <p>Once the pattern holds at low load, it gets loaded, sped up, and taken into the movements your sport actually demands. A pattern that only works lying down hasn't changed yet.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img2.src} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+
+      <p><a href="/how-recovery-works/what-dns-is" class="text-accent hover:text-primary underline">What DNS is &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">I'm not injured. Is there any point coming in?</h3>
+          <p class="mt-0">That's often the better time. An assessment identifies where control runs out before it produces a problem, and changing a pattern is easier when it isn't also painful.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Will this make me stronger?</h3>
+          <p class="mt-0">Not directly — it isn't strength training. What it tends to change is how much of your existing strength reaches the movement, and how well the pattern holds under fatigue.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do I have to stop training?</h3>
+          <p class="mt-0">Rarely. More often it's a matter of adjusting what and how much while the pattern is being changed. What that looks like depends on the assessment and on what you're training for.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How long does it take?</h3>
+          <p class="mt-0">The examination gives an answer in the first session. Changing a pattern usually needs ten to fifteen minutes of daily practice, and how long depends on how long the compensation has been in place.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">I've had this looked at and been told everything is fine.</h3>
+          <p class="mt-0">Structural assessment and movement assessment answer different questions. "Nothing is torn" and "the movement is well organised" aren't the same finding.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is this covered by insurance?</h3>
+          <p class="mt-0">Treatment is Registered Massage Therapy and is covered by most BC extended health plans. <a href="/fees" class="text-accent hover:text-primary underline">Fees and insurance &rarr;</a></p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Scandinavian Clinic</h2>
+      
+      <ul>
+        <li><strong>Assessment under load, not just on the table.</strong> The clinic has access to the strength and conditioning floor, so patterns can be tested at something like real demand.</li>
+        <li><strong>Swedish-trained orthopaedic manual therapy</strong>, with five years of university-level training and a strong biomechanical assessment component.</li>
+        <li><strong>Czech-trained in Dynamic Neuromuscular Stabilisation</strong>, at the Prague School of Rehabilitation Medicine.</li>
+        <li><strong>Covered by most extended health plans.</strong></li>
+      </ul>
+      
+      <p><a href="/about-me" class="text-accent hover:text-primary underline">More about Eva &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Book an Appointment</h2>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <p class="italic mt-6">Written by Eva Andersson, RMT · Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
