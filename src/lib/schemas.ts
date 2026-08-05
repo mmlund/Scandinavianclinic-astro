@@ -486,3 +486,129 @@ export const bookingSchema = {
     ]),
   ],
 };
+
+export const athletesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    businessRef,
+    {
+      "@type": "MedicalWebPage",
+      name: "Athletes and Performance",
+      url: "https://scandinavianclinic.com/athletes",
+      description: "For North Shore trail runners, riders, skiers and climbers. Assessment of the movement patterns behind recurring overuse injuries.",
+      about: businessRef,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "I'm not injured. Is there any point coming in?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "That's often the better time. An assessment identifies where control runs out before it produces a problem, and changing a pattern is easier when it isn't also painful."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Will this make me stronger?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not directly — it isn't strength training. What it tends to change is how much of your existing strength reaches the movement, and how well the pattern holds under fatigue."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Do I have to stop training?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Rarely. More often it's a matter of adjusting what and how much while the pattern is being changed. What that looks like depends on the assessment and on what you're training for."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "How long does it take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The examination gives an answer in the first session. Changing a pattern usually needs ten to fifteen minutes of daily practice, and how long depends on how long the compensation has been in place."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "I've had this looked at and been told everything is fine.",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Structural assessment and movement assessment answer different questions. 'Nothing is torn' and 'the movement is well organised' aren't the same finding."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Is this covered by insurance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Treatment is Registered Massage Therapy and is covered by most BC extended health plans."
+          }
+        }
+      ]
+    },
+    breadcrumb([
+      { name: "Home", url: "https://scandinavianclinic.com/" },
+      { name: "Athletes and Performance", url: "https://scandinavianclinic.com/athletes" },
+    ]),
+  ],
+};
+
+export const feesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    businessRef,
+    {
+      "@type": "MedicalWebPage",
+      name: "Fees and Insurance",
+      url: "https://scandinavianclinic.com/fees",
+      description: "Registered Massage Therapy fees and extended health insurance coverage information.",
+      about: businessRef,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is the assessment charged separately?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. The assessment is part of your first appointment, not an additional fee. A 60-minute initial visit covers the history, the examination and treatment based on what's found."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "How many sessions will I need?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on what the examination finds. Some acute problems settle in two or three sessions; patterns built up over years take longer. You'll get a realistic estimate after the assessment rather than a package sold upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Do you offer packages or prepaid blocks?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Sessions are booked and paid for individually, so the number of visits follows what you actually need."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "What if my plan covers less than the full fee?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You pay the full fee at the appointment and submit the receipt to your provider, who reimburses at whatever rate your plan allows. The difference is yours."
+          }
+        }
+      ]
+    },
+    breadcrumb([
+      { name: "Home", url: "https://scandinavianclinic.com/" },
+      { name: "Fees and Insurance", url: "https://scandinavianclinic.com/fees" },
+    ]),
+  ],
+};

@@ -1,0 +1,143 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { feesSchema } from '@/lib/schemas';
+---
+
+<BaseLayout 
+  title="RMT Fees & Insurance Coverage North Vancouver | Scandinavian Clinic"
+  description="Registered Massage Therapy fees and extended health insurance coverage information. Serving North Vancouver and the North Shore."
+  robots="noindex, nofollow"
+  jsonLd={feesSchema}
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Fees and Insurance</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">How much does an RMT appointment cost in North Vancouver?</h2>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">Fees</h2>
+      
+      <div class="overflow-x-auto not-prose my-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b-2 border-border text-lg">
+              <th class="py-4 px-4 font-semibold w-1/4"></th>
+              <th class="py-4 px-4 font-semibold w-1/4">30 minutes</th>
+              <th class="py-4 px-4 font-semibold w-1/4">45 minutes</th>
+              <th class="py-4 px-4 font-semibold w-1/4">60 minutes</th>
+            </tr>
+          </thead>
+          <tbody class="text-base">
+            <tr class="border-b border-border hover:bg-muted/50 transition-colors">
+              <td class="py-4 px-4 font-medium"><strong>Initial visit</strong></td>
+              <td class="py-4 px-4 text-muted-foreground">—</td>
+              <td class="py-4 px-4">$150</td>
+              <td class="py-4 px-4 font-bold text-lg"><strong>$190</strong></td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted/50 transition-colors">
+              <td class="py-4 px-4 font-medium"><strong>Subsequent visits</strong></td>
+              <td class="py-4 px-4">$105</td>
+              <td class="py-4 px-4">$150</td>
+              <td class="py-4 px-4">$190</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p><strong>Sixty minutes is recommended for a first visit.</strong> The assessment takes time — history, movement testing, joint and muscle examination — and a 60-minute booking leaves room for treatment in the same session rather than a second appointment. Forty-five minutes is workable if that's what your schedule allows.</p>
+      
+      <p><a href="/first-visit" class="text-accent hover:text-primary underline">What happens during the assessment &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Extended health insurance</h2>
+      
+      <p>Most BC extended health plans cover Registered Massage Therapy. Eva Andersson is a Registered Massage Therapist with the College of Massage Therapists of British Columbia, so treatments are eligible under plans that include RMT coverage.</p>
+      
+      <p>You pay at the time of your appointment and receive an official RMT receipt to submit to your provider for reimbursement.</p>
+      
+      <p>Coverage amounts, per-visit limits and annual maximums vary between plans. Check with your provider for the specifics of yours.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">ICBC, WorkSafeBC, RCMP and MSP-exempt programs</h2>
+      
+      <p><strong>Please call (604) 926-4883 rather than booking online.</strong> These programs each have their own intake requirements, and booking online skips the step that makes sure your claim is set up correctly.</p>
+      
+      <p>Registered Massage Therapy is an accepted treatment under ICBC claims following a motor vehicle accident, commonly for whiplash, post-accident neck and back pain, and soft-tissue injury recovery. No referral is needed to become eligible for coverage.</p>
+      
+      <p><strong>The clinic does not bill ICBC directly.</strong> You pay at the time of your appointment and receive an official RMT receipt to submit to ICBC as part of your claim — the same process as extended health. Worth knowing in advance so the first invoice isn't a surprise.</p>
+      
+      <p class="font-medium text-lg mt-6">
+        <strong><a href="tel:+16049264883" class="text-accent hover:text-primary underline">Call (604) 926-4883</a></strong>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Do you need a referral?</h2>
+      
+      <p>No. In British Columbia you can book directly with a Registered Massage Therapist without a doctor's referral.</p>
+      
+      <p>Some extended health plans require a physician's note for reimbursement even though the appointment itself doesn't need one. That's a condition of your insurance rather than of the treatment, so it's worth checking your plan before your first visit.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Cancellations</h2>
+      
+      <p>Twenty-four hours' notice is required for cancellations or rescheduling. Later changes are subject to the full session fee.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is the assessment charged separately?</h3>
+          <p class="mt-0">No. The assessment is part of your first appointment, not an additional fee. A 60-minute initial visit covers the history, the examination and treatment based on what's found.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How many sessions will I need?</h3>
+          <p class="mt-0">It depends on what the examination finds. Some acute problems settle in two or three sessions; patterns built up over years take longer. You'll get a realistic estimate after the assessment rather than a package sold upfront.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do you offer packages or prepaid blocks?</h3>
+          <p class="mt-0">No. Sessions are booked and paid for individually, so the number of visits follows what you actually need.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">What if my plan covers less than the full fee?</h3>
+          <p class="mt-0">You pay the full fee at the appointment and submit the receipt to your provider, who reimburses at whatever rate your plan allows. The difference is yours.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Book an Appointment</h2>
+      
+      <p class="font-medium text-lg">
+        <strong><a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a></strong>
+      </p>
+      
+      <p>For ICBC, WorkSafeBC, RCMP or MSP-exempt programs, call <strong><a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></strong> instead.</p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver, BC V7M 1T3</p>
+      
+      <p><strong>Hours:</strong> Monday, Wednesday and Thursday, 8:00 am – 5:00 pm</p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <p class="italic mt-6">Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
