@@ -1,0 +1,189 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+import img1Raw from "@/assets/_archive/breaking-pain-treatment-cycle.png";
+import img2Raw from "@/assets/_archive/Body_alignment_starts_ with_the_feet_link_to_knee_hip_back_pain.png";
+
+const img1 = await getImage({ src: img1Raw, width: 800 });
+const img2 = await getImage({ src: img2Raw, width: 800 });
+---
+
+<BaseLayout 
+  title="Why Pain Keeps Coming Back | Scandinavian Clinic"
+  description="Understanding why muscle and joint pain returns after treatment, and what an assessment finds that treating only the painful area misses."
+  robots="noindex, nofollow"
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Why Pain Keeps Coming Back</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">Why does pain come back after treatment helped?</h2>
+      
+      <p>Usually because the treatment addressed <em>where</em> it hurt rather than <em>why</em> it hurt. Easing a tight muscle or a painful joint brings real relief — but if the pattern that overloaded that area is still there, the pain has every reason to return. Which pattern it is differs from person to person, and that's what an assessment is for.</p>
+      
+      <p>You have probably tried a number of things already. Maybe you had some relief — and then, weeks or months later, the same thing in your lower back, neck, shoulder or hip shows up again.</p>
+      
+      <p>That's frustrating. It doesn't mean something is fundamentally wrong with you, and it isn't unusual. In a study following 65,790 adults after a first episode of low back pain, about half recovered and stayed recovered. Just under a third appeared to recover over six months but carried a 37–48% chance of seeking care for it again in every quarter that followed (<a href="https://doi.org/10.1016/j.spinee.2015.08.015" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Norton et al., <em>The Spine Journal</em>, 2016</a>). Recurring pain is one of the most common patterns in musculoskeletal care.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img1.src} alt="The cycle of recurring pain" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a> · <a href="/first-visit" class="underline hover:text-accent transition-colors">What to expect from a thorough assessment</a>
+      </p>
+
+      <div class="my-8 bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+        <h3 class="text-red-800 text-xl font-bold mt-0 mb-3 flex items-center">
+          <span class="mr-2">🚨</span> When recurring pain isn't just recurring
+        </h3>
+        <p class="text-red-900 mt-0 mb-4">
+          Pain that comes and goes in a cycle is common. Pain that is steadily <strong>getting worse</strong> is a different pattern and needs medical review.
+        </p>
+        <p class="text-red-900 mb-0">
+          <strong>See your family physician</strong> for pain that wakes you at night or is worse lying down, pain with unexplained weight loss or fever, a history of cancer, or pain that no longer settles between episodes the way it used to. <strong>Go to the emergency department</strong> for new loss of bladder or bowel control, numbness around the groin or inner thighs, or new weakness in a limb.
+        </p>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Two people, identical pain — completely different causes</h2>
+      
+      <p>Two people can walk in with the same lower back pain and have entirely different reasons for it. One may have a stabilising pattern that overloads the spine. Another may have a restricted joint segment feeding the problem from elsewhere. A third may have a long-standing habit — how they sit, lift or breathe — quietly producing it.</p>
+      
+      <p>The pain looks the same. The cause is not.</p>
+      
+      <p>This is why treatment aimed only at the painful spot tends to give temporary relief. It can settle the symptom, but it doesn't reach whichever driver is specific to that person. Without examining how you move and stabilise as a whole, the same overload keeps happening.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">I've tried physiotherapy, chiropractic or massage — why does it still come back?</h2>
+      
+      <p>Each of those can help, and the answer isn't that you picked the wrong one. What determines whether relief lasts is whether the driver was found, and the driver often sits somewhere other than where the pain is felt.</p>
+      
+      <p>Sciatica is the clearest example. Nerve-related leg pain is frequently produced by patterns in the lower back, pelvis and hips rather than at the spot where it's felt. Treatment concentrated on the leg can ease the symptom and leave what's loading the nerve untouched — so it returns. See the <a href="/conditions/sciatica-treatment-north-vancouver" class="text-accent hover:text-primary underline">sciatica page</a>.</p>
+      
+      <p>The question that changes the outcome isn't which type of therapist. It's whether the whole pattern was examined.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What an assessment finds that treating the painful area misses</h2>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img2.src} alt="Body alignment and how it affects pain" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p>The painful area is examined, and so is everything that loads it. Settling the pain is usually the first priority — that part doesn't change. What changes the recurrence is also finding what produced it, and that often sits somewhere other than where you feel it.</p>
+      
+      <p>Depending on your symptoms the examination covers breathing and posture, the neck, thoracic spine and ribs, the lumbar spine, pelvis and sacroiliac joints, the hips, and the feet — each finding tested against your symptoms to establish which ones are actually relevant to you.</p>
+      
+      <p>Two contributors are worth explaining, because they're commonly missed and they explain a great deal about recurrence.</p>
+      
+      <p><strong>A stabilising pattern the body no longer runs well.</strong> In people with <em>recurrent</em> low back pain, the deep stabilising muscle of the trunk activates late, and the way that movement is represented in the brain's motor map has reorganised — the nervous system keeps defaulting to an older, compensatory pattern.</p>
+      
+      <p>This is reversible, and it has been shown directly. Twenty people with recurrent low back pain were assigned either two weeks of specific training for that muscle or two weeks of self-paced walking. In the training group the motor map shifted back toward normal and the muscle's timing improved. In the walking group it didn't (<a href="https://pubmed.ncbi.nlm.nih.gov/20181504/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Tsao, Galea & Hodges, <em>Eur J Pain</em>, 2010</a>). The pattern responds to the right practice, not to activity in general.</p>
+      
+      <p><strong>A nervous system that has become more sensitive.</strong> When pain persists, the system that carries it can become more reactive, so less is needed to set it off — a process called central sensitisation (<a href="https://doi.org/10.1016/j.pain.2010.09.030" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Woolf, <em>Pain</em>, 2011</a>). This doesn't mean the pain is imagined. It's a physical change in how signals are processed, and it explains why pain can outlast the injury that started it.</p>
+      
+      <p>Neither of these is universal and neither can be assumed. They are found, or ruled out, through the examination. <a href="/first-visit" class="text-accent hover:text-primary underline">What to expect from a thorough assessment &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What changes the pattern</h2>
+      
+      <p>Once the assessment identifies what's driving the recurrence, treatment can address that rather than chase the symptom.</p>
+      
+      <p>Where a stabilising or movement pattern is the driver, the aim is to retrain it — and as the research above shows, that takes specific practice rather than general activity. The work is on how the trunk supports itself before you move: timing, pressure and breathing rather than strength. <a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">How core stability and breathing actually work &rarr;</a></p>
+      
+      <p>Where restricted joints or overworking muscles are holding the pattern in place, those are treated first, because a pattern can't change while the mechanics prevent it.</p>
+      
+      <p>The retraining uses Dynamic Neuromuscular Stabilisation — positions from infant motor development that make the correct coordination happen without you having to think about it. The exercises look simple, and their value depends entirely on doing them with the right activation, which is why the early ones are done with someone watching. <a href="/how-recovery-works/what-dns-is" class="text-accent hover:text-primary underline">Learn more about DNS &rarr;</a></p>
+      
+      <p>Ten to fifteen minutes of daily practice is usually what makes a pattern automatic. It does more than session frequency does.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Scandinavian Clinic</h2>
+      
+      <ul>
+        <li><strong>The examination doesn't stop at the painful area.</strong> Breathing, posture, the joints above and below, and the muscles doing too much are all assessed as standard, alongside the region that hurts.</li>
+        <li><strong>Swedish-trained orthopaedic manual therapy.</strong> A five-year Scandinavian education with a strong biomechanical assessment component.</li>
+        <li><strong>Czech-trained in Dynamic Neuromuscular Stabilisation</strong>, at the Prague School of Rehabilitation Medicine.</li>
+        <li><strong>Covered by most extended health plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits. For ICBC or WorkSafeBC, call (604) 926-4883 before booking.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Should I see a chiropractor, physiotherapist or massage therapist for pain that keeps coming back?</h3>
+          <p class="mt-0">Any of them can help — they're different tools and the right one depends on your situation. What matters more than the profession is whether the driver gets assessed rather than only the painful area. Recurring pain in particular tends to need a look at how you move and stabilise as a whole.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">My physiotherapy isn't helping my sciatica. What should I do?</h3>
+          <p class="mt-0">Sciatica is often produced by patterns in the back, pelvis and hips rather than at the point where the pain is felt. If treatment hasn't reached lasting relief, it's worth having the whole pattern assessed to find what's loading the nerve upstream.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Does "the nervous system has become more sensitive" mean it's in my head?</h3>
+          <p class="mt-0">No. Central sensitisation is a physical change in how the nervous system processes signals (<a href="https://doi.org/10.1016/j.pain.2010.09.030" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Woolf, 2011</a>). The pain is real. It explains why pain can persist after an injury has healed, and why retraining and desensitising the system can matter alongside treating tissue.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How long until it stops coming back?</h3>
+          <p class="mt-0">It depends on what the assessment finds and how long the pattern has been there. Some things settle quickly; long-standing patterns need consistent retraining, usually with short daily practice. You'll get a realistic picture after the examination rather than a standard package.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Can I just do the exercises from a video?</h3>
+          <p class="mt-0">The exercises look simple, and their value depends on the activation being correct — it's easy to reproduce the old compensatory pattern without realising. Real-time correction is what makes the difference, at least until the pattern is established.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is it too late if this has been going on for years?</h3>
+          <p class="mt-0">No. The motor-pattern research above was done in people with <em>recurrent</em> pain, some long-standing, and the pattern still changed in two weeks of specific training. Long-standing problems take longer, but duration on its own doesn't rule out change.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is this covered by insurance?</h3>
+          <p class="mt-0">Eva is a Registered Massage Therapist, so sessions are covered as RMT by most BC extended health plans, and you'll receive an official RMT receipt. For ICBC, WorkSafeBC or similar, call (604) 926-4883 before booking.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Schedule Your Visit</h2>
+      
+      <p>Book an assessment and start treatment based on what the examination finds.</p>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <h3 class="font-semibold mb-4 text-foreground">References</h3>
+        <ul class="list-none pl-0 space-y-2">
+          <li class="pl-0">Norton G, McDonough CM, Cabral HJ, et al. <a href="https://doi.org/10.1016/j.spinee.2015.08.015" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Classification of patients with incident non-specific low back pain: implications for research.</a> <em>The Spine Journal.</em> 2016;16(5):567–576.</li>
+          <li class="pl-0">Tsao H, Galea MP, Hodges PW. <a href="https://pubmed.ncbi.nlm.nih.gov/20181504/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Driving plasticity in the motor cortex in recurrent low back pain.</a> <em>European Journal of Pain.</em> 2010;14(8):832–839.</li>
+          <li class="pl-0">Woolf CJ. <a href="https://doi.org/10.1016/j.pain.2010.09.030" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Central sensitization: implications for the diagnosis and treatment of pain.</a> <em>Pain.</em> 2011;152(3 Suppl):S2–S15.</li>
+        </ul>
+        <p class="italic mt-6">Written by Eva Andersson, RMT · Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
