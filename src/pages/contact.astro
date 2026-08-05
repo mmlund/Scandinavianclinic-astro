@@ -1,0 +1,104 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { contactSchema } from '@/lib/schemas';
+---
+
+<BaseLayout 
+  title="Contact and Location — RMT North Vancouver | Scandinavian Clinic"
+  description="Scandinavian Clinic is at Suite 202, 101 West 16th Street, North Vancouver, at the corner of 16th and Lonsdale. Phone (604) 926-4883. Monday, Wednesday and Thursday."
+  robots="noindex"
+  jsonLd={contactSchema}
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Contact and Location</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">Where is Scandinavian Clinic, and how do I book?</h2>
+      
+      <p>Scandinavian Clinic is at Suite 202, 101 West 16th Street in North Vancouver — the corner of 16th and Lonsdale, inside Liberation Fitness on the second floor. Book online, or call <strong>(604) 926-4883</strong>. For ICBC, WorkSafeBC, RCMP or MSP-exempt claims, please call rather than booking online.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Get in touch</h2>
+      
+      <p><strong>Phone</strong> — <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a><br/>
+      <strong>Email</strong> — <a href="mailto:info@scandinavianclinic.com" class="text-accent hover:text-primary underline">info@scandinavianclinic.com</a></p>
+      
+      <p><strong>Scandinavian Clinic</strong><br/>
+      Suite 202 – 101 West 16th Street<br/>
+      North Vancouver, BC V7M 1T3</p>
+      
+      <p><strong><a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Appointment</a></strong> · <a href="https://maps.google.com/?q=101+West+16th+Street,+North+Vancouver,+BC" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">View on Google Maps</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Hours</h2>
+      
+      <div class="overflow-x-auto not-prose my-8">
+        <table class="w-full text-left border-collapse">
+          <tbody class="text-lg">
+            <tr class="border-b border-border hover:bg-muted/50 transition-colors">
+              <td class="py-4 px-4 font-bold w-1/3"><strong>Monday</strong></td>
+              <td class="py-4 px-4">8:00 am – 5:00 pm</td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted/50 transition-colors">
+              <td class="py-4 px-4 font-bold"><strong>Wednesday</strong></td>
+              <td class="py-4 px-4">8:00 am – 5:00 pm</td>
+            </tr>
+            <tr class="border-b border-border hover:bg-muted/50 transition-colors">
+              <td class="py-4 px-4 font-bold"><strong>Thursday</strong></td>
+              <td class="py-4 px-4">8:00 am – 5:00 pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p>Additional times are occasionally available. If a slot appears in the online booking system, it can be booked.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Finding us</h2>
+      
+      <p>The clinic is at the corner of <strong>16th and Lonsdale</strong>, in the professional building on that corner — the entrance is the <strong>door next to Scotiabank</strong>.</p>
+      
+      <p>Take the stairs or the elevator to the <strong>second floor</strong>. The clinic is inside the Liberation Fitness facility, <strong>towards the back on the right-hand side</strong>.</p>
+      
+      <p><strong>Parking.</strong> Street parking is available on 16th Street and the adjacent side streets. It's pay parking.</p>
+      
+      <p><strong>Transit.</strong> The clinic is on local bus routes along Lonsdale, in Central Lonsdale.</p>
+      
+      <p><strong>Arrive 10 minutes early</strong> for a first visit, to complete the intake form. <a href="/first-visit" class="text-accent hover:text-primary underline">What else to bring &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Booking</h2>
+      
+      <p><strong>Online</strong> — <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">book an appointment</a>. Available slots are shown in real time.</p>
+      
+      <p><strong>By phone</strong> — <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a>.</p>
+      
+      <p><strong>ICBC, WorkSafeBC, RCMP and MSP-exempt programs</strong> — please call rather than booking online, so the intake for your claim is set up correctly. <a href="/fees" class="text-accent hover:text-primary underline">More on fees and insurance &rarr;</a></p>
+      
+      <p><strong>Cancellations</strong> need 24 hours' notice. Later changes are subject to the full session fee.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Serving the North Shore</h2>
+      
+      <p>Patients come to the clinic from across North Vancouver and West Vancouver — Central Lonsdale, Lower Lonsdale, Lynn Valley, Edgemont Village and Deep Cove among them. The Central Lonsdale location is a short drive or bus ride from most of the North Shore.</p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <p class="italic mt-6">Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
