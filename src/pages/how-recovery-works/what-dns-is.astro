@@ -1,0 +1,188 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+import img1Raw from "@/assets/_archive/developmental-kinesiology -foundation.png";
+import img2Raw from "@/assets/_archive/Optimizing-movement-patterns-dns.webp";
+import img3Raw from "@/assets/_archive/Developmental-kinesiology-dns-principles.png";
+
+const img1 = await getImage({ src: img1Raw, width: 800 });
+const img2 = await getImage({ src: img2Raw, width: 800 });
+const img3 = await getImage({ src: img3Raw, width: 400 });
+const img1Small = await getImage({ src: img1Raw, width: 400 });
+---
+
+<BaseLayout 
+  title="What is DNS? | Scandinavian Clinic"
+  description="What is Dynamic Neuromuscular Stabilisation (DNS) and how is it used to treat pain?"
+  robots="noindex, nofollow"
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">What Is Dynamic Neuromuscular Stabilisation?</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">What is DNS, and what is it used for?</h2>
+      
+      <p>Dynamic Neuromuscular Stabilisation is a movement assessment and training approach developed at the Prague School of Rehabilitation Medicine. It works from how infants develop control of the trunk in the first year of life — a sequence that happens the same way in nearly everyone, without being taught. Those patterns are the reference an adult's movement is compared against, and the positions they developed in are what the training uses to bring them back.</p>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">We start out with good stabilising patterns</h2>
+      
+      <p>During the first year of life, as the nervous system matures, movement develops gradually and automatically. Nearly all of us reach the same milestones — head control, rolling, sitting, crawling, standing — in the same order, at roughly the same age, and with the same efficient stabilising patterns underneath them.</p>
+      
+      <p>Nobody teaches a baby to sit upright. The nervous system matures, the stabilising muscles activate in sequence, and sitting happens.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img1.src} alt="Developmental kinesiology foundation" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Then things happen</h2>
+      
+      <p>Ideally those patterns would stay with us. In practice they get disrupted — by injury, by pain, by prolonged sitting, by training that built strength without addressing coordination, by long periods of stress.</p>
+      
+      <p>When a pattern is disrupted, the body compensates. It still gets the job done, but by a different route, and the load ends up distributed differently from how it was meant to be. In adults, the first sign of that is usually discomfort or pain — often somewhere other than where the compensation is happening.</p>
+      
+      <p>The patterns themselves aren't lost. They've been overridden, and they can usually be reached again.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How a joint behaves through a movement</h2>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img2.src} alt="Optimizing movement patterns DNS" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p>When a joint tracks well through a movement, load spreads across the whole joint surface and the muscles around it don't have to compensate. When the movement pattern is poor, the same joint takes load unevenly, the muscles work harder to control it, and the tissues carry more than they were built for — repeated a few thousand times a day.</p>
+      
+      <p>This is about how a joint behaves <em>while it moves</em>, under load, repeatedly. Not a position to be found once and then held.</p>
+      
+      <p>That's why the training works on movement rather than on isolated muscles, and why the quality of a movement matters more than the number of repetitions.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">It usually starts with breathing</h2>
+      
+      <p>A common reason stability is poor is that the breathing pattern isn't contributing to it.</p>
+      
+      <p>The diaphragm is a breathing muscle and a stabilising one. When it works properly it raises pressure inside the abdomen, and the pelvic floor and abdominal wall respond — together forming a cylinder of support around the trunk. When breathing moves up into the chest, that support is reduced and other muscles compensate.</p>
+      
+      <p>So assessment and treatment usually begin there. <a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">How core stability and breathing work &rarr;</a></p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What the training involves</h2>
+      
+      <div class="my-8 flex flex-col md:flex-row gap-4 not-prose justify-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg flex-1 bg-white">
+          <img src={img1Small.src} alt="Developmental kinesiology foundation" class="w-full h-auto object-contain max-h-[400px]" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg flex-1 bg-white">
+          <img src={img3.src} alt="Developmental kinesiology DNS principles" class="w-full h-auto object-contain max-h-[400px]" />
+        </div>
+      </div>
+      
+      <p>The exercises use positions from the first year of life: lying on the back, on the front, side-lying, four-point kneeling, half-kneeling. They look simple, and they are not exercises in the usual sense — the point isn't to work the muscle, it's to make the correct coordination happen without you having to think about it.</p>
+      
+      <p>Work starts slow and simple, at low load. Complexity and speed are added once the pattern holds.</p>
+      
+      <p><strong>Quality is the whole thing.</strong> The difference between performing the movement and activating the right pattern is subtle, and it's easy to do the exercise while the nervous system runs the old compensation. That's difficult to detect in yourself, because the compensation feels normal — it's been the default for years. So the early sessions are done with someone watching, using hands-on cues to guide the ribcage or abdomen so you can feel what correct looks like from the inside. Once you've felt it, reproducing it gets much easier.</p>
+      
+      <p>Ten to fifteen minutes of daily practice is usually what makes a pattern automatic.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Who it suits</h2>
+      
+      <p>DNS is used across a wide range — it isn't specific to one condition.</p>
+      
+      <p><strong>Pain that keeps returning.</strong> Where treatment has helped and then the problem has come back, a stabilising pattern is one of the things worth examining. <a href="/how-recovery-works/why-pain-keeps-coming-back" class="text-accent hover:text-primary underline">More on why pain returns &rarr;</a></p>
+      
+      <p><strong>Recovery that has stalled.</strong> Where strength has been rebuilt but the movement still doesn't feel right.</p>
+      
+      <p><strong>Athletes and active people.</strong> Where the demand is high enough that a small inefficiency compounds. <a href="/athletes" class="text-accent hover:text-primary underline">Athletes and performance &rarr;</a></p>
+      
+      <p><strong>Anyone whose core work isn't translating.</strong> Where there's plenty of strength and not much stability.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is DNS the same as physiotherapy?</h3>
+          <p class="mt-0">No — DNS isn't a profession. It's a training that clinicians from a range of backgrounds take: physiotherapists, massage therapists, chiropractors, athletic trainers and physicians all attend the same courses. At Scandinavian Clinic it's used within Registered Massage Therapy, alongside manual treatment.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is it the same as Pilates or core training?</h3>
+          <p class="mt-0">No. Pilates and core training build strength and control through exercise. DNS works on the timing and coordination underneath — whether the deep system activates before you move, and whether pressure is generated evenly. The two aren't in conflict; they're aimed at different things.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do I need to be in pain to benefit?</h3>
+          <p class="mt-0">No. Plenty of people come because a movement doesn't feel right, because performance has plateaued, or because they want to keep doing something for another twenty years.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Are the exercises hard?</h3>
+          <p class="mt-0">Not in the way you'd expect. They're low-load and slow, and most people find them surprisingly demanding anyway — holding a precise pattern is different from working hard.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do I need to keep doing them forever?</h3>
+          <p class="mt-0">No. The aim is for the pattern to become automatic, at which point it runs without practice. How long that takes depends on how long the compensation has been in place.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is DNS covered by insurance?</h3>
+          <p class="mt-0">Treatment at Scandinavian Clinic is Registered Massage Therapy, and DNS is used within it. Sessions are covered as RMT by most BC extended health plans. <a href="/fees" class="text-accent hover:text-primary underline">Fees and insurance &rarr;</a></p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Where does DNS come from?</h3>
+          <p class="mt-0">It was developed at the Prague School of Rehabilitation Medicine in the Czech Republic, from research into developmental kinesiology — how movement control emerges in infancy.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Scandinavian Clinic</h2>
+      
+      <ul>
+        <li><strong>Trained at the source.</strong> Eva is Czech-trained in Dynamic Neuromuscular Stabilisation at the Prague School of Rehabilitation Medicine, having completed the full course sequence and the examinations required of DNS clinicians. <a href="/about" class="text-accent hover:text-primary underline">More about Eva &rarr;</a></li>
+        <li><strong>Used alongside manual treatment, not instead of it.</strong> Restricted joints and overworking muscles are treated first, because a pattern can't change while the mechanics prevent it.</li>
+        <li><strong>Covered by most extended health plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Book an Appointment</h2>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <p class="italic mt-6">Written by Eva Andersson, RMT · Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
