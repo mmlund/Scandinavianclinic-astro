@@ -1,0 +1,231 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+import img1Raw from "@/assets/_archive/bad-good-posture-female-kyphosis.png";
+import img2Raw from "@/assets/_archive/Diapragm-breathing-IAP-dns.webp";
+import img3Raw from "@/assets/_archive/Explaining-dns.png";
+import img4Raw from "@/assets/_archive/posture-dns-correction.png";
+
+const img1 = await getImage({ src: img1Raw, width: 800 });
+const img2 = await getImage({ src: img2Raw, width: 800 });
+const img3 = await getImage({ src: img3Raw, width: 800 });
+const img4 = await getImage({ src: img4Raw, width: 800 });
+---
+
+<BaseLayout 
+  title="Posture | Scandinavian Clinic"
+  description="Why 'Sit Up Straight' doesn't work long-term. Learn how the deep stabilising system affects posture."
+  robots="noindex, nofollow"
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Posture: Why "Sit Up Straight" Doesn't Work Long-Term</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">Why doesn't sitting up straight fix your posture?</h2>
+      
+      <p>Because upright posture isn't a shape you hold — it's what happens when the deep stabilising system is working the right way in the background, without you having to think about it. Pulling your shoulders back engages the muscles you can consciously control, on top of a system that hasn't changed. The moment your attention moves elsewhere, so does your posture.</p>
+      
+      <p>You've probably tried to fix your posture before. Pulled your shoulders back. Tucked your chin. Maybe bought a standing desk or a posture corrector. It works for a while — then the moment you stop thinking about it, you're back where you started.</p>
+      
+      <p>That's not a willpower problem. It may be a stabilisation problem.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img1.src} alt="Bad vs good posture" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a> · <a href="/conditions" class="underline hover:text-accent transition-colors">See all conditions treated</a>
+      </p>
+
+      <div class="my-8 bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+        <h3 class="text-red-800 text-xl font-bold mt-0 mb-3 flex items-center">
+          <span class="mr-2">🚨</span> When a change in posture needs a doctor first
+        </h3>
+        <p class="text-red-900 mt-0 mb-4 font-semibold">
+          See your family physician for a rounding of the upper back that has developed quickly or is progressing, particularly after age fifty or with a history of osteoporosis; a new or increasing sideways curve in a child or adolescent; postural change with unexplained weight loss, fever or night pain; or any postural change accompanied by weakness, numbness, or loss of balance.
+        </p>
+        <p class="text-red-900 mb-0">
+          These are uncommon. Most postural change is habitual and mechanical — but it's worth ruling the rest out first.
+        </p>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Posture Isn't a Position — It's a System</h2>
+      
+      <p>Posture isn't really about holding a shape. It's a reflection of how your nervous system organises stabilisation in the background.</p>
+      
+      <p>When your deep stabilising muscles are doing their job well — automatically, without you thinking about it — upright posture happens with relatively little effort. Your skeleton stacks efficiently. Your muscles don't have to overwork to keep you from collapsing forward.</p>
+      
+      <p>When that system isn't working well, your body still has to stay upright somehow. So it compensates. Superficial muscles take over — the upper trapezius, the back extensors, the neck muscles. They can do the job, but they're not designed for it all day long. That's when you start feeling stiff, tight, and sore.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Willpower-Based Corrections Fade</h2>
+      
+      <p>When someone tells you to "sit up straight," what typically happens is you engage the muscles you can consciously control — you pull your shoulders back, tighten your back, lift your chest. This looks like good posture from the outside.</p>
+      
+      <p>But the deep stabilising system — the diaphragm, the deep abdominal wall, the pelvic floor — is still not doing its part. You're essentially holding a posture on top of a system that hasn't changed. The moment your attention goes elsewhere, the old pattern reasserts itself.</p>
+      
+      <p>The deep system is supposed to work ahead of you, not with you. In one study, healthy participants raising an arm activated the deep abdominal wall <em>before</em> the shoulder muscle that produced the movement. In participants with low back pain, that activation was delayed, and the superficial muscles fired first (<a href="https://pubmed.ncbi.nlm.nih.gov/9018337/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Hodges & Richardson, <em>Spine</em>, 1996</a>). This is a difference of timing, measured in fractions of a second, and it isn't something conscious effort can reach.</p>
+      
+      <p>This is why postural corrections based purely on "hold this position" tend not to last. The underlying motor program — how your brain organises the task of staying upright — hasn't been addressed.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What the Assessment Looks At</h2>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img2.src} alt="Diaphragm, Breathing, and Intra-Abdominal Pressure" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p>The assessment approaches posture as an output of the whole stabilisation system, not as an isolated thing to correct. It starts from the inside out.</p>
+      
+      <p><strong>Is the diaphragm contributing to stability?</strong> If your breathing pattern is chest-dominant, the diaphragm's stabilising role is reduced. Without that internal support, the spine has to rely on the outer muscles to stay upright — and those muscles fatigue. In people with chronic low back pain, the diaphragm has been shown to move less under load and to sit higher in the chest (<a href="https://www.jospt.org/doi/10.2519/jospt.2012.3830" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Kolář et al., <em>JOSPT</em>, 2012</a>). See <a href="/how-recovery-works/core-stability-and-breathing" class="text-accent hover:text-primary underline">breathing and core stability</a>.</p>
+      
+      <p><strong>Are the deep abdominal muscles active?</strong> Not in the "ab exercise" sense — but in the sense of creating even intra-abdominal pressure that supports the spine from the inside. Many people with poor posture have plenty of superficial abdominal strength but very little deep stabilisation happening automatically.</p>
+      
+      <p><strong>What's happening at the ribcage and pelvis?</strong> How the ribcage sits in relation to the pelvis determines whether the deep system can work at all. If the ribcage has dropped or tipped away, the diaphragm and abdominal wall are no longer working against each other the way they need to — and no amount of cueing "engage your core" will change that.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Where It Shows Up</h2>
+      
+      <p>The same underlying pattern presents differently depending on what you spend your hours doing.</p>
+      
+      <p><strong>Desk work.</strong> Hours of low-level sustained load, with the ribcage settling down toward the pelvis. That closes the space the diaphragm needs to descend into, so breathing moves upward, and the neck and upper back muscles take on both the postural work and part of the breathing work. It tends to show up as end-of-day neck and shoulder tension that stretching relieves for an hour.</p>
+      
+      <p>Worth knowing: sitting itself has not been shown to cause back pain. A systematic review of occupational sitting found no consistent causal relationship (<a href="https://pubmed.ncbi.nlm.nih.gov/20097618/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Roffey et al., <em>The Spine Journal</em>, 2010</a>). What matters is less how long you sit than how well you're supported while you do it — which is why chair-shopping so often disappoints.</p>
+      
+      <p><strong>Driving.</strong> Sitting, plus a seat that tips the pelvis backward, plus one foot fixed on a pedal and the arms held forward for long stretches, plus vibration. Movement variety drops to almost nothing. Long-drive stiffness that takes a few minutes to walk off is usually this.</p>
+      
+      <p><strong>Side-sleeping.</strong> Seven or eight hours in one position with no variation, with the shoulder underneath taking compression and the neck held in a slight side-bend if the pillow doesn't match the width of your shoulder. It shows up as pain that is worst on waking and eases through the morning — the opposite pattern to the two above.</p>
+      
+      <p>None of these are diagnoses. They're the situations in which an already-inefficient stabilising pattern gets loaded the longest, which is why they're where people first notice it.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">The Developmental Angle</h2>
+      
+      <p>As infants, we all developed posture automatically. No one taught a baby to sit upright. The nervous system matured, the stabilising muscles activated in the right sequence, and sitting happened — organised from the inside, without effort.</p>
+      
+      <p>The training uses this principle. The positions we moved through in our first year of life — lying on the back, on the belly, sitting, transitioning to all fours — each required specific stabilisation patterns. Those patterns are still in the nervous system. In many adults, they've been overridden by years of compensatory habits, but they can often be reached again.</p>
+      
+      <p>The exercises look surprisingly simple — often resembling infant positions. But the goal isn't the position itself. It's to bring back the stabilisation pattern that should accompany that position. When those patterns start working again, posture tends to improve as a consequence — not as something you have to consciously maintain.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img3.src} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What This Means Practically</h2>
+      
+      <p>If your posture bothers you — or if you have pain that seems connected to how you sit or stand — it may be worth looking at whether the stabilisation system underneath is functioning well.</p>
+      
+      <p>Some signs that it might not be:</p>
+      
+      <ul>
+        <li>You can correct your posture temporarily, but it doesn't hold</li>
+        <li>You feel like you're fighting gravity all day</li>
+        <li>Your neck, upper back, or shoulders are chronically tight despite stretching</li>
+        <li>You feel better when you're moving, worse when you're still</li>
+      </ul>
+      
+      <p>These aren't diagnostic — many things can cause these patterns. But they're the kind of presentation where looking at the stabilisation system sometimes turns up something useful.</p>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img4.src} alt="Posture DNS Correction" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How a Session Works</h2>
+      
+      <p>In a session, the assessment covers how your deep system is functioning — whether the diaphragm is stabilising, whether intra-abdominal pressure is being generated evenly, how your ribcage and pelvis relate to each other — alongside the joints and muscles that may be restricting it.</p>
+      
+      <p>From there, the work is about bringing back the correct patterns through specific positions and cues. Some people feel the difference in one session. For others, it takes a few sessions plus daily practice — usually ten to fifteen minutes — before the new pattern starts to become the default.</p>
+      
+      <p>The goal isn't to give you something to think about all day. It's the opposite — to retrain the system so that good posture happens without effort, the way it did when you were one year old.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Scandinavian Clinic</h2>
+      
+      <ul>
+        <li><strong>Posture is assessed as an output, not corrected as a shape.</strong> What's examined is the system underneath it.</li>
+        <li><strong>Swedish-trained orthopaedic manual therapy.</strong> A five-year Scandinavian education with a strong biomechanical assessment component.</li>
+        <li><strong>Czech-trained in Dynamic Neuromuscular Stabilisation</strong>, at the Prague School of Rehabilitation Medicine — where the approach on this page comes from. <a href="/how-recovery-works/what-dns-is" class="text-accent hover:text-primary underline">Learn more about DNS &rarr;</a></li>
+        <li><strong>Covered by most extended health plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do posture correctors and braces work?</h3>
+          <p class="mt-0">They hold you in a shape while you wear them. What they don't do is change how the deep system organises stabilisation, so the effect tends to stop when the brace comes off. Some people find them useful as a short-term reminder; they aren't a way of retraining the pattern.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Will a standing desk fix this?</h3>
+          <p class="mt-0">It changes what you're loading rather than removing the load. Standing all day produces its own pattern. What helps more than either is variety — changing position regularly, which most people find easier with a desk that adjusts than without one.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Is bad posture the cause of my neck and shoulder pain?</h3>
+          <p class="mt-0">Sometimes it's part of it, and it's rarely the whole story. What an assessment establishes is which findings actually relate to your symptoms, rather than assuming the connection. See the <a href="/conditions/neck-pain-and-whiplash-treatment-north-vancouver" class="text-accent hover:text-primary underline">neck pain</a> page.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How long does it take to change?</h3>
+          <p class="mt-0">The pattern usually needs ten to fifteen minutes of daily practice before it starts running by itself, and that timeline depends far more on the home practice than on how often you're seen.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Do I need to think about my posture during the day?</h3>
+          <p class="mt-0">That's what the work is trying to make unnecessary. Consciously holding a position is the thing that hasn't worked; the aim is for upright posture to require no attention.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">My posture looks fine but I'm still in pain. Is this still relevant?</h3>
+          <p class="mt-0">It can be. How a posture looks from the outside and how it's being held from the inside are different questions — someone can look well aligned while the superficial muscles are doing all the work to keep it that way.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Schedule Your Visit</h2>
+      
+      <p>Book an assessment and start treatment based on what the examination finds.</p>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <h3 class="font-semibold mb-4 text-foreground">References</h3>
+        <ul class="list-none pl-0 space-y-2">
+          <li class="pl-0">Hodges PW, Richardson CA. <a href="https://pubmed.ncbi.nlm.nih.gov/9018337/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Inefficient muscular stabilization of the lumbar spine associated with low back pain: a motor control evaluation of transversus abdominis.</a> <em>Spine.</em> 1996;21(22):2640–2650.</li>
+          <li class="pl-0">Kolář P, Šulc J, Kynčl M, et al. <a href="https://www.jospt.org/doi/10.2519/jospt.2012.3830" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Postural function of the diaphragm in persons with and without chronic low back pain.</a> <em>JOSPT.</em> 2012;42(4):352–362.</li>
+          <li class="pl-0">Roffey DM, Wai EK, Bishop P, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/20097618/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Causal assessment of occupational sitting and low back pain: results of a systematic review.</a> <em>The Spine Journal.</em> 2010;10(3):252–261.</li>
+        </ul>
+        <p class="italic mt-6">Written by Eva Andersson, RMT · Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
