@@ -1,0 +1,289 @@
+---
+import { getImage } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Navigation } from '@/components/Navigation';
+import { Footer } from '@/components/Footer';
+import { ConsentBanner } from '@/components/ConsentBanner';
+
+import img1LeftRaw from "@/assets/conditions/back-pain-stability-chain-left.jpg";
+import img1RightRaw from "@/assets/conditions/back-pain-stability-chain-right.jpg";
+import img2Raw from "@/assets/_archive/breathing-spinal-connection-dns.webp";
+import img3Raw from "@/assets/_archive/Trunk_stability_and_the_hip.png";
+import img4Raw from "@/assets/_archive/intra-abdominal-pressure-regulation.webp";
+
+const img1Left = await getImage({ src: img1LeftRaw, width: 400 });
+const img1Right = await getImage({ src: img1RightRaw, width: 400 });
+const img2 = await getImage({ src: img2Raw, width: 800 });
+const img3 = await getImage({ src: img3Raw, width: 800 });
+const img4 = await getImage({ src: img4Raw, width: 800 });
+---
+
+<BaseLayout 
+  title="Core Stability and Breathing | Scandinavian Clinic"
+  description="What's the difference between core strength and core stability? Why breathing and intra-abdominal pressure matter for back pain and recovery."
+  robots="noindex, nofollow"
+>
+  <div class="min-h-screen">
+    <Navigation client:load />
+    
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Core Stability and Breathing: It's Not About How Strong Your Core Is</h1>
+      
+      <h2 class="text-3xl font-semibold mt-10 mb-6">What's the difference between core strength and core stability?</h2>
+      
+      <p>Strength is how much force a muscle can produce. Stability is whether the right muscles switch on at the right moment, and whether pressure is generated evenly inside the trunk while you move. They're different qualities, and training one doesn't guarantee the other — which is why you can plank for minutes and still have a back that gives out.</p>
+      
+      <p>You've probably been training your core. There's no shortage of exercises out there, and they're not bad exercises. But core stability isn't really about how strong those muscles are. It's about when and how they activate.</p>
+      
+      <div class="my-8 flex flex-col md:flex-row gap-4 not-prose justify-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg flex-1">
+          <img src={img1Left.src} alt="Back pain stability chain - poor" class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg flex-1">
+          <img src={img1Right.src} alt="Back pain stability chain - good" class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+      </div>
+      
+      <p class="font-medium">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a> · <a href="/conditions" class="underline hover:text-accent transition-colors">See all conditions treated</a>
+      </p>
+
+      <div class="my-8 bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+        <h3 class="text-red-800 text-xl font-bold mt-0 mb-3 flex items-center">
+          <span class="mr-2">🚨</span> When breathing symptoms need a doctor first
+        </h3>
+        <p class="text-red-900 mt-0 mb-4">
+          Some of this page is about breathing mechanics. That's a different question from whether breathing is hard.
+        </p>
+        <p class="text-red-900 mb-0">
+          Seek urgent medical care for shortness of breath that comes on suddenly, breathlessness at rest, chest pain or pressure, coughing up blood, or breathing difficulty with dizziness, fainting, or a blue tinge to the lips or fingertips. See your family physician first for new or worsening breathlessness on exertion, a persistent cough or wheeze, or a known or suspected heart or lung condition.
+        </p>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Strength and Stability Are Not the Same Thing</h2>
+      
+      <p>You can have very strong core muscles and still have poor core stability.</p>
+      
+      <p>The deep stabilising muscles — the diaphragm, the deep abdominal wall and the pelvic floor working as a system — are supposed to activate automatically, a fraction of a second before you move. Before you reach, step, lift, or twist. Your brain anticipates the movement and prepares the trunk to carry it. When this works, it's invisible; you don't feel it happening.</p>
+      
+      <p>That sequence has been measured. In one study, fifteen people with low back pain and fifteen without were asked to raise an arm quickly. In those without back pain, the deep abdominal wall switched on ahead of the shoulder muscle producing the movement. In those with back pain, it was significantly delayed — arriving after the movement had already started, in every direction tested (<a href="https://pubmed.ncbi.nlm.nih.gov/9018337/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Hodges & Richardson, <em>Spine</em>, 1996</a>).</p>
+      
+      <p>That's not a strength issue. It's a question of how the nervous system organises the sequence — and it isn't something conscious effort or heavier training can reach.</p>
+      
+      <p>When the deep system arrives late, other muscles compensate. Over time, that can lead to overload, stiffness, or pain in the areas picking up the slack.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Where the Stability Actually Comes From</h2>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img2.src} alt="The breathing and spinal connection" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p>This is the part most people have never had explained: the deep system works by generating pressure, and the muscle that generates it is the diaphragm.</p>
+      
+      <p>When you inhale, the diaphragm descends. If it descends properly — not just at the front, but in all directions — it creates pressure inside the abdominal cavity. This is called intra-abdominal pressure.</p>
+      
+      <p>That pressure stabilises the spine from the inside. Raising pressure inside the abdomen measurably increases the stability of the spine, without the large back muscles having to contract (<a href="https://pubmed.ncbi.nlm.nih.gov/10956340/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Hodges et al., <em>J Appl Physiol</em>, 2000</a>). At the same time it triggers the pelvic floor and deep abdominal wall to co-activate. Together these muscles form a cylinder of support around the trunk — the diaphragm as the roof, the pelvic floor as the base, the abdominal wall in front, the deep spinal muscles behind.</p>
+      
+      <p>So the diaphragm has two jobs. It moves air, and it stabilises the trunk. And it does more of the second, not less, as demand rises: in one study of thirty healthy adults, dynamic MRI with simultaneous spirometry showed greater diaphragm movement when the arms or legs were pushing against resistance than during quiet breathing (<a href="https://journals.physiology.org/doi/full/10.1152/japplphysiol.01216.2009" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Kolář et al., <em>J Appl Physiol</em>, 2010</a>).</p>
+      
+      <p>The back, neck, shoulders and limbs all work from that internal support. When the trunk is stable underneath them, they move efficiently and carry load without having to compensate for what isn't being held.</p>
+      
+      <div class="my-8 not-prose flex flex-col items-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg w-full">
+          <img src={img3.src} alt="Trunk stability and the hip" class="w-full h-auto object-cover max-h-[500px]" />
+        </div>
+        <p class="text-sm text-muted-foreground mt-4 italic text-center max-w-2xl">Trunk stability and the diaphragm affect other mechanical structures like i.e. the hip.</p>
+      </div>
+      
+      <p>This account of the diaphragm is central to Dynamic Neuromuscular Stabilisation, an approach developed at the Prague School of Rehabilitation Medicine. The stabilising patterns established in the first year of life are the efficient ones, and they serve two purposes: they are the standard an adult's movement is compared against, and the positions in which they first developed are what the training uses to bring them back.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">What "Correct" Breathing Looks Like</h2>
+      
+      <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
+        <img src={img4.src} alt="Intra-abdominal pressure regulation" class="w-full h-auto object-cover max-h-[500px]" />
+      </div>
+      
+      <p>When the diaphragm works correctly, contracting downwards, you should see expansion in all directions: front, sides, and back of the lower ribcage and abdomen. This is sometimes called 360-degree expansion. It's not about pushing your belly out — that's a common misconception. It's about even pressure distribution.</p>
+      
+      <p>A useful way to think about it: imagine the trunk as a cylinder. When you breathe in, the entire cylinder should expand slightly — not just the front wall.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How It Gets Disrupted</h2>
+      
+      <p>There are a number of reasons the diaphragm's stabilising function can become compromised:</p>
+      
+      <ul>
+        <li><strong>Pain.</strong> Breathing patterns often shift because of pain, and they don't always return to normal after the pain resolves.</li>
+        <li><strong>Stress and anxiety.</strong> These tend to shift breathing toward the upper chest. The diaphragm still moves, but less effectively.</li>
+        <li><strong>Poor posture.</strong> A slouched posture pushes the ribcage down toward the pelvis, limiting the diaphragm's ability to descend fully. Over time, the nervous system adapts to a shallower, chest-dominant pattern. See <a href="/how-recovery-works/posture" class="text-accent hover:text-primary underline">posture</a>.</li>
+        <li><strong>Habitual chest breathing.</strong> Some people have simply been breathing this way for so long that their nervous system treats it as the default.</li>
+      </ul>
+      
+      <p>The result is the same in each case: the diaphragm does its breathing job (you're still alive, after all), but its stabilising function is reduced. Other muscles have to compensate — and they're often not well suited to the task long-term. The muscles that assist breathing sit largely in the neck and upper chest, which is one reason neck and upper trapezius tension can return within days of every treatment. See the <a href="/conditions/neck-pain-and-whiplash-treatment-north-vancouver" class="text-accent hover:text-primary underline">neck pain</a> and <a href="/conditions/headache-treatment-north-vancouver" class="text-accent hover:text-primary underline">headaches</a> pages.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Exercises Can Look Right but Miss the Point</h2>
+      
+      <p>Someone does a dead bug with good form. Their spine stays neutral, their legs move smoothly, it looks correct from the outside. But their deep stabilising system may not be doing the work — the superficial muscles, rectus abdominis and the external obliques, might be carrying the load instead.</p>
+      
+      <p>The exercise gets done. It even feels hard. But the pattern underneath — how the nervous system organises the stabilisation — hasn't necessarily changed.</p>
+      
+      <p>This isn't a problem with the exercise. It's a problem at the level of motor control, and it's very difficult to detect on your own, because the compensatory pattern feels normal to you. It's been your default for years.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">The Hollowing vs Bracing Question</h2>
+      
+      <p>If you've looked into core training at all, you've probably encountered conflicting advice. "Draw your navel in toward your spine." "No — brace like you're about to be punched." Both cues get taught confidently. Both have research behind them.</p>
+      
+      <p>The approach here doesn't start with a conscious cue at all. The aim is to restore the automatic activation that should be happening before you think about it.</p>
+      
+      <p>In a well-functioning system you don't need to hollow or brace. The pressure regulates itself, driven by the diaphragm descending and the deep muscles co-activating in response. It isn't something you manage consciously — it's something your nervous system does for you, when the pattern is intact.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why This Matters</h2>
+      
+      <p>In people with chronic low back pain, the diaphragm behaves differently under load. In one study, eighteen people with chronic low back pain and twenty-nine without were examined with dynamic MRI while pushing against resistance with the arms or legs. Those with back pain showed less diaphragm movement — mainly in its front and middle portions — and the diaphragm sat higher in the chest (<a href="https://www.jospt.org/doi/10.2519/jospt.2012.3830" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Kolář et al., <em>JOSPT</em>, 2012</a>).</p>
+      
+      <p>It also tires sooner. In one study, diaphragm pressure was measured before and after a period of breathing against resistance in ten people with recurrent low back pain and ten without. Twenty minutes afterwards, diaphragm fatigue was present in 80% of the back pain group compared with 40% of the others (<a href="https://pubmed.ncbi.nlm.nih.gov/23727158/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Janssens et al., <em>Respir Physiol Neurobiol</em>, 2013</a>).</p>
+      
+      <p>Neither study shows which came first. What they show is that where back pain persists, the muscle responsible for supporting the spine from the inside is measurably doing less of it, and running out sooner.</p>
+      
+      <p>This also matters for performance. If the core doesn't activate automatically before you move, force gets lost. Your limbs work harder than they need to, and the load ends up in structures that aren't designed to carry it repeatedly.</p>
+      
+      <p>For some people, correcting the breathing pattern has a noticeable effect relatively quickly. For others, it's one piece of a larger puzzle. But it's almost always worth investigating if you have persistent stability or pain issues.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">The Gap Between Understanding and Doing</h2>
+      
+      <p>Understanding how this works and actually retraining the pattern are two different things.</p>
+      
+      <p>Some people can read about it, try it, and feel the difference immediately. Others find it surprisingly difficult to change a pattern they've used for years — especially because the diaphragm operates largely below conscious awareness.</p>
+      
+      <p>The challenge is that you can think you're doing it correctly while your nervous system is still running the old pattern. It's a bit like trying to correct your own posture in a mirror — you can get close, but you might miss what you can't see.</p>
+      
+      <p>This is why the work uses hands-on cues — physically guiding the ribcage or abdomen so you can feel what correct expansion actually feels like. Once you've felt it, it becomes much easier to reproduce.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Some Signs This Might Be Relevant to You</h2>
+      
+      <ul>
+        <li>You train your core regularly but still feel unstable, or get recurring pain</li>
+        <li>You can plank for minutes and your back still bothers you</li>
+        <li>You've been told you have a "weak core" despite being strong</li>
+        <li>Your stability disappears under fatigue, or when you add speed</li>
+        <li>Breathing that you feel in the upper chest and shoulders rather than low in the ribs</li>
+        <li>Neck and shoulder tension that returns within days of every treatment</li>
+        <li>Difficulty taking a full breath while holding a plank, a squat, or a heavy load</li>
+      </ul>
+      
+      <p>These aren't diagnostic — plenty of things produce them. But they're the kind of presentation where looking at how the system coordinates, rather than how strong it is, sometimes turns up something useful.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">How a Session Works</h2>
+      
+      <p>In a session, the assessment covers how your stabilising system is functioning — not how strong it is, but how it's coordinating.</p>
+      
+      <ul>
+        <li><strong>Timing and sequencing.</strong> Whether the deep stabilisers arrive before movement begins, or whether the superficial system is doing the work.</li>
+        <li><strong>Breathing and stabilisation together.</strong> Whether the diaphragm can do both jobs at once. Many people lose stability the moment they need to breathe under effort.</li>
+        <li><strong>The ribcage and pelvis.</strong> How they sit in relation to each other, since that determines whether pressure can build between them at all.</li>
+        <li><strong>Real-time correction.</strong> Manual and visual cues to help the nervous system find the pattern. The difference between doing the exercise and activating the system is often subtle, and it usually takes hands-on guidance to feel it the first time.</li>
+      </ul>
+      
+      <p>The training itself is slow and simple to begin with. The point is to establish the pattern at low load, then build complexity. Ten to fifteen minutes of daily practice is usually what makes it automatic — and it does more than session frequency does.</p>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Why Scandinavian Clinic</h2>
+      
+      <ul>
+        <li><strong>Stability is assessed as coordination, not strength.</strong> What's examined is timing, pressure and breathing, not how long you can hold a position.</li>
+        <li><strong>Swedish-trained orthopaedic manual therapy.</strong> A five-year Scandinavian education with a strong biomechanical assessment component.</li>
+        <li><strong>Czech-trained in Dynamic Neuromuscular Stabilisation</strong>, at the Prague School of Rehabilitation Medicine — where the approach on this page comes from. <a href="/how-recovery-works/what-dns-is" class="text-accent hover:text-primary underline">Learn more about DNS &rarr;</a></li>
+        <li><strong>Covered by most extended health plans.</strong> As a Registered Massage Therapist, Eva's treatments are eligible for extended health benefits.</li>
+      </ul>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Why don't my ab exercises help my back?</h3>
+          <p class="mt-0">Because most of them train force production, and the problem is usually timing and pressure. An exercise can be done well and still leave the underlying pattern unchanged — the superficial muscles carry the load while the deep system stays late.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">So should I stop doing planks and crunches?</h3>
+          <p class="mt-0">Not necessarily. They're not harmful, and strength has its place. They're just not the thing that changes stability. The order matters more than the exclusion: establish the pattern, then load it.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">I don't have any trouble breathing. Why would this apply to me?</h3>
+          <p class="mt-0">Most people with an inefficient breathing pattern breathe perfectly comfortably. Nothing feels wrong, because the pattern has been the normal one for years. What's affected isn't how breathing feels — it's how well the trunk is supported while you move.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Isn't this just belly breathing?</h3>
+          <p class="mt-0">No. Pushing the abdomen forward while the lower ribs stay still is its own fault pattern. What's being trained is expansion of the lower ribcage in every direction — sides and back as well as front — with even pressure distribution.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How is this different from breathing exercises for stress or relaxation?</h3>
+          <p class="mt-0">Slow breathing for relaxation works on the nervous system's arousal level, and does that well. This work is about the mechanics of how the trunk is supported during movement and load. Both are useful; they're aimed at different things.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">Should I hollow or brace?</h3>
+          <p class="mt-0">Neither, as a starting point. Both are conscious cues layered on top of a system that should be running by itself. The work is on restoring the automatic version first.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-medium mt-0 mb-2">How long does it take?</h3>
+          <p class="mt-0">Ten to fifteen minutes of daily practice is usually what's needed before the pattern starts running on its own. The timeline depends far more on the home practice than on how often you're seen.</p>
+        </div>
+      </div>
+
+      <hr class="my-12 border-border" />
+
+      <h2 class="text-3xl font-semibold mb-6">Schedule Your Visit</h2>
+      
+      <p>Book an assessment and start treatment based on what the examination finds.</p>
+      
+      <p class="font-medium text-lg">
+        <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="booking-link underline text-accent hover:text-primary transition-colors">Book Your Assessment</a>
+      </p>
+      
+      <p>Suite 202 – 101 West 16th Street, North Vancouver · <a href="tel:+16049264883" class="text-accent hover:text-primary underline">(604) 926-4883</a></p>
+
+      <div class="mt-16 text-sm text-muted-foreground border-t border-border pt-8">
+        <h3 class="font-semibold mb-4 text-foreground">References</h3>
+        <ul class="list-none pl-0 space-y-2">
+          <li class="pl-0">Hodges PW, Richardson CA. <a href="https://pubmed.ncbi.nlm.nih.gov/9018337/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Inefficient muscular stabilization of the lumbar spine associated with low back pain: a motor control evaluation of transversus abdominis.</a> <em>Spine.</em> 1996;21(22):2640–2650.</li>
+          <li class="pl-0">Hodges PW, Butler JE, Gandevia SC, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/10956340/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Changes in intra-abdominal pressure during postural and respiratory activation of the human diaphragm.</a> <em>J Appl Physiol.</em> 2000;89(3):967–976.</li>
+          <li class="pl-0">Kolář P, Neuwirth J, Šanda J, et al. <a href="https://journals.physiology.org/doi/full/10.1152/japplphysiol.01216.2009" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Stabilizing function of the diaphragm: dynamic MRI and synchronized spirometric assessment.</a> <em>J Appl Physiol.</em> 2010;109(4):1064–1071.</li>
+          <li class="pl-0">Kolář P, Šulc J, Kynčl M, et al. <a href="https://www.jospt.org/doi/10.2519/jospt.2012.3830" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Postural function of the diaphragm in persons with and without chronic low back pain.</a> <em>JOSPT.</em> 2012;42(4):352–362.</li>
+          <li class="pl-0">Janssens L, Brumagne S, McConnell AK, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/23727158/" target="_blank" rel="noopener noreferrer" class="underline hover:text-foreground">Greater diaphragm fatigability in individuals with recurrent low back pain.</a> <em>Respir Physiol Neurobiol.</em> 2013;188(2):119–123.</li>
+        </ul>
+        <p class="italic mt-6">Written by Eva Andersson, RMT · Last updated August 2026</p>
+      </div>
+
+    </main>
+    
+    <Footer />
+    <ConsentBanner client:load />
+  </div>
+</BaseLayout>
