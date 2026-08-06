@@ -1,0 +1,97 @@
+<USER_REQUEST>
+You are working in the Scandinavian Clinic Astro site. Complete the four tasks below. Do not change any page copy, layout, styling, or images except where explicitly stated. Do not commit or push.
+
+TASK 1 — Wire up missing structured data (highest priority)
+
+Fifteen pages do not pass a jsonLd object to BaseLayout. Fix all of them.
+
+First, read src/lib/schemas.ts and list every schema export that already exists. Some builders are likely present but unused — reuse those rather than creating duplicates. Report what you found before making changes.
+
+Then, for each page below, add a schema export to src/lib/schemas.ts following the existing file's conventions, and wire it into that page's jsonLd prop on BaseLayout.
+
+Reference the shared business entity via businessRef — do not duplicate the full medicalBusiness block. Only Home and Contact carry that.
+
+Nine condition pages — back-pain-treatment-north-vancouver, sciatica-treatment-north-vancouver, neck-pain-and-whiplash-treatment-north-vancouver, headache-treatment-north-vancouver, shoulder-pain-treatment-north-vancouver, hip-pain-treatment-north-vancouver, tennis-elbow-ver2, foot-and-ankle-pain-treatment-north-vancouver:
+
+MedicalWebPage with businessRef
+BreadcrumbList: Home → Conditions → [page]
+FAQPage built from the questions actually present in that page's FAQ section. Use the real question and answer text from the page — do not invent entries, and do not include a question that isn't on the page.
+
+Four How Recovery Works pages — why-pain-keeps-coming-back, core-stability-and-breathing, posture, what-dns-is:
+
+MedicalWebPage with businessRef
+BreadcrumbList: Home → How Recovery Works → [page]
+FAQPage where the page has an FAQ section
+No MedicalCondition node — these are mechanism pages, not conditions
+
+The Assessment (/first-visit):
+
+MedicalWebPage with businessRef, BreadcrumbList, and FAQPage from its existing FAQ
+
+Conditions hub (/conditions/index.astro):
+
+MedicalWebPage with businessRef, BreadcrumbList, and an ItemList of the eight condition pages with their names and URLs
+
+Validate every generated JSON-LD block parses as valid JSON and that required properties for each type are present.
+
+TASK 2 — Tennis Elbow cleanup check
+
+The Tennis Elbow content swap has already been done — the canonical page at /conditions/tennis-elbow-treatment-north-vancouver now carries the approved version. Do not re-do it. Just verify and clean up:
+
+Search the repo for tennis-elbow-ver2. If any file, route or internal link still references it, report what you found before changing anything.
+Report the current meta description on /conditions/tennis-elbow-treatment-north-vancouver. If it still begins "Tennis elbow is a degenerative tendinopathy, not active inflammation", replace it with: Tennis elbow is pain on the outside of the elbow, felt most when you grip or twist. Commonly the elbow is the end point of a functional disturbance elsewhere in the arm, shoulder or neck. If it already reflects the approved version, leave it alone.
+
+Change nothing else on this page.
+
+TASK 3 — Fix titles, descriptions and the missing H1
+
+Add an H1 to the Conditions hub (/conditions/index.astro). It currently has none. Use: Conditions Treated at Scandinavian Clinic, North Vancouver
+
+Replace these title tags:
+
+Page	New title
+/how-recovery-works/why-pain-keeps-coming-back	Why Does Pain Keep Coming Back After Treatment? | Scandinavian Clinic
+/how-recovery-works/core-stability-and-breathing	Core Stability and Breathing — Why Strength Isn't Stability | Scandinavian Clinic
+/how-recovery-works/posture	Why "Sit Up Straight" Doesn't Fix Your Posture | Scandinavian Clinic
+/how-recovery-works/what-dns-is	What Is Dynamic Neuromuscular Stabilisation (DNS)? | Scandinavian Clinic
+
+Replace these meta descriptions:
+
+Page	New description
+core-stability-and-breathing	Core stability is a question of timing and pressure, not strength. How the diaphragm generates the pressure that supports the spine, and why strong abdominal muscles don't guarantee a stable back.
+posture	Upright posture is an output of the deep stabilising system, not a shape you hold. Why conscious correction fades, what gets examined instead, and how it shows up in desk work, driving and sleeping.
+what-dns-is	Dynamic Neuromuscular Stabilisation is a movement assessment and training approach developed at the Prague School of Rehabilitation Medicine, based on how infants develop stability. What it involves and who it suits.
+why-pain-keeps-coming-back	Pain that eases and then returns usually means the driver was never found. What recurring pain indicates, what an assessment looks for beyond the painful area, and what changes the pattern.
+neck-pain-and-whiplash-treatment-north-vancouver	Most neck pain comes from posture, muscle tension and everyday load on the neck's joints — and often originates in the mid-back rather than the neck itself. Whiplash is a distinct injury with its own recovery pattern.
+sciatica-treatment-north-vancouver	Sciatica is nerve pain from the lower back down the leg, with several possible causes that need different treatment. Disc, piriformis and hip-referred pain can feel identical — which is why assessment comes first.
+
+TASK 4 — Filename hygiene
+
+Two image filenames contain spaces, which can break on some hosts. Rename these and update every import:
+
+Body_alignment_starts_ with_the_feet_link_to_knee_hip_back_pain.png → foot-to-knee-hip-back-alignment-chain.png
+developmental-kinesiology -foundation.png → developmental-kinesiology-foundation.png
+
+Two contain typos. Rename and update imports:
+
+Diapragm-breathing-IAP-dns.webp → diaphragm-breathing-iap.webp
+Shoulder-asessment-movement.png → shoulder-assessment-movement.png
+
+Then report — but do not change — every remaining image filename that uses uppercase letters or underscores, so I can decide whether to normalise them in a separate pass.
+
+VERIFICATION — report all of this back:
+
+The list of schema exports that already existed in src/lib/schemas.ts before you started.
+For each of the 15 pages: the schema types now attached.
+Confirmation that every JSON-LD block is valid JSON.
+Any remaining references to tennis-elbow-ver2, and the current meta description on the canonical Tennis Elbow page.
+Before and after for every title and description changed.
+The list of remaining non-conforming image filenames.
+npm run build passes.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-08-05T09:41:08-07:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.1 Pro (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
