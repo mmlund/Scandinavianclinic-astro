@@ -1,5 +1,5 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
@@ -7,12 +7,8 @@ import { ConsentBanner } from '@/components/ConsentBanner';
 import { aboutMeSchema } from '@/lib/schemas';
 
 import evaPortraitRaw from "@/assets/clinic/eva-portrait.webp";
-import treatmentRoomRaw from "@/assets/_archive/facility-treatment-room.webp";
+import treatmentRoomRaw from "@/assets/clinic/facility-treatment-room.webp";
 import gymRaw from "@/assets/clinic/liberation-fitness-gym.jpeg";
-
-const optPortrait = await getImage({ src: evaPortraitRaw, width: 1200 });
-const optRoom = await getImage({ src: treatmentRoomRaw, width: 800 });
-const optGym = await getImage({ src: gymRaw, width: 800 });
 ---
 
 <BaseLayout 
@@ -32,7 +28,7 @@ const optGym = await getImage({ src: gymRaw, width: 800 });
       <p>Eva Andersson has practised as a Registered Massage Therapist in British Columbia since 1994, with over 30 years of clinical experience across Sweden and Canada. Her training is five years of university-level orthopedic manual therapy in Sweden, with advanced training in Dynamic Neuromuscular Stabilisation at the Prague School of Rehabilitation Medicine. Her practice is built on assessment: identifying the mechanical source of a problem before choosing a treatment.</p>
       
       <div class="my-10 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={optPortrait.src} alt="Eva Andersson, clinical setting, treatment room" class="w-full h-auto object-cover max-h-[600px] object-center" />
+        <Image src={evaPortraitRaw} alt="Eva Andersson, clinical setting, treatment room" class="w-full h-auto object-cover max-h-[600px] object-center" loading="eager" fetchpriority="high" />
       </div>
 
       <p class="font-medium">
@@ -94,10 +90,10 @@ const optGym = await getImage({ src: gymRaw, width: 800 });
       
       <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
         <div class="rounded-2xl overflow-hidden shadow-lg h-64">
-          <img src={optRoom.src} alt="The treatment room" class="w-full h-full object-cover object-center" />
+          <Image src={treatmentRoomRaw} alt="The treatment room" class="w-full h-full object-cover object-center" />
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg h-64">
-          <img src={optGym.src} alt="Liberation Fitness gym" class="w-full h-full object-cover object-center" />
+          <Image src={gymRaw} alt="Liberation Fitness gym" class="w-full h-full object-cover object-center" />
         </div>
       </div>
       

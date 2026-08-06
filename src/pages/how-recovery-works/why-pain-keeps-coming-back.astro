@@ -1,21 +1,20 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { whyPainReturnsSchema } from '@/lib/schemas';
 
-import img1Raw from "@/assets/_archive/breaking-pain-treatment-cycle.png";
-import img2Raw from "@/assets/_archive/Body_alignment_starts_ with_the_feet_link_to_knee_hip_back_pain.png";
-
-const img1 = await getImage({ src: img1Raw, width: 800 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
+import img1Raw from "@/assets/conditions/breaking-pain-treatment-cycle.png";
+import img2Raw from "@/assets/conditions/foot-to-knee-hip-back-alignment-chain.png";
 ---
 
 <BaseLayout 
-  title="Why Pain Keeps Coming Back | Scandinavian Clinic"
-  description="Understanding why muscle and joint pain returns after treatment, and what an assessment finds that treating only the painful area misses."
+  title="Why Does Pain Keep Coming Back After Treatment? | Scandinavian Clinic"
+  description="Pain that eases and then returns usually means the driver was never found. What recurring pain indicates, what an assessment looks for beyond the painful area, and what changes the pattern."
   robots="noindex, nofollow"
+  jsonLd={whyPainReturnsSchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
@@ -32,7 +31,7 @@ const img2 = await getImage({ src: img2Raw, width: 800 });
       <p>That's frustrating. It doesn't mean something is fundamentally wrong with you, and it isn't unusual. In a study following 65,790 adults after a first episode of low back pain, about half recovered and stayed recovered. Just under a third appeared to recover over six months but carried a 37–48% chance of seeking care for it again in every quarter that followed (<a href="https://doi.org/10.1016/j.spinee.2015.08.015" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-primary underline">Norton et al., <em>The Spine Journal</em>, 2016</a>). Recurring pain is one of the most common patterns in musculoskeletal care.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img1.src} alt="The cycle of recurring pain" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img1Raw} alt="The cycle of recurring pain" class="w-full h-auto object-cover max-h-[500px]" loading="eager" fetchpriority="high" />
       </div>
       
       <p class="font-medium">
@@ -76,7 +75,7 @@ const img2 = await getImage({ src: img2Raw, width: 800 });
       <h2 class="text-3xl font-semibold mb-6">What an assessment finds that treating the painful area misses</h2>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="Body alignment and how it affects pain" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="Body alignment and how it affects pain" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>The painful area is examined, and so is everything that loads it. Settling the pain is usually the first priority — that part doesn't change. What changes the recurrence is also finding what produced it, and that often sits somewhere other than where you feel it.</p>

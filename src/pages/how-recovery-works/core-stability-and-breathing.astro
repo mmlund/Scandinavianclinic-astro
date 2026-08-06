@@ -1,27 +1,26 @@
 ---
-import { getImage } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { coreStabilitySchema } from '@/lib/schemas';
 
 import img1LeftRaw from "@/assets/conditions/back-pain-stability-chain-left.jpg";
 import img1RightRaw from "@/assets/conditions/back-pain-stability-chain-right.jpg";
-import img2Raw from "@/assets/_archive/breathing-spinal-connection-dns.webp";
-import img3Raw from "@/assets/_archive/Trunk_stability_and_the_hip.png";
-import img4Raw from "@/assets/_archive/intra-abdominal-pressure-regulation.webp";
+import img2Raw from "@/assets/conditions/breathing-spinal-connection-dns.webp";
+import img3Raw from "@/assets/conditions/trunk-stability-and-the-hip.png";
+import img4Raw from "@/assets/conditions/intra-abdominal-pressure-regulation.webp";
 
 const img1Left = await getImage({ src: img1LeftRaw, width: 400 });
 const img1Right = await getImage({ src: img1RightRaw, width: 400 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
-const img3 = await getImage({ src: img3Raw, width: 800 });
-const img4 = await getImage({ src: img4Raw, width: 800 });
 ---
 
 <BaseLayout 
-  title="Core Stability and Breathing | Scandinavian Clinic"
-  description="What's the difference between core strength and core stability? Why breathing and intra-abdominal pressure matter for back pain and recovery."
+  title="Core Stability and Breathing — Why Strength Isn't Stability | Scandinavian Clinic"
+  description="Core stability is a question of timing and pressure, not strength. How the diaphragm generates the pressure that supports the spine, and why strong abdominal muscles don't guarantee a stable back."
   robots="noindex, nofollow"
+  jsonLd={coreStabilitySchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
@@ -37,10 +36,10 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       
       <div class="my-8 flex flex-col md:flex-row gap-4 not-prose justify-center">
         <div class="rounded-2xl overflow-hidden shadow-lg flex-1">
-          <img src={img1Left.src} alt="Back pain stability chain - poor" class="w-full h-auto object-cover max-h-[400px]" />
+          <img src={img1Left.src} alt="Back pain stability chain - poor" class="w-full h-auto object-cover max-h-[400px]" loading="eager" fetchpriority="high" />
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg flex-1">
-          <img src={img1Right.src} alt="Back pain stability chain - good" class="w-full h-auto object-cover max-h-[400px]" />
+          <img src={img1Right.src} alt="Back pain stability chain - good" class="w-full h-auto object-cover max-h-[400px]" loading="eager" fetchpriority="high" />
         </div>
       </div>
       
@@ -79,7 +78,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <h2 class="text-3xl font-semibold mb-6">Where the Stability Actually Comes From</h2>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="The breathing and spinal connection" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="The breathing and spinal connection" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>This is the part most people have never had explained: the deep system works by generating pressure, and the muscle that generates it is the diaphragm.</p>
@@ -94,7 +93,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       
       <div class="my-8 not-prose flex flex-col items-center">
         <div class="rounded-2xl overflow-hidden shadow-lg w-full">
-          <img src={img3.src} alt="Trunk stability and the hip" class="w-full h-auto object-cover max-h-[500px]" />
+          <Image src={img3Raw} alt="Trunk stability and the hip" class="w-full h-auto object-cover max-h-[500px]" />
         </div>
         <p class="text-sm text-muted-foreground mt-4 italic text-center max-w-2xl">Trunk stability and the diaphragm affect other mechanical structures like i.e. the hip.</p>
       </div>
@@ -106,7 +105,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <h2 class="text-3xl font-semibold mb-6">What "Correct" Breathing Looks Like</h2>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img4.src} alt="Intra-abdominal pressure regulation" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img4Raw} alt="Intra-abdominal pressure regulation" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>When the diaphragm works correctly, contracting downwards, you should see expansion in all directions: front, sides, and back of the lower ribcage and abdomen. This is sometimes called 360-degree expansion. It's not about pushing your belly out — that's a common misconception. It's about even pressure distribution.</p>

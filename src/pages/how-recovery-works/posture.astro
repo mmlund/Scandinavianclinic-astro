@@ -1,25 +1,22 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { postureSchema } from '@/lib/schemas';
 
-import img1Raw from "@/assets/_archive/bad-good-posture-female-kyphosis.png";
-import img2Raw from "@/assets/_archive/Diapragm-breathing-IAP-dns.webp";
-import img3Raw from "@/assets/_archive/Explaining-dns.png";
-import img4Raw from "@/assets/_archive/posture-dns-correction.png";
-
-const img1 = await getImage({ src: img1Raw, width: 800 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
-const img3 = await getImage({ src: img3Raw, width: 800 });
-const img4 = await getImage({ src: img4Raw, width: 800 });
+import img1Raw from "@/assets/conditions/bad-good-posture-female-kyphosis.png";
+import img2Raw from "@/assets/conditions/diaphragm-breathing-iap.webp";
+import img3Raw from "@/assets/conditions/explaining-dns.png";
+import img4Raw from "@/assets/conditions/posture-dns-correction.png";
 ---
 
 <BaseLayout 
-  title="Posture | Scandinavian Clinic"
-  description="Why 'Sit Up Straight' doesn't work long-term. Learn how the deep stabilising system affects posture."
+  title="Why &quot;Sit Up Straight&quot; Doesn't Fix Your Posture | Scandinavian Clinic"
+  description="Upright posture is an output of the deep stabilising system, not a shape you hold. Why conscious correction fades, what gets examined instead, and how it shows up in desk work, driving and sleeping."
   robots="noindex, nofollow"
+  jsonLd={postureSchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
@@ -36,7 +33,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <p>That's not a willpower problem. It may be a stabilisation problem.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img1.src} alt="Bad vs good posture" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img1Raw} alt="Bad vs good posture" class="w-full h-auto object-cover max-h-[500px]" loading="eager" fetchpriority="high" />
       </div>
       
       <p class="font-medium">
@@ -82,7 +79,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <h2 class="text-3xl font-semibold mb-6">What the Assessment Looks At</h2>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="Diaphragm, Breathing, and Intra-Abdominal Pressure" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="Diaphragm, Breathing, and Intra-Abdominal Pressure" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>The assessment approaches posture as an output of the whole stabilisation system, not as an isolated thing to correct. It starts from the inside out.</p>
@@ -120,7 +117,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <p>The exercises look surprisingly simple — often resembling infant positions. But the goal isn't the position itself. It's to bring back the stabilisation pattern that should accompany that position. When those patterns start working again, posture tends to improve as a consequence — not as something you have to consciously maintain.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img3.src} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img3Raw} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
 
       <hr class="my-12 border-border" />
@@ -141,7 +138,7 @@ const img4 = await getImage({ src: img4Raw, width: 800 });
       <p>These aren't diagnostic — many things can cause these patterns. But they're the kind of presentation where looking at the stabilisation system sometimes turns up something useful.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img4.src} alt="Posture DNS Correction" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img4Raw} alt="Posture DNS Correction" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
 
       <hr class="my-12 border-border" />

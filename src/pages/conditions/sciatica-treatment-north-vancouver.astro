@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { sciaticaSchema } from '@/lib/schemas';
 
 // Image imports
 import imgPathway from '@/assets/conditions/sciatic-nerve-pathway.webp';
@@ -17,8 +18,9 @@ import logo from '@/assets/brand/logo.webp?url';
 
 <BaseLayout 
   title="Sciatica Treatment in North Vancouver | Scandinavian Clinic"
-  description="Sciatica is nerve pain from the lower back down the leg — with several possible causes that need different treatment. What's actually driving it, what the evidence supports, and how assessment-based RMT care helps. North Vancouver."
-  robots="noindex"
+  description="Sciatica is nerve pain from the lower back down the leg, with several possible causes that need different treatment. Disc, piriformis and hip-referred pain can feel identical — which is why assessment comes first."
+  robots="noindex, nofollow"
+  jsonLd={sciaticaSchema}
 >
   <div class="min-h-screen bg-background pt-20">
     

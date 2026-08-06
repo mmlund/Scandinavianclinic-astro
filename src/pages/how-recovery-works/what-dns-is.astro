@@ -1,24 +1,21 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { whatDnsIsSchema } from '@/lib/schemas';
 
-import img1Raw from "@/assets/_archive/developmental-kinesiology -foundation.png";
-import img2Raw from "@/assets/_archive/Optimizing-movement-patterns-dns.webp";
-import img3Raw from "@/assets/_archive/Developmental-kinesiology-dns-principles.png";
-
-const img1 = await getImage({ src: img1Raw, width: 800 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
-const img3 = await getImage({ src: img3Raw, width: 400 });
-const img1Small = await getImage({ src: img1Raw, width: 400 });
+import img1Raw from "@/assets/conditions/developmental-kinesiology-foundation.png";
+import img2Raw from "@/assets/conditions/optimizing-movement-patterns-dns.webp";
+import img3Raw from "@/assets/conditions/developmental-kinesiology-dns-principles.png";
 ---
 
 <BaseLayout 
-  title="What is DNS? | Scandinavian Clinic"
-  description="What is Dynamic Neuromuscular Stabilisation (DNS) and how is it used to treat pain?"
+  title="What Is Dynamic Neuromuscular Stabilisation (DNS)? | Scandinavian Clinic"
+  description="Dynamic Neuromuscular Stabilisation is a movement assessment and training approach developed at the Prague School of Rehabilitation Medicine, based on how infants develop stability. What it involves and who it suits."
   robots="noindex, nofollow"
+  jsonLd={whatDnsIsSchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
@@ -43,7 +40,7 @@ const img1Small = await getImage({ src: img1Raw, width: 400 });
       <p>Nobody teaches a baby to sit upright. The nervous system matures, the stabilising muscles activate in sequence, and sitting happens.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img1.src} alt="Developmental kinesiology foundation" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img1Raw} alt="Developmental kinesiology foundation" class="w-full h-auto object-cover max-h-[500px]" loading="eager" fetchpriority="high" />
       </div>
 
       <hr class="my-12 border-border" />
@@ -61,7 +58,7 @@ const img1Small = await getImage({ src: img1Raw, width: 400 });
       <h2 class="text-3xl font-semibold mb-6">How a joint behaves through a movement</h2>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="Optimizing movement patterns DNS" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="Optimizing movement patterns DNS" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>When a joint tracks well through a movement, load spreads across the whole joint surface and the muscles around it don't have to compensate. When the movement pattern is poor, the same joint takes load unevenly, the muscles work harder to control it, and the tissues carry more than they were built for — repeated a few thousand times a day.</p>
@@ -86,10 +83,10 @@ const img1Small = await getImage({ src: img1Raw, width: 400 });
       
       <div class="my-8 flex flex-col md:flex-row gap-4 not-prose justify-center">
         <div class="rounded-2xl overflow-hidden shadow-lg flex-1 bg-white">
-          <img src={img1Small.src} alt="Developmental kinesiology foundation" class="w-full h-auto object-contain max-h-[400px]" />
+          <Image src={img1Raw} alt="Developmental kinesiology foundation" class="w-full h-auto object-contain max-h-[400px]" />
         </div>
         <div class="rounded-2xl overflow-hidden shadow-lg flex-1 bg-white">
-          <img src={img3.src} alt="Developmental kinesiology DNS principles" class="w-full h-auto object-contain max-h-[400px]" />
+          <Image src={img3Raw} alt="Developmental kinesiology DNS principles" class="w-full h-auto object-contain max-h-[400px]" />
         </div>
       </div>
       

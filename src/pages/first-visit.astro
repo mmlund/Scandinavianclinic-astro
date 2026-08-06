@@ -1,27 +1,23 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
+import { firstVisitSchema } from '@/lib/schemas';
 
-import img1Raw from "@/assets/_archive/Sciatica-assessment.jpeg";
-import img2Raw from "@/assets/_archive/Sciatica_investigation.webp";
-import img3Raw from "@/assets/_archive/treatment-session.webp";
-import img4Raw from "@/assets/_archive/stretching_for_neck_pain.jpg";
-import img5Raw from "@/assets/_archive/Shoulder-asessment-movement.png";
-
-const img1 = await getImage({ src: img1Raw, width: 800 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
-const img3 = await getImage({ src: img3Raw, width: 800 });
-const img4 = await getImage({ src: img4Raw, width: 800 });
-const img5 = await getImage({ src: img5Raw, width: 800 });
+import img1Raw from "@/assets/clinic/sciatica-assessment.jpeg";
+import img2Raw from "@/assets/clinic/sciatica-investigation.webp";
+import img3Raw from "@/assets/clinic/treatment-session.webp";
+import img4Raw from "@/assets/clinic/stretching-for-neck-pain.jpg";
+import img5Raw from "@/assets/clinic/shoulder-assessment-movement.png";
 ---
 
 <BaseLayout 
   title="What a Thorough Assessment Involves | Scandinavian Clinic"
   description="What a thorough assessment actually includes: a detailed history, movement testing, joint testing, and muscle evaluation."
   robots="noindex, nofollow"
+  jsonLd={firstVisitSchema}
 >
   <div class="min-h-screen">
     <Navigation client:load />
@@ -93,7 +89,7 @@ const img5 = await getImage({ src: img5Raw, width: 800 });
       <p>Where treatment has been tried before without lasting results, the history often surfaces the pattern of how the pain returns and what it responds to, which points toward factors not previously identified.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img1.src} alt="The clinical history" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img1Raw} alt="The clinical history" class="w-full h-auto object-cover max-h-[500px]" loading="eager" fetchpriority="high" />
       </div>
 
       <hr class="my-12 border-border" />
@@ -109,7 +105,7 @@ const img5 = await getImage({ src: img5Raw, width: 800 });
       <h3 class="text-2xl font-semibold mt-8 mb-4">How is movement tested?</h3>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="Movement testing" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="Movement testing" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>Movement testing looks at how you move as a whole — bending, turning, reaching — read against two references: the range the movement should have, and the symmetry between your two sides.</p>
@@ -121,7 +117,7 @@ const img5 = await getImage({ src: img5Raw, width: 800 });
       <h3 class="text-2xl font-semibold mt-8 mb-4">How are joints tested?</h3>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img3.src} alt="Segmental joint testing" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img3Raw} alt="Segmental joint testing" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>The spine is not one joint but a chain of segments, each contributing its own share of movement. The segments are tested individually — how each one moves, and whether it moves the same to the left as to the right.</p>
@@ -133,7 +129,7 @@ const img5 = await getImage({ src: img5Raw, width: 800 });
       <h3 class="text-2xl font-semibold mt-8 mb-4">How are muscles tested?</h3>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img4.src} alt="Muscle system evaluation" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img4Raw} alt="Muscle system evaluation" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>Muscles are tested as a system, alongside the movement and joint findings, rather than as isolated parts. What's assessed is tone, tightness, and the balance between groups: which muscles are overworking, which are underactive, and how that fits the restrictions already found.</p>
@@ -145,7 +141,7 @@ const img5 = await getImage({ src: img5Raw, width: 800 });
       <h3 class="text-2xl font-semibold mt-8 mb-4">Testing findings against your symptoms</h3>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img5.src} alt="Testing finding relevance" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img5Raw} alt="Testing finding relevance" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
       
       <p>An examination will always turn up findings. A stiff segment, a tight muscle, an asymmetry — most people have several, and many of them are incidental.</p>

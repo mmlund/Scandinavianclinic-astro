@@ -5,15 +5,22 @@ import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { ConditionsWeTreat } from '@/components/ConditionsWeTreat';
 import ConditionBodyMap from '@/components/ConditionBodyMap.astro';
+import { conditionsTreatedSchema } from '@/lib/schemas';
 ---
 
 <BaseLayout 
   title="Conditions We Treat | Scandinavian Clinic"
   description="Assessment-based treatment for chronic pain, sports injuries, and complex musculoskeletal conditions. Explore the areas we treat."
+  jsonLd={conditionsTreatedSchema}
+
+  robots="noindex, nofollow"
 >
   <div class="min-h-screen flex flex-col">
     <Navigation client:load />
     <main class="flex-grow pt-24">
+      <div class="container mx-auto px-4 pt-12 pb-4 text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-foreground">Conditions Treated at Scandinavian Clinic, North Vancouver</h1>
+      </div>
       <ConditionsWeTreat client:idle>
         <ConditionBodyMap />
       </ConditionsWeTreat>

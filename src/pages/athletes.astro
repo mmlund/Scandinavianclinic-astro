@@ -1,22 +1,19 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { athletesSchema } from '@/lib/schemas';
 
-import img1Raw from "@/assets/_archive/runner.png";
-import img2Raw from "@/assets/_archive/Explaining-dns.png";
-
-const img1 = await getImage({ src: img1Raw, width: 800 });
-const img2 = await getImage({ src: img2Raw, width: 800 });
+import img1Raw from "@/assets/clinic/runner.png";
+import img2Raw from "@/assets/conditions/explaining-dns.png";
 ---
 
 <BaseLayout 
   title="Sports Performance and Injury Prevention — RMT North Vancouver | Scandinavian Clinic"
   description="For North Shore trail runners, riders, skiers and climbers. Assessment of the movement patterns behind recurring overuse injuries, and what changes when stability is addressed rather than trained around."
-  robots="noindex"
+  robots="noindex, nofollow"
   jsonLd={athletesSchema}
 >
   <div class="min-h-screen">
@@ -32,7 +29,7 @@ const img2 = await getImage({ src: img2Raw, width: 800 });
       <p>For the trail runners, riders, skiers and climbers on the North Shore, fitness is rarely the problem. You have the strength and the drive. The question is whether the foundation underneath will support what you want to be doing in twenty years.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img1.src} alt="Runner" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img1Raw} alt="Runner" class="w-full h-auto object-cover max-h-[500px]" loading="eager" fetchpriority="high" />
       </div>
       
       <p class="font-medium">
@@ -92,7 +89,7 @@ const img2 = await getImage({ src: img2Raw, width: 800 });
       <p>Once the pattern holds at low load, it gets loaded, sped up, and taken into the movements your sport actually demands. A pattern that only works lying down hasn't changed yet.</p>
       
       <div class="my-8 rounded-2xl overflow-hidden shadow-lg not-prose">
-        <img src={img2.src} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
+        <Image src={img2Raw} alt="Explaining DNS" class="w-full h-auto object-cover max-h-[500px]" />
       </div>
 
       <p><a href="/how-recovery-works/what-dns-is" class="text-accent hover:text-primary underline">What DNS is &rarr;</a></p>
