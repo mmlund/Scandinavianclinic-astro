@@ -114,6 +114,15 @@ const medicalBusiness = {
 };
 
 // Lightweight @id reference used to link other schema nodes to the business.
+const minimalBusiness = {
+  "@type": "MedicalBusiness",
+  "@id": BUSINESS_ID,
+  name: "Scandinavian Clinic",
+  url: "https://scandinavianclinic.com",
+  telephone: "+1-604-926-4883",
+  address: baseAddress,
+};
+
 const businessRef = { "@id": BUSINESS_ID };
 
 const breadcrumb = (items: { name: string; url: string }[]) => ({
@@ -173,6 +182,10 @@ export const aboutMeSchema = {
   "@context": "https://schema.org",
   "@graph": [
     medicalBusiness,
+    {
+      "@type": "ProfilePage",
+      mainEntity: { "@id": EVA_ID },
+    },
     {
       "@type": "Person",
       "@id": EVA_ID,
@@ -273,7 +286,7 @@ export const servicesSchema = {
 export const firstVisitSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Your First Visit",
@@ -332,7 +345,7 @@ export const firstVisitSchema = {
 export const facilitiesSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "Place",
       name: "Scandinavian Clinic — Treatment Facility",
@@ -354,7 +367,7 @@ export const facilitiesSchema = {
 export const rmtSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Registered Massage Therapy in North Vancouver",
@@ -381,7 +394,7 @@ export const rmtSchema = {
 export const dnsSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Dynamic Neuromuscular Stabilization (DNS) in North Vancouver",
@@ -430,10 +443,11 @@ export const contactSchema = {
 export const conditionsTreatedSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Conditions Treated with Registered Massage Therapy at Scandinavian Clinic",
+      url: "https://scandinavianclinic.com/conditions",
       about: [
         { "@type": "MedicalCondition", name: "Back Pain" },
         { "@type": "MedicalCondition", name: "Neck Pain" },
@@ -457,7 +471,7 @@ export const conditionsTreatedSchema = {
 export const bookingSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "WebPage",
       name: "Book an Appointment",
@@ -474,7 +488,7 @@ export const bookingSchema = {
 export const athletesSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Athletes and Performance",
@@ -545,7 +559,7 @@ export const athletesSchema = {
 export const feesSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Fees and Insurance",
@@ -600,7 +614,7 @@ export const feesSchema = {
 export const neckPainSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Neck Pain & Whiplash Treatment in North Vancouver",
@@ -675,7 +689,7 @@ export const neckPainSchema = {
 export const sciaticaSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Sciatica Treatment in North Vancouver",
@@ -750,7 +764,7 @@ export const sciaticaSchema = {
 export const shoulderPainSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Shoulder Pain Treatment in North Vancouver",
@@ -841,7 +855,7 @@ export const shoulderPainSchema = {
 export const tennisElbowSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Tennis Elbow Treatment in North Vancouver",
@@ -924,10 +938,11 @@ export const tennisElbowSchema = {
 export const coreStabilitySchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Core Stability and Breathing | Scandinavian Clinic",
+      url: "https://scandinavianclinic.com/how-recovery-works/core-stability-and-breathing",
       description: "What's the difference between core strength and core stability? Why breathing and intra-abdominal pressure matter for back pain and recovery.",
     },
     breadcrumb([
@@ -1002,10 +1017,11 @@ export const coreStabilitySchema = {
 export const postureSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Posture | Scandinavian Clinic",
+      url: "https://scandinavianclinic.com/how-recovery-works/posture",
       description: "Why 'Sit Up Straight' doesn't work long-term. Learn how the deep stabilising system affects posture.",
     },
     breadcrumb([
@@ -1072,10 +1088,11 @@ export const postureSchema = {
 export const whatDnsIsSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "What is DNS? | Scandinavian Clinic",
+      url: "https://scandinavianclinic.com/how-recovery-works/what-dns-is",
       description: "What is Dynamic Neuromuscular Stabilisation (DNS) and how is it used to treat pain?",
     },
     breadcrumb([
@@ -1150,10 +1167,11 @@ export const whatDnsIsSchema = {
 export const whyPainReturnsSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Why Pain Keeps Coming Back | Scandinavian Clinic",
+      url: "https://scandinavianclinic.com/how-recovery-works/why-pain-keeps-coming-back",
       description: "Understanding why muscle and joint pain returns after treatment, and what an assessment finds that treating only the painful area misses.",
     },
     breadcrumb([
@@ -1228,7 +1246,7 @@ export const whyPainReturnsSchema = {
 export const backPainSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Back Pain Treatment in North Vancouver | Scandinavian Clinic",
@@ -1303,7 +1321,7 @@ export const backPainSchema = {
 export const footAndAnklePainSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Foot and Ankle Pain Treatment in North Vancouver | Scandinavian Clinic",
@@ -1378,7 +1396,7 @@ export const footAndAnklePainSchema = {
 export const headacheSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Headache Treatment in North Vancouver | Scandinavian Clinic",
@@ -1445,7 +1463,7 @@ export const headacheSchema = {
 export const hipPainSchema = {
   "@context": "https://schema.org",
   "@graph": [
-    businessRef,
+    minimalBusiness,
     {
       "@type": "MedicalWebPage",
       name: "Hip Pain Treatment in North Vancouver | Scandinavian Clinic",
