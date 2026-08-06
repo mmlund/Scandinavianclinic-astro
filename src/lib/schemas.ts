@@ -17,8 +17,8 @@ const baseAddress = {
 
 const baseGeo = {
   "@type": "GeoCoordinates",
-  latitude: 49.3231,
-  longitude: -123.0726,
+  latitude: 49.32305,
+  longitude: -123.07229,
 };
 
 const openingHours = [
@@ -85,7 +85,7 @@ const serviceCatalog = {
         alternateName: "DNS",
         description:
           "Rehabilitation approach targeting core stabilization and motor control, developed at the Prague School of Rehabilitation.",
-        url: "https://scandinavianclinic.com/d-n-s",
+        url: "https://scandinavianclinic.com/how-recovery-works/what-dns-is",
       },
     },
   ],
@@ -126,18 +126,6 @@ const breadcrumb = (items: { name: string; url: string }[]) => ({
   })),
 });
 
-const videoObject = (v: {
-  name: string;
-  description: string;
-  thumbnailUrl: string;
-  embedUrl: string;
-}) => ({
-  "@type": "VideoObject",
-  name: v.name,
-  description: v.description,
-  thumbnailUrl: v.thumbnailUrl,
-  embedUrl: v.embedUrl,
-});
 
 const conditionsItemList = {
   "@type": "ItemList",
@@ -169,15 +157,11 @@ export const homeSchema = {
     {
       "@type": "Person",
       "@id": EVA_ID,
+      name: "Eva Andersson",
+      jobTitle: "Registered Massage Therapist",
       url: "https://scandinavianclinic.com/about-me"
     },
     conditionsItemList,
-    videoObject({
-      name: "Dynamic Neuromuscular Stabilization",
-      description: "Fast-growing active treatment method for training and pain prevention, rehabilitation and and athletic performance improvement. DNS stabilizes core muscles: diaphragm, pelvic floor, and all parts of the abdominal wall.",
-      thumbnailUrl: "https://i.ytimg.com/vi/Dt-hermwK3U/hqdefault.jpg",
-      embedUrl: "https://www.youtube-nocookie.com/embed/Dt-hermwK3U"
-    }),
     breadcrumb([{ name: "Home", url: "https://scandinavianclinic.com/" }]),
   ],
 };
@@ -401,7 +385,7 @@ export const dnsSchema = {
     {
       "@type": "MedicalWebPage",
       name: "Dynamic Neuromuscular Stabilization (DNS) in North Vancouver",
-      url: "https://scandinavianclinic.com/d-n-s",
+      url: "https://scandinavianclinic.com/how-recovery-works/what-dns-is",
       description:
         "Clinical rehabilitation approach developed at the Prague School of Rehabilitation, targeting core stabilization and motor control for chronic pain, sports injuries, and complex musculoskeletal conditions.",
       about: {
@@ -413,7 +397,7 @@ export const dnsSchema = {
     },
     breadcrumb([
       { name: "Home", url: "https://scandinavianclinic.com/" },
-      { name: "DNS", url: "https://scandinavianclinic.com/d-n-s" },
+      { name: "DNS", url: "https://scandinavianclinic.com/how-recovery-works/what-dns-is" },
     ]),
   ],
 };

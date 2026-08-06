@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Navigation } from '@/components/Navigation';
+import Navigation from '@/components/Navigation.astro';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { firstVisitSchema } from '@/lib/schemas';
@@ -20,7 +20,7 @@ import img5Raw from "@/assets/clinic/shoulder-assessment-movement.png";
   jsonLd={firstVisitSchema}
 >
   <div class="min-h-screen">
-    <Navigation client:load />
+    <Navigation />
     
     <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">What a Thorough Assessment Involves</h1>

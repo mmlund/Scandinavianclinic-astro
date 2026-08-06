@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Navigation } from '@/components/Navigation';
+import Navigation from '@/components/Navigation.astro';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { sciaticaSchema } from '@/lib/schemas';
@@ -24,17 +24,7 @@ import logo from '@/assets/brand/logo.webp?url';
 >
   <div class="min-h-screen bg-background pt-20">
     
-    <header class="bg-background border-b border-border fixed top-0 w-full z-50">
-      <div class="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div class="flex items-center">
-          <img src={logo} alt="Scandinavian Clinic Logo" class="h-12 w-auto" />
-        </div>
-        <div class="flex items-center gap-6">
-          <a href="tel:+16049264883" class="hidden md:block text-foreground font-medium hover:text-primary transition-colors">(604) 926-4883</a>
-          <a href="https://booking.scandinavianclinic.com" class="booking-link bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors">Book Your Assessment</a>
-        </div>
-      </div>
-    </header>
+    <Navigation />
     
     <main class="pt-24 pb-16">
       <div class="container mx-auto px-4 max-w-4xl">

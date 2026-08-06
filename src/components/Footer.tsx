@@ -11,7 +11,7 @@ export const Footer = () => {
               Scandinavian Clinic is a registered massage therapy clinic located in North Vancouver.
             </p>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Orthopedic & Sports Therapy providing expert care through Swedish-trained 
+              Orthopedic &amp; Sports Therapy providing expert care through Swedish-trained 
               manual therapy techniques and active rehabilitation.
             </p>
           </div>
@@ -35,10 +35,10 @@ export const Footer = () => {
                 <a href="/how-recovery-works/why-pain-keeps-coming-back" className="hover:text-accent transition-colors">How Recovery Works</a>
               </li>
               <li>
-                <a href="/athletes-and-performance" className="hover:text-accent transition-colors">Athletes & Performance</a>
+                <a href="/athletes-and-performance" className="hover:text-accent transition-colors">Athletes &amp; Performance</a>
               </li>
               <li>
-                <a href="/fees" className="hover:text-accent transition-colors">Fees & Insurance</a>
+                <a href="/fees" className="hover:text-accent transition-colors">Fees &amp; Insurance</a>
               </li>
               <li>
                 <a
@@ -77,7 +77,7 @@ export const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60 text-sm">
           <p>© {currentYear} Scandinavian Clinic. All rights reserved.</p>
-          <p className="mt-2">Registered Massage Therapist - Insurance Accepted</p>
+          <p className="mt-2">Registered Massage Therapist - Covered by most extended health insurance plans.</p>
         </div>
       </div>
     </footer>

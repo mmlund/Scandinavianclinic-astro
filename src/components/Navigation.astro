@@ -1,0 +1,156 @@
+---
+import logo from "@/assets/brand/logo.webp?url";
+import { ChevronDown, Menu, X } from "lucide-react";
+
+const conditions = [
+  { name: "Back Pain", path: "/conditions/back-pain-treatment-north-vancouver" },
+  { name: "Sciatica", path: "/conditions/sciatica-treatment-north-vancouver" },
+  { name: "Neck Pain & Whiplash", path: "/conditions/neck-pain-and-whiplash-treatment-north-vancouver" },
+  { name: "Headaches", path: "/conditions/headache-treatment-north-vancouver" },
+  { name: "Shoulder", path: "/conditions/shoulder-pain-treatment-north-vancouver" },
+  { name: "Hip", path: "/conditions/hip-pain-treatment-north-vancouver" },
+  { name: "Tennis Elbow", path: "/conditions/tennis-elbow-treatment-north-vancouver" },
+  { name: "Foot & Ankle", path: "/conditions/foot-and-ankle-pain-treatment-north-vancouver" }
+];
+
+const recovery = [
+  { name: "Why Pain Keeps Coming Back", path: "/how-recovery-works/why-pain-keeps-coming-back" },
+  { name: "Core Stability and Breathing", path: "/how-recovery-works/core-stability-and-breathing" },
+  { name: "Posture", path: "/how-recovery-works/posture" },
+  { name: "What DNS Is", path: "/how-recovery-works/what-dns-is" }
+];
+---
+
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between gap-4 lg:gap-8">
+      <a
+        href="/"
+        class="flex items-center gap-3 hover:opacity-80 transition-opacity flex-shrink-0"
+        aria-label="Scandinavian Clinic — Home"
+      >
+        <img src={logo} alt="Scandinavian Clinic logo" class="w-10 h-10 rounded-md shadow-sm" />
+        <span id="nav-logo-text" class="text-xl xl:text-2xl font-bold tracking-wide transition-colors duration-300 whitespace-nowrap text-accent drop-shadow-lg">
+          SCANDINAVIAN CLINIC
+        </span>
+      </a>
+
+      {/* Desktop Navigation */}
+      <div class="hidden lg:flex items-center gap-3 xl:gap-5 text-[13px] xl:text-sm ml-auto">
+        
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none whitespace-nowrap py-2" aria-haspopup="true" aria-expanded="false">
+            Conditions <ChevronDown className="w-3.5 h-3.5" />
+          </button>
+          <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+            <div class="bg-background border border-border rounded-md shadow-md min-w-[200px] py-1 flex flex-col">
+              {conditions.map(c => (
+                <a href={c.path} class="px-3 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground text-foreground">{c.name}</a>
+              ))}
+              <div class="h-px bg-border my-1"></div>
+              <a href="/athletes-and-performance" class="px-3 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground text-foreground">Athletes &amp; Performance</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-foreground hover:text-primary transition-colors font-medium focus:outline-none whitespace-nowrap py-2" aria-haspopup="true" aria-expanded="false">
+            How Recovery Works <ChevronDown className="w-3.5 h-3.5" />
+          </button>
+          <div class="absolute left-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+            <div class="bg-background border border-border rounded-md shadow-md min-w-[200px] py-1 flex flex-col">
+              {recovery.map(c => (
+                <a href={c.path} class="px-3 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground text-foreground">{c.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a href="/first-visit" class="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">The Assessment</a>
+        <a href="/fees" class="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">Fees</a>
+        <a href="/about-me" class="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap">About</a>
+        
+        <a href="tel:+16049264883" class="text-foreground hover:text-primary transition-colors font-medium whitespace-nowrap lg:ml-2 xl:ml-4">(604) 926-4883</a>
+        
+        <a 
+          href="https://booking.scandinavianclinic.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground ml-1 h-9 px-3"
+        >
+          Book
+        </a>
+      </div>
+
+      {/* Mobile Menu Button - Using details/summary */}
+      <details class="lg:hidden relative group">
+        <summary class="list-none cursor-pointer text-foreground flex items-center justify-center p-2 rounded-md hover:bg-accent/20 focus:outline-none focus:ring-2 focus:ring-primary [&::-webkit-details-marker]:hidden">
+          <Menu className="w-6 h-6 group-open:hidden" />
+          <X className="w-6 h-6 hidden group-open:block" />
+        </summary>
+        
+        {/* Mobile Menu Dropdown */}
+        <div class="absolute top-full right-0 mt-2 w-[calc(100vw-2rem)] max-w-sm py-4 bg-background border border-border rounded-lg shadow-lg max-h-[80vh] overflow-y-auto z-50">
+          <div class="flex flex-col gap-4">
+            <a href="/" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Home</a>
+            <a href="/about-me" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">About</a>
+            <a href="/first-visit" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">The Assessment</a>
+            
+            <div class="px-4 py-2 text-left font-medium text-foreground bg-secondary/20">Conditions</div>
+            {conditions.map(c => (
+              <a href={c.path} class="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c.name}</a>
+            ))}
+            
+            <div class="px-4 py-2 text-left font-medium text-foreground mt-2 bg-secondary/20">How Recovery Works</div>
+            {recovery.map(c => (
+              <a href={c.path} class="text-foreground hover:text-primary transition-colors font-medium px-4 py-1 text-left pl-8">{c.name}</a>
+            ))}
+            
+            <a href="/athletes-and-performance" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left mt-2">Athletes &amp; Performance</a>
+            <a href="/fees" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Fees</a>
+            <a href="/contact" class="text-foreground hover:text-primary transition-colors font-medium px-4 py-2 text-left">Contact / Book</a>
+            
+            <a href="https://booking.scandinavianclinic.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-accent hover:bg-accent/90 text-accent-foreground h-9 px-3 mx-4">
+              Book
+            </a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Handle scroll state inline
+  const nav = document.getElementById('main-nav');
+  const logoText = document.getElementById('nav-logo-text');
+  
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      nav?.classList.add('bg-background/95', 'backdrop-blur-sm', 'shadow-md');
+      nav?.classList.remove('bg-transparent');
+      logoText?.classList.add('text-primary');
+      logoText?.classList.remove('text-accent', 'drop-shadow-lg');
+    } else {
+      nav?.classList.remove('bg-background/95', 'backdrop-blur-sm', 'shadow-md');
+      nav?.classList.add('bg-transparent');
+      logoText?.classList.remove('text-primary');
+      logoText?.classList.add('text-accent', 'drop-shadow-lg');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  // Initial check
+  handleScroll();
+
+  // Handle closing details when clicking a link on mobile
+  const details = document.querySelector('details.group');
+  if (details) {
+    const links = details.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        details.removeAttribute('open');
+      });
+    });
+  }
+</script>

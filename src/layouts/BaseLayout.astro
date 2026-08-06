@@ -18,6 +18,8 @@ const {
   ogImage = '/og-image.png',
   jsonLd
 } = Astro.props;
+
+const absoluteOgImage = new URL(ogImage, Astro.site).href;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -32,15 +34,15 @@ const {
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={absoluteOgImage} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="CA-BC" />
     <meta name="geo.placename" content="North Vancouver" />
-    <meta name="geo.position" content="49.3245;-123.0736" />
-    <meta name="ICBM" content="49.3245, -123.0736" />
+    <meta name="geo.position" content="49.32305;-123.07229" />
+    <meta name="ICBM" content="49.32305, -123.07229" />
     
     <!-- Google Consent Mode v2 Default (Denied) -->
     <script is:inline>
@@ -57,12 +59,12 @@ const {
     </script>
     
     <!-- Google Tag Manager / GA4 (Placeholder ID) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-SGGM6T75JR"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GA4_MEASUREMENT_ID');
+      gtag('config', 'G-SGGM6T75JR');
     </script>
 
     {jsonLd && (

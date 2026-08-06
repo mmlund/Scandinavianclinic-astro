@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Navigation } from '@/components/Navigation';
+import Navigation from '@/components/Navigation.astro';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { ConditionsWeTreat } from '@/components/ConditionsWeTreat';
@@ -16,7 +16,7 @@ import { conditionsTreatedSchema } from '@/lib/schemas';
   robots="noindex, nofollow"
 >
   <div class="min-h-screen flex flex-col">
-    <Navigation client:load />
+    <Navigation />
     <main class="flex-grow pt-24">
       <div class="container mx-auto px-4 pt-12 pb-4 text-center">
         <h1 class="text-4xl font-bold tracking-tight text-foreground">Conditions Treated at Scandinavian Clinic, North Vancouver</h1>

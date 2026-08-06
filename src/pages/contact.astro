@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { Navigation } from '@/components/Navigation';
+import Navigation from '@/components/Navigation.astro';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { contactSchema } from '@/lib/schemas';
@@ -13,7 +13,7 @@ import { contactSchema } from '@/lib/schemas';
   jsonLd={contactSchema}
 >
   <div class="min-h-screen">
-    <Navigation client:load />
+    <Navigation />
     
     <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 prose prose-lg prose-primary dark:prose-invert">
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Contact and Location</h1>

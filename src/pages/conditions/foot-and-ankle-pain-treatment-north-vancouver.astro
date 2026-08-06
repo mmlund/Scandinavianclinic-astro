@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Navigation } from '@/components/Navigation';
+import Navigation from '@/components/Navigation.astro';
 import { Footer } from '@/components/Footer';
 import { ConsentBanner } from '@/components/ConsentBanner';
 import { footAndAnklePainSchema } from '@/lib/schemas';
@@ -23,7 +23,7 @@ import logo from '@/assets/brand/logo.webp?url';
 >
   <div class="min-h-screen bg-background pt-20">
     
-    <Navigation client:load />
+    <Navigation />
     
     <main class="pt-24 pb-16">
       <div class="container mx-auto px-4 max-w-4xl">
