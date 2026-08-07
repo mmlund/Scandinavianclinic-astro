@@ -14,6 +14,23 @@ export const ConsentBanner = () => {
     const consent = localStorage.getItem("cookie-consent");
     if (!consent) {
       setIsVisible(true);
+    } else if (consent === "accepted") {
+      const applyConsent = () => {
+        window.gtag!("consent", "update", {
+          ad_storage: "granted",
+          ad_user_data: "granted",
+          ad_personalization: "granted",
+          analytics_storage: "granted",
+        });
+      };
+
+      if (window.gtag) {
+        applyConsent();
+      } else {
+        setTimeout(() => {
+          if (window.gtag) applyConsent();
+        }, 0);
+      }
     }
   }, []);
 

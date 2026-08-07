@@ -67,6 +67,27 @@ const absoluteOgImage = new URL(ogImage, Astro.site).href;
       gtag('config', 'G-SGGM6T75JR');
     </script>
 
+    <!-- Conversion Event Tracking -->
+    <script is:inline>
+      document.addEventListener('click', function(e) {
+        var target = e.target.closest('a');
+        if (!target) return;
+        
+        var isBookingLink = target.classList.contains('booking-link') || (target.href && target.href.includes('booking.scandinavianclinic.com'));
+        var isPhoneLink = target.href && target.href.startsWith('tel:');
+        var isEmailLink = target.href && target.href.startsWith('mailto:');
+        
+        if (isBookingLink || isPhoneLink || isEmailLink) {
+          var eventName = isBookingLink ? 'booking_click' : (isPhoneLink ? 'phone_click' : 'email_click');
+          if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+              'page_path': window.location.pathname
+            });
+          }
+        }
+      });
+    </script>
+
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
