@@ -59,7 +59,7 @@ export const ConditionsWeTreat = ({ children }: { children?: React.ReactNode }) 
             Conditions We Treat
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Eva treats a wide range of musculoskeletal conditions through clinical Registered
+            Eva treats a wide range of musculoskeletal conditions through Registered
             Massage Therapy. Common reasons patients seek treatment include:
           </p>
         </div>

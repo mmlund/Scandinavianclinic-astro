@@ -55,7 +55,7 @@ const reserveAction = {
 // Exactly three services. No Acupuncture. No Physiotherapy.
 const serviceCatalog = {
   "@type": "OfferCatalog",
-  name: "Clinical Services",
+  name: "Services",
   itemListElement: [
     {
       "@type": "Offer",
@@ -64,7 +64,7 @@ const serviceCatalog = {
         name: "Registered Massage Therapy",
         alternateName: "RMT",
         description:
-          "Clinical Registered Massage Therapy for musculoskeletal conditions, injury recovery, and rehabilitation. ICBC and WSBC eligible.",
+          "Registered Massage Therapy for musculoskeletal conditions, injury recovery, and rehabilitation. ICBC and WSBC eligible.",
         url: "https://scandinavianclinic.com/r-m-t",
       },
     },
@@ -72,7 +72,7 @@ const serviceCatalog = {
       "@type": "Offer",
       itemOffered: {
         "@type": "MedicalTherapy",
-        name: "Orthopedic Manual Therapy",
+        name: "Orthopaedic Manual Therapy",
         description:
           "Assessment-based manual therapy for chronic pain, sports injuries, and complex musculoskeletal conditions.",
       },
@@ -98,7 +98,7 @@ const medicalBusiness = {
   "@id": BUSINESS_ID,
   name: "Scandinavian Clinic",
   description:
-    "Registered Massage Therapy and orthopedic manual therapy clinic in North Vancouver. Clinical assessment, musculoskeletal rehabilitation, and DNS therapy.",
+    "Registered Massage Therapy and orthopaedic manual therapy clinic in North Vancouver. Clinical assessment, musculoskeletal rehabilitation, and DNS therapy.",
   url: "https://scandinavianclinic.com",
   telephone: "+1-604-926-4883",
   email: "info@scandinavianclinic.com",
@@ -196,7 +196,7 @@ export const aboutMeSchema = {
       worksFor: businessRef,
       knowsAbout: [
         "Registered Massage Therapy",
-        "Orthopedic Manual Therapy",
+        "Orthopaedic Manual Therapy",
         "Dynamic Neuromuscular Stabilization",
         "Musculoskeletal Rehabilitation",
         "Sports Injury Treatment",
@@ -216,9 +216,9 @@ export const aboutMeSchema = {
         {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "Professional Training",
-          name: "Swedish Orthopedic Manual Therapy Training",
+          name: "Swedish Orthopaedic Manual Therapy Training",
           description:
-            "Advanced clinical training in orthopedic manual therapy from Sweden, focused on assessment-based musculoskeletal treatment.",
+            "Advanced clinical training in orthopaedic manual therapy from Sweden, focused on assessment-based musculoskeletal treatment.",
         },
         {
           "@type": "EducationalOccupationalCredential",
@@ -248,12 +248,12 @@ export const educationSchema = {
       jobTitle: "Registered Massage Therapist",
       alternateName: "RMT",
       description:
-        "Registered Massage Therapist with 28+ years of clinical experience in orthopedic manual therapy and Dynamic Neuromuscular Stabilization (DNS).",
+        "Registered Massage Therapist with 28+ years of clinical experience in orthopaedic manual therapy and Dynamic Neuromuscular Stabilization (DNS).",
       url: "https://scandinavianclinic.com/education",
       worksFor: businessRef,
       knowsAbout: [
         "Registered Massage Therapy",
-        "Orthopedic Manual Therapy",
+        "Orthopaedic Manual Therapy",
         "Dynamic Neuromuscular Stabilization",
         "Musculoskeletal Rehabilitation",
       ],
@@ -373,7 +373,7 @@ export const rmtSchema = {
       name: "Registered Massage Therapy in North Vancouver",
       url: "https://scandinavianclinic.com/r-m-t",
       description:
-        "Clinical Registered Massage Therapy in North Vancouver. Assessment-based treatment for musculoskeletal conditions, sports injuries, and rehabilitation. ICBC and WSBC eligible.",
+        "Registered Massage Therapy in North Vancouver. Assessment-based treatment for musculoskeletal conditions, sports injuries, and rehabilitation. ICBC and WSBC eligible.",
       about: {
         "@type": "MedicalTherapy",
         name: "Registered Massage Therapy",
@@ -1401,7 +1401,7 @@ export const headacheSchema = {
       "@type": "MedicalWebPage",
       name: "Headache Treatment in North Vancouver | Scandinavian Clinic",
       url: "https://scandinavianclinic.com/conditions/headache-treatment-north-vancouver",
-      description: "Can your neck cause headaches? Often, yes. Eva Andersson, RMT, uses clinical massage therapy to assess and treat the neck contributors to your headaches.",
+      description: "Can your neck cause headaches? Often, yes. Eva Andersson, RMT, uses massage therapy to assess and treat the neck contributors to your headaches.",
       about: {
         "@type": "MedicalCondition",
         name: "Headache"

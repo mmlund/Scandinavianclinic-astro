@@ -11,7 +11,7 @@ export const Footer = () => {
               Scandinavian Clinic is a registered massage therapy clinic located in North Vancouver.
             </p>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Orthopedic &amp; Sports Therapy providing expert care through Swedish-trained 
+              Orthopaedic &amp; Sports Therapy providing expert care through Swedish-trained 
               manual therapy techniques and active rehabilitation.
             </p>
           </div>
